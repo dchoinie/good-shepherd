@@ -7,7 +7,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        darkOverlay: 'rgba(0, 0, 0, 0.4)',
+        primary: '#5E2224',
+        accent: '#B78550',
+        secondary: '#301B3A',
+        light: '#A6D7FB',
+        grey: '#B0ADA6',
+        darkOverlay: 'rgba(0, 0, 0, 0.8)',
+        lightOverlay: 'rgba(245, 245, 245, 0.92)',
+        textPrimary: 'rgba(0, 0, 0, 0.87)',
+        textMedium: 'rgba(0, 0, 0, 0.6)',
+        textDisabled: 'rgba(0, 0, 0, 0.38)',
       }
     },
   },

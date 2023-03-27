@@ -4,6 +4,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: `Good Shepherd Lutheran Church`,
     siteUrl: `https://goodshepherdmankato.org`,
+    subTitle: `Grow in God’s Truth. Show Jesus’ Love.`
   },
   graphqlTypegen: true,
   plugins: [
@@ -32,7 +33,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Ubuntu']
+          families: ['Ubuntu', 'Source Sans Pro']
         }
       }
     },
