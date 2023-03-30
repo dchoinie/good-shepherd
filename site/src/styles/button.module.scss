@@ -3,7 +3,7 @@
 .btn {
     align-items: center;
     border: 0;
-    border-radius: 0.25rem;
+    border-radius: 0.35rem;
     cursor: pointer;
     padding: 0.5rem 1.25rem;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);;
@@ -43,6 +43,17 @@
     }
 }
 
+.btnPrimaryOutline {
+    color: $primary;
+    background-color: inherit;
+    border: 1px solid $primary;
+
+    &:hover {
+        background-color: $primary;
+        color: #fff;
+    }
+}
+
 .btnSecondary {
     color: #fff;
     background-color: $secondary;
@@ -52,12 +63,34 @@
     }
 }
 
+.btnSecondaryOutline {
+    color: $secondary;
+    background-color: inherit;
+    border: 1px solid $secondary;
+
+    &:hover {
+        background-color: $secondary;
+        color: #fff;
+    }
+}
+
 .btnAccent {
-    color: $text;
+    color: #fff;
     background-color: $accent;
 
     &:hover {
         background-color: $accent-dark;
+    }
+}
+
+.btnAccentOutline {
+    color: $accent;
+    background-color: inherit;
+    border: 1px solid $accent;
+
+    &:hover {
+        background-color: $accent;
+        color: #fff;
     }
 }
 

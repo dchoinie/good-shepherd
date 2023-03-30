@@ -4,6 +4,7 @@ import cx from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "../types/common";
 import * as styles from "../styles/button.module.scss"
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 const sizeMap = {
   larger: styles.btnLarger,
@@ -18,6 +19,9 @@ const themeMap = {
   secondary: styles.btnSecondary,
   accent: styles.btnAccent,
   white: styles.btnWhite,
+  primaryOutline: styles.btnPrimaryOutline,
+  secondaryOutline: styles.btnSecondaryOutline,
+  accentOutline: styles.accentOutline,
 } as any;
 
 const ButtonComponent = ({
@@ -54,9 +58,9 @@ const ButtonComponent = ({
           rel="noopener noreferrer"
           download={download}
         >
-          {startIcon && <FontAwesomeIcon icon={startIcon} className="mr-2" />}
+          {startIcon && <FontAwesomeIcon icon={startIcon as IconProp} className="mr-2" />}
           <span>{label}</span>
-          {endIcon && <FontAwesomeIcon icon={endIcon} className="ml-2" />}
+          {endIcon && <FontAwesomeIcon icon={endIcon as IconProp} className="ml-2" />}
         </a>
       );
     }
@@ -69,12 +73,12 @@ const ButtonComponent = ({
           size.toLowerCase() && sizeMap[size],
           theme?.toLowerCase() && themeMap[theme],
           pill ? styles.pill : '',
-          classes
+          classes,
         )}
       >
-        {startIcon && <FontAwesomeIcon icon={startIcon} className="mr-2" />}
+        {startIcon && <FontAwesomeIcon icon={startIcon as IconProp} className="mr-2" />}
         <span>{label}</span>
-        {endIcon && <FontAwesomeIcon icon={endIcon} className="ml-2" />}
+        {endIcon && <FontAwesomeIcon icon={endIcon as IconProp} className="ml-2" />}
       </Link>
     );
   };
@@ -94,9 +98,9 @@ const ButtonComponent = ({
           )}
           disabled={disabled || submissionInProgress}
         >
-          {startIcon && <FontAwesomeIcon icon={startIcon} className="mr-2" />}
+          {startIcon && <FontAwesomeIcon icon={startIcon as IconProp} className="mr-2" />}
           <span>{label}</span>
-          {endIcon && <FontAwesomeIcon icon={endIcon} className="ml-2" />}
+          {endIcon && <FontAwesomeIcon icon={endIcon as IconProp} className="ml-2" />}
         </button>
       ) : (
         <>{getLinkType()}</>

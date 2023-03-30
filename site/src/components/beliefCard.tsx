@@ -8,7 +8,7 @@ const BeliefCard = ({ title, subTitle, image, description}: BeliefCardType): JSX
         <GatsbyImage image={image} alt={title} className="rounded-lg mb-4" />
         <h5 className='text-textPrimary text-center'>{title}</h5>
         <p className="text-accent italic text-center mb-4">{subTitle}</p>
-        <p className="text-textMedium">{description}</p>
+        <p className="text-textMedium text-justify">{description}</p>
     </div>
   )
 }

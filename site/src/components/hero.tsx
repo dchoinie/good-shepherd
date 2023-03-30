@@ -25,13 +25,13 @@ const Hero = (): JSX.Element => {
   `);
   return (
     <div className={cx("flex w-full h-screen", styles.hero)}>
-      <div className="flex flex-col justify-center w-1/2 border-r border-black bg-stone-200 px-32">
-        <h1 className='text-zinc-800 tracking-wide'>{data.site.siteMetadata.title}</h1>
+      <div className="flex flex-col justify-center w-1/2 border-r border-primary bg-stone-200 px-32">
+        <h1 className='text-primary tracking-wide'>{data.site.siteMetadata.title}</h1>
         <hr className="my-3 border border-accent w-2/3" />
         <p className='text-textMedium text-2xl mb-6'>{data.site.siteMetadata.subTitle}</p>
         <div className="flex">
-          <ButtonComponent label="What We Believe" theme='primary' size='small' startIcon={faCross} pill classes={['mr-4']} />
-          <ButtonComponent label="Worship Schedule" theme='white' size='small' startIcon={faCalendarAlt} pill />
+          <ButtonComponent label="What We Believe" theme='primary' startIcon={faCross} classes={['mr-4']} />
+          <ButtonComponent label="Worship Schedule" theme='secondaryOutline' startIcon={faCalendarAlt} />
         </div>
       </div>
       <div className="flex w-1/2">

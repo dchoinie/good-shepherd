@@ -77,7 +77,7 @@ const Footer = (): JSX.Element => {
                     href={item.link}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='text-textMedium'
+                    className='text-textMedium hover:text-accent'
                   >
                     {item.label}
                   </a>
@@ -87,7 +87,7 @@ const Footer = (): JSX.Element => {
                 <Link
                   key={item.label}
                   to={item.link}
-                  className='text-textMedium'
+                  className='text-textMedium hover:text-accent'
                 >
                   {item.label}
                 </Link>
@@ -102,13 +102,13 @@ const Footer = (): JSX.Element => {
             </div>
             <form action="https://formspree.io/f/mjvdkqbp" method="POST" className='flex self-center'>
               <input type="email" name="email" id="email" placeholder='Email' className='border border-stone-200 p-2 rounded shadow-md w-56 mr-4' />
-              <button className={cx(styles.btn, styles.btnPrimary, styles.btnSmall, 'flex')} type="submit">
+              <button className={cx(styles.btn, styles.btnSecondary, styles.btnSmall, 'flex')} type="submit">
                 <span>Submit</span>
                 <FontAwesomeIcon className='ml-2 self-center' icon={faPaperPlane} />
               </button>
             </form>
           </div>
-          <div className="flex justify-center text-primary">
+          <div className="flex justify-center text-secondary">
             <a href={Constants.facebookUrl} target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faFacebook as any} />
             </a>
