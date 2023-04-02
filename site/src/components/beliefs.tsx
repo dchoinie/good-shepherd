@@ -1,12 +1,10 @@
-import React from 'react';
-import cx from 'classnames';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import React, { forwardRef } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import BeliefCard from './beliefCard';
 import ButtonComponent from './button';
 import { faCross } from '@fortawesome/free-solid-svg-icons';
 
-const Beliefs = (): JSX.Element => {
+const Beliefs = forwardRef((_, ref): JSX.Element => {
   const data = useStaticQuery(graphql`
     query BeliefsQuery {
       faith: file(relativePath: { eq: "faith_alone.jpeg" }) {
@@ -27,19 +25,18 @@ const Beliefs = (): JSX.Element => {
     }
   `);
   return (
-    <div className='max-w-screen-2xl mx-auto flex flex-col justify-center my-48'>
+    <div ref={ref as any} className='max-w-screen-2xl mx-auto flex flex-col justify-center my-48'>
       <h3 className='text-textPrimary text-center'>What We Believe</h3>
       <hr className="my-3 border border-accent w-1/4 mx-auto" />
-      <p className='text-textMedium max-w-screen-lg mx-auto mb-12 text-justify'>
+      <p className='text-textMedium max-w-screen-md mx-auto mb-12 text-center'>
         With the universal Christian Church, The Lutheran Church—Missouri Synod
         teaches and responds to the love of the Triune God.
         <span className='text-accent underline ml-1'>The Father</span>, creator of all that exists,
-        <span className='text-accent underline ml-1'>Jesus Christ, the Son</span>, who became human to suffer and die
+        <span className='text-accent underline ml-1'>Jesus Christ</span>, the Son, who became human to suffer and die
         for the sins of all human beings and to rise to life again in the
         ultimate victory over death and Satan, and
         <span className='text-accent underline ml-1'>The Holy Spirit</span>, who creates faith through God's Word and
-        Sacraments. The three persons of the Trinity are coequal and coeternal,
-        one God.
+        Sacraments.
       </p>
       <div className='grid grid-cols-3 gap-16 mb-12'>
         <BeliefCard
@@ -64,6 +61,6 @@ const Beliefs = (): JSX.Element => {
       <ButtonComponent link='/about/what-we-believe' label='More About Our Confession' startIcon={faCross} theme="secondaryOutline" classes={['self-center']} />
     </div>
   );
-};
+});
 
 export default Beliefs;

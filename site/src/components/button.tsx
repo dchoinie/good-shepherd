@@ -22,6 +22,7 @@ const themeMap = {
   primaryOutline: styles.btnPrimaryOutline,
   secondaryOutline: styles.btnSecondaryOutline,
   accentOutline: styles.accentOutline,
+  whiteOutline: styles.btnWhiteOutline,
 } as any;
 
 const ButtonComponent = ({

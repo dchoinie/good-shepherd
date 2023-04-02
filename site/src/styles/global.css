@@ -3,45 +3,41 @@
 @tailwind utilities;
 
 h1 {
-    font-size: 4rem;
+    font-size: 3.75rem;
     line-height: 1;
-    font-family: 'Ubuntu';
+    font-family: 'Rubik';
 }
 
 h2 {
     font-size: 3rem;
     line-height: 1;
-    font-family: 'Ubuntu';
+    font-family: 'Rubik';
 }
 
 h3 {
     font-size: 2.5rem;
     line-height: 1;
-    font-family: 'Ubuntu';
+    font-family: 'Rubik';
 }
 
 h4 {
     font-size: 2rem;
     line-height: 1;
-    font-family: 'Ubuntu';
+    font-family: 'Rubik';
 }
 
 h5 {
     font-size: 1.25rem;
     line-height: 1;
-    font-family: 'Ubuntu';
+    font-family: 'Rubik';
 }
 
 h6 {
     font-size: 1rem;
     line-height: 1;
-    font-family: 'Ubuntu';
+    font-family: 'Rubik';
 }
 
 div, span, ul, li, button, a, section, article, p {
-    font-family: 'Source Sans Pro';
-}
-
-.halfHeight {
-    height: calc(100vh / 2);
+    font-family: 'Karla';
 }

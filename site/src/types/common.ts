@@ -16,6 +16,9 @@ export interface NavItemType {
   link: string;
   order: number;
   subLinks?: SubLinkType[];
+  textColor?: string;
+  hoverTextColor?: string;
+  subBgColor?: string;
 }
 
 export interface Button {

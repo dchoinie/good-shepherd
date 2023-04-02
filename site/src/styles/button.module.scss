@@ -35,7 +35,7 @@
 }
 
 .btnPrimary {
-    color: #fff;
+    color: #e7e5e4;
     background-color: $primary;
 
     &:hover {
@@ -50,12 +50,12 @@
 
     &:hover {
         background-color: $primary;
-        color: #fff;
+        color: #e7e5e4;
     }
 }
 
 .btnSecondary {
-    color: #fff;
+    color: #e7e5e4;
     background-color: $secondary;
 
     &:hover {
@@ -70,12 +70,12 @@
 
     &:hover {
         background-color: $secondary;
-        color: #fff;
+        color: #e7e5e4;
     }
 }
 
 .btnAccent {
-    color: #fff;
+    color: #e7e5e4;
     background-color: $accent;
 
     &:hover {
@@ -90,15 +90,26 @@
 
     &:hover {
         background-color: $accent;
-        color: #fff;
+        color: #e7e5e4;
     }
 }
 
 .btnWhite {
     color: $text;
-    background-color: #fff;
+    background-color: #e7e5e4;
 
     &:hover {
-        background-color: #e6e6e6;
+        background-color: #d6d3d1;
+    }
+}
+
+.btnWhiteOutline {
+    color: #e7e5e4;
+    background-color: inherit;
+    border: 1px solid #e7e5e4;
+
+    &:hover {
+        color: $text-medium;
+        background-color: #e7e5e4;
     }
 }
