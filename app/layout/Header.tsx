@@ -132,26 +132,28 @@ const navItems: NavItem[] = [
 
 export default function Header() {
   return (
-    <div className="max-w-screen-xl mx-auto py-6 flex gap-48 relative z-50">
-      <nav className="flex w-full justify-between self-center text-gray-50">
-        {navItems.map((navItem: NavItem) =>
-          !navItem.subItems && navItem.link ? (
-            <div key={navItem.label}>
-              <Link href={navItem.link}>{navItem.label}</Link>
-            </div>
-          ) : (
-            <div key={navItem.label}>
+    <header className="w-full bg-white shadow-sm relative z-50">
+      <div className="max-w-screen-xl mx-auto px-4 py-4">
+        <div className="flex justify-between items-center">
+          <div className="flex gap-8">
+            {navItems.map((item) => (
               <NavItemComponent
-                label={navItem.label}
-                subItems={navItem.subItems}
+                key={item.label}
+                label={item.label}
+                link={item.link}
+                subItems={item.subItems}
               />
-            </div>
-          )
-        )}
-      </nav>
-      <Button asChild variant="default" className="bg-yellow-500">
-        <Link href="/new">I&apos;m New</Link>
-      </Button>
-    </div>
+            ))}
+          </div>
+          <Button
+            asChild
+            size="lg"
+            className="bg-rose-900 hover:bg-rose-800 text-white font-medium"
+          >
+            <Link href="/new">I&apos;m New</Link>
+          </Button>
+        </div>
+      </div>
+    </header>
   );
 }

@@ -39,7 +39,7 @@ const Services = (): JSX.Element => {
             }`}
             key={item.name}
           >
-            <span className="text-yellow-500 mb-3">{item.icon}</span>
+            <span className="text-rose-900 mb-3">{item.icon}</span>
             <h3 className="text-2xl font-bold">{item.name}</h3>
             <p className="text-md text-gray-500">{item.time}</p>
           </div>

@@ -50,7 +50,7 @@ const ministriesData = [
 
 const Ministries = (): JSX.Element => {
   return (
-    <div className="bg-gradient-to-br from-slate-50 to-slate-100 py-24 shadow-inner relative overflow-hidden">
+    <div className="py-24 relative overflow-hidden">
       <div className="relative">
         <SectionTitle
           title="Ministries"

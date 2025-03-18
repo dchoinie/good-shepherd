@@ -36,7 +36,7 @@ const MinistriesCard = ({
           />
         </div>
         <CardTitle className="text-xl font-bold">{title}</CardTitle>
-        <hr className="border-b border-yellow-500 w-1/2" />
+        <hr className="border-b border-rose-900 w-1/2" />
       </CardHeader>
       <CardContent>
         <p>{description}</p>

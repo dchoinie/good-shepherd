@@ -1,7 +1,15 @@
 import React from "react";
 
-const PageContainer = ({ children }: { children: React.ReactNode }) => {
-  return <div className="max-w-screen-xl mx-auto">{children}</div>;
+const PageContainer = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return (
+    <div className={`max-w-screen-xl mx-auto ${className}`}>{children}</div>
+  );
 };
 
 export default PageContainer;

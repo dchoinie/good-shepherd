@@ -45,9 +45,7 @@ const Stream = (): JSX.Element => {
         }
 
         // Get all video IDs
-        const videoIds = searchData.items.map(
-          (item: string) => item.id.videoId
-        );
+        const videoIds = searchData.items.map((item: any) => item.id.videoId);
 
         // Get detailed information including exact scheduled times
         const detailsResponse = await fetch(
@@ -107,16 +105,12 @@ const Stream = (): JSX.Element => {
     fetchLatestVideo();
   }, []);
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
-
-  if (!latestVideo) {
-    return <div>Loading...</div>;
+  if (error || !latestVideo) {
+    return <></>;
   }
 
   return (
-    <div className="bg-gradient-to-br from-slate-50 to-slate-100 py-24 my-24 shadow-inner">
+    <div className="py-24 my-24">
       <PageContainer>
         <SectionTitle
           title="Live Stream"
@@ -142,7 +136,7 @@ const Stream = (): JSX.Element => {
             </AspectRatio>
           </div>
           <div className="flex flex-col justify-center">
-            <p className="text-yellow-500">
+            <p className="text-rose-900">
               {new Date(latestVideo.publishedAt).toLocaleDateString("en-US", {
                 weekday: "long",
                 year: "numeric",
