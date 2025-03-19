@@ -8,83 +8,103 @@ import { motion } from "framer-motion";
 
 const Hero: React.FC = () => {
   return (
-    <>
-      <div className="absolute top-0 h-screen w-full" />
+    <div className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-[#1B3B6F] to-[#2C5282]">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,theme(colors.white)_1px,transparent_0)] [background-size:24px_24px]" />
+      </div>
 
-      <PageContainer className="h-screen -mt-20">
-        <div className="flex flex-col h-full justify-center relative">
-          {/* Content Section */}
+      {/* Main Content */}
+      <PageContainer className="relative h-screen">
+        <div className="flex flex-col lg:flex-row items-center justify-between h-full gap-12 py-20">
+          {/* Left Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex-1 text-center lg:text-left space-y-8"
+          >
+            <div className="space-y-4">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold leading-tight text-white"
+              >
+                Good Shepherd
+              </motion.h1>
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold leading-tight text-[#D4AF37]"
+              >
+                Lutheran Church
+              </motion.h2>
+            </div>
 
-          <div className="max-w-xl">
-            <h1 className="mb-4 text-5xl font-bold leading-tight text-gray-900">
-              Grow in God&apos;s Truth. Show Jesus&apos; Love.
-            </h1>
-            <p className="mb-8 text-lg text-gray-600">
-              Welcome to Good Shepherd Lutheran Church! We are a Lutheran
-              Church-Missouri Synod congregation located in North Mankato, MN
-            </p>
-            <div className="flex gap-4">
-              <Button size="lg" className="bg-rose-900 hover:bg-rose-700">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="space-y-6"
+            >
+              <p className="text-xl md:text-2xl text-white/90 max-w-xl leading-relaxed font-source-serif font-semibold mx-auto lg:mx-0">
+                Grow in God&apos;s Truth. Show Jesus&apos; Love.
+              </p>
+              <p className="text-base md:text-lg text-white/80 max-w-xl leading-relaxed mx-auto lg:mx-0 font-source-serif">
+                Welcome to Good Shepherd Lutheran Church! We are a Lutheran
+                Church-Missouri Synod congregation located in North Mankato, MN
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            >
+              <Button
+                size="lg"
+                className="h-14 bg-[#D4AF37] text-[#1B3B6F] hover:bg-[#D4AF37]/90 px-8 text-lg shadow-lg hover:shadow-xl transition-all duration-300 font-source-serif"
+              >
                 I&apos;m New
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-rose-900 text-rose-900 hover:bg-gray-50"
+                className="h-14 bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10 px-8 text-lg shadow-lg hover:shadow-xl transition-all duration-300 font-source-serif"
               >
                 Live Stream
               </Button>
+            </motion.div>
+          </motion.div>
+
+          {/* Right Content - Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex-1 relative w-full max-w-lg mx-auto"
+          >
+            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/loft_2.jpg"
+                alt="Church Sanctuary"
+                fill
+                className="object-cover"
+                priority
+              />
+              {/* Image Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1B3B6F]/20 to-transparent" />
             </div>
-          </div>
-
-          {/* Image Section */}
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="absolute right-0 top-[25%] h-[250px] w-[450px]"
-          >
-            <Image
-              src="/loft_2.jpg"
-              alt="Church Exterior"
-              fill
-              className="object-cover object-[center_25%] rounded shadow"
-              priority
-            />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="absolute right-0 top-[62%] h-[260px] w-[250px]"
-          >
-            <Image
-              src="/baptism.jpg"
-              alt="Church Exterior"
-              fill
-              className="object-cover object-[center_20%] rounded shadow"
-              priority
-            />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="absolute right-[22%] top-[62%] h-[225px] w-[350px]"
-          >
-            <Image
-              src="/altar_2.jpg"
-              alt="Church Exterior"
-              fill
-              className="object-cover object-[center_10%] rounded shadow"
-              priority
-            />
+            {/* Decorative Elements */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#D4AF37]/10 rounded-full border border-[#D4AF37]/20" />
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-[#D4AF37]/10 rounded-full border border-[#D4AF37]/20" />
           </motion.div>
         </div>
       </PageContainer>
-    </>
+    </div>
   );
 };
 

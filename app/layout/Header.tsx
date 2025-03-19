@@ -3,11 +3,7 @@ import { NavItem } from "../types/layout";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-const navItems: NavItem[] = [
-  {
-    label: "Home",
-    link: "/",
-  },
+export const navItems: NavItem[] = [
   {
     label: "About",
     subItems: [
@@ -132,26 +128,34 @@ const navItems: NavItem[] = [
 
 export default function Header() {
   return (
-    <header className="w-full bg-white shadow-sm relative z-50">
+    <header className="w-full bg-transparent absolute top-0 left-0 right-0 z-50">
       <div className="max-w-screen-xl mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <div className="flex gap-8">
-            {navItems.map((item) => (
-              <NavItemComponent
-                key={item.label}
-                label={item.label}
-                link={item.link}
-                subItems={item.subItems}
-              />
-            ))}
+          {/* Logo */}
+          <Link href="/" className="text-2xl font-serif font-bold text-white">
+            Good Shepherd
+          </Link>
+
+          {/* Navigation */}
+          <div className="flex items-center gap-8">
+            <nav className="flex gap-6">
+              {navItems.map((item) => (
+                <NavItemComponent
+                  key={item.label}
+                  label={item.label}
+                  link={item.link}
+                  subItems={item.subItems}
+                />
+              ))}
+            </nav>
+            <Button
+              asChild
+              size="lg"
+              className="bg-[#D4AF37] text-[#1B3B6F] hover:bg-[#D4AF37]/90 font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <Link href="/new">I&apos;m New</Link>
+            </Button>
           </div>
-          <Button
-            asChild
-            size="lg"
-            className="bg-rose-900 hover:bg-rose-800 text-white font-medium"
-          >
-            <Link href="/new">I&apos;m New</Link>
-          </Button>
         </div>
       </div>
     </header>

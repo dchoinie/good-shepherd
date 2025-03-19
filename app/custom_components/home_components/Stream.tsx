@@ -110,20 +110,23 @@ const Stream = (): JSX.Element => {
   }
 
   return (
-    <div className="py-24 my-24">
+    <div className="py-24 my-24 relative overflow-hidden">
+      <div className="absolute inset-0 bg-lcms-navy/5 rounded-full blur-3xl -z-10" />
       <PageContainer>
         <SectionTitle
           title="Live Stream"
           tag="Watch"
+          tagColor="bg-lcms-navy"
           subtitle="Watch our upcoming live stream from our YouTube channel."
         />
-        <div className="flex gap-12">
-          <div className="flex w-3/5">
+        <div className="flex flex-col lg:flex-row gap-12">
+          <div className="flex w-full lg:w-3/5">
             <AspectRatio ratio={16 / 9}>
               <div
-                className="w-full h-full bg-cover bg-center rounded-lg shadow-lg overflow-hidden"
+                className="w-full h-full bg-cover bg-center rounded-xl shadow-xl overflow-hidden group relative"
                 style={{ backgroundImage: `url(${latestVideo.thumbnail})` }}
               >
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1B3B6F]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <iframe
                   src={`https://www.youtube.com/embed/${latestVideo.id}?modestbranding=1&rel=0&showinfo=0&autoplay=0&origin=${window.location.origin}`}
                   title={latestVideo.title}
@@ -135,20 +138,24 @@ const Stream = (): JSX.Element => {
               </div>
             </AspectRatio>
           </div>
-          <div className="flex flex-col justify-center">
-            <p className="text-rose-900">
-              {new Date(latestVideo.publishedAt).toLocaleDateString("en-US", {
-                weekday: "long",
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </p>
-            <h3 className="text-2xl font-bold">{latestVideo.title}</h3>
+          <div className="flex flex-col justify-center space-y-6">
+            <div className="space-y-2">
+              <p className="text-lcms-gold font-semibold">
+                {new Date(latestVideo.publishedAt).toLocaleDateString("en-US", {
+                  weekday: "long",
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </p>
+              <h3 className="text-2xl font-serif font-bold text-lcms-navy">
+                {latestVideo.title}
+              </h3>
+            </div>
             <Button
               asChild
               variant="default"
-              className="self-start mt-3"
+              className="self-start bg-lcms-navy text-white hover:bg-lcms-navy/90 px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-lcms-navy/10"
               size="lg"
             >
               <Link href="/watch">View Previous Streams</Link>

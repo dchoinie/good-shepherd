@@ -5,7 +5,6 @@ import Link from "next/link";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -25,25 +24,34 @@ const MinistriesCard = ({
   href,
 }: MinistriesCardProps): JSX.Element => {
   return (
-    <Card>
-      <CardHeader>
-        <div className="relative w-full h-48 mb-6">
+    <Card className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 h-full flex flex-col group">
+      <CardHeader className="p-0">
+        <div className="relative w-full h-48 mb-6 overflow-hidden rounded-t-xl">
           <Image
             src={image}
             alt={title}
             fill
-            className="object-cover rounded"
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1B3B6F]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
-        <CardTitle className="text-xl font-bold">{title}</CardTitle>
-        <hr className="border-b border-rose-900 w-1/2" />
+        <div className="px-6">
+          <CardTitle className="text-2xl font-serif font-bold text-[#1B3B6F]">
+            {title}
+          </CardTitle>
+          <div className="w-16 h-1 bg-[#D4AF37] mt-4" />
+        </div>
       </CardHeader>
-      <CardContent>
-        <p>{description}</p>
+      <CardContent className="flex-grow px-6">
+        <p className="text-gray-600 leading-relaxed">{description}</p>
       </CardContent>
-      <CardFooter>
-        <Button asChild variant="default">
-          <Link href={href}>{title}</Link>
+      <CardFooter className="px-6 pb-6">
+        <Button
+          asChild
+          variant="default"
+          className="bg-[#1B3B6F] text-white hover:bg-[#1B3B6F]/90 px-6 py-2 text-base shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#1B3B6F]/10"
+        >
+          <Link href={href}>Learn More</Link>
         </Button>
       </CardFooter>
     </Card>

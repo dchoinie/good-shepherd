@@ -51,14 +51,16 @@ const ministriesData = [
 const Ministries = (): JSX.Element => {
   return (
     <div className="py-24 relative overflow-hidden">
+      <div className="absolute inset-0 bg-lcms-navy/5 rounded-full blur-3xl -z-10" />
       <div className="relative">
         <SectionTitle
           title="Ministries"
-          tag="Ministries"
+          tag="Get Involved"
+          tagColor="bg-lcms-navy"
           subtitle="We offer a variety of ministries to help you get involved and make a difference. Whether you're passionate about community outreach, music, youth programs, or small group fellowship, there's a place for you here. Join us in serving others, building relationships, and growing together in faith."
         />
         <PageContainer>
-          <div className="grid grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {ministriesData.map((ministry) => (
               <MinistriesCard
                 key={ministry.title}
