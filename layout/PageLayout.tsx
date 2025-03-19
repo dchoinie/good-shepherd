@@ -1,6 +1,9 @@
+"use client";
+
 import { ReactNode } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import PageTransition from "../components/custom/PageTransition";
 
 interface PageLayoutProps {
   children: ReactNode;
@@ -8,9 +11,11 @@ interface PageLayoutProps {
 
 export default function PageLayout({ children }: PageLayoutProps) {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <Header />
-      {children}
+      <main className="flex-grow">
+        <PageTransition>{children}</PageTransition>
+      </main>
       <Footer />
     </div>
   );

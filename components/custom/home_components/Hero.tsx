@@ -5,14 +5,14 @@ import { Button } from "@/components/ui/button";
 import PageContainer from "../PageContainer";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import BackgroundPattern from "@/components/custom/background-pattern";
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-[#1B3B6F] to-[#2C5282]">
+    <div className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-lcms-navy to-[#2C5282]">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,theme(colors.white)_1px,transparent_0)] [background-size:24px_24px]" />
-      </div>
+      <BackgroundPattern />
 
       {/* Main Content */}
       <PageContainer className="relative h-screen">
@@ -64,16 +64,16 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <Button
-                size="lg"
-                className="h-14 bg-[#D4AF37] text-[#1B3B6F] hover:bg-[#D4AF37]/90 px-8 text-lg shadow-lg hover:shadow-xl transition-all duration-300 font-source-serif"
+              <Link
+                href="/new"
+                className="bg-lcms-gold text-lcms-navy hover:bg-lcms-gold/90 px-8 text-lg shadow-lg hover:shadow-xl transition-all duration-300 font-source-serif flex items-center rounded"
               >
                 I&apos;m New
-              </Button>
+              </Link>
               <Button
                 size="lg"
                 variant="outline"
-                className="h-14 bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10 px-8 text-lg shadow-lg hover:shadow-xl transition-all duration-300 font-source-serif"
+                className="h-14 bg-transparent border-2 border-lcms-gold text-lcms-gold hover:bg-lcms-gold/10 px-8 text-lg shadow-lg hover:shadow-xl transition-all duration-300 font-source-serif"
               >
                 Live Stream
               </Button>
