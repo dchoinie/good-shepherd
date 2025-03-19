@@ -1,8 +1,8 @@
-import Hero from "./custom_components/home_components/Hero";
-import Beliefs from "./custom_components/home_components/Beliefs";
-import Stream from "./custom_components/home_components/Stream";
-import Services from "./custom_components/home_components/Services";
-import Ministries from "./custom_components/home_components/Ministries";
+import Hero from "../components/custom/home_components/Hero";
+import Beliefs from "../components/custom/home_components/Beliefs";
+import Stream from "../components/custom/home_components/Stream";
+import Services from "../components/custom/home_components/Services";
+import Ministries from "../components/custom/home_components/Ministries";
 
 export default function Home() {
   return (

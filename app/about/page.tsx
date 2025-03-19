@@ -1,5 +1,5 @@
 import React from "react";
-import PageContainer from "../custom_components/PageContainer";
+import PageContainer from "../../components/custom/PageContainer";
 
 export default function AboutPage() {
   return (

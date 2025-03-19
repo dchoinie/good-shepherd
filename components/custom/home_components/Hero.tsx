@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import PageContainer from "../../custom_components/PageContainer";
+import PageContainer from "../PageContainer";
 import Image from "next/image";
 import { motion } from "framer-motion";
 

@@ -1,4 +1,4 @@
-import NavItemComponent from "../custom_components/NavItemComponent";
+import NavItemComponent from "../components/custom/NavItemComponent";
 import { NavItem } from "../types/layout";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -138,7 +138,7 @@ export default function Header() {
 
           {/* Navigation */}
           <div className="flex items-center gap-8">
-            <nav className="flex gap-6">
+            <nav className="flex gap-8">
               {navItems.map((item) => (
                 <NavItemComponent
                   key={item.label}
