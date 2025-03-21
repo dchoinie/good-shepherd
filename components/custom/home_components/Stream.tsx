@@ -3,11 +3,11 @@
 import React, { useEffect, useState } from "react";
 import { YouTubeVideo } from "@/types/video";
 import PageContainer from "../PageContainer";
-import SectionTitle from "../SectionTitle";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import Link from "next/link";
+import Image from "next/image";
 
 interface YouTubeSearchItem {
   id: {
@@ -156,17 +156,21 @@ const Stream = (): JSX.Element => {
   }
 
   return (
-    <div className="py-24 my-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-lcms-navy/5 rounded-full blur-3xl -z-10" />
-      <PageContainer>
-        <SectionTitle
-          title="Live Stream"
-          tag="Watch"
-          tagColor="bg-lcms-navy"
-          subtitle="Watch our upcoming live stream from our YouTube channel."
+    <div className="py-12 my-24 relative overflow-hidden">
+      <div className="absolute inset-0">
+        <Image
+          src="/side_2.jpg"
+          alt="Background"
+          fill
+          priority
+          className="object-cover"
+          quality={100}
         />
-        <div className="flex flex-col lg:flex-row gap-12">
-          <div className="flex w-full lg:w-3/5">
+      </div>
+      <div className="absolute inset-0 bg-stone-800/90" />
+      <PageContainer>
+        <div className="flex flex-col justify-center items-center lg:flex-row gap-12 relative z-10">
+          <div className="flex w-1/2">
             <AspectRatio ratio={16 / 9}>
               {isLoading ? (
                 <Skeleton className="w-full h-full rounded-xl" />
@@ -185,7 +189,8 @@ const Stream = (): JSX.Element => {
             </AspectRatio>
           </div>
           <div className="flex flex-col justify-center space-y-6">
-            <div className="space-y-2">
+            <h4 className="text-white text-5xl">Live Stream</h4>
+            <div>
               {isLoading ? (
                 <>
                   <Skeleton className="h-6 w-32" />
@@ -193,7 +198,7 @@ const Stream = (): JSX.Element => {
                 </>
               ) : (
                 <>
-                  <p className="text-lcms-gold font-semibold">
+                  <p className="text-lcms-gold">
                     {new Date(
                       latestVideo?.publishedAt || ""
                     ).toLocaleDateString("en-US", {
@@ -203,7 +208,7 @@ const Stream = (): JSX.Element => {
                       day: "numeric",
                     })}
                   </p>
-                  <h3 className="text-2xl font-serif font-bold text-lcms-navy">
+                  <h3 className="text-2xl font-serif text-white">
                     {latestVideo?.title}
                   </h3>
                 </>
@@ -215,8 +220,8 @@ const Stream = (): JSX.Element => {
               <Button
                 asChild
                 variant="default"
-                className="self-start bg-lcms-navy text-white hover:bg-lcms-navy/90 px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-lcms-navy/10"
-                size="lg"
+                className="self-start bg-white text-stone-700 hover:bg-stone-700/90 px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                size="sm"
               >
                 <Link href="/watch">View Previous Streams</Link>
               </Button>

@@ -36,7 +36,7 @@ const MinistriesCard = ({
           <div className="absolute inset-0 bg-gradient-to-t from-[#1B3B6F]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
         <div className="px-6">
-          <CardTitle className="text-2xl font-serif font-bold text-[#1B3B6F]">
+          <CardTitle className="text-2xl font-serif font-bold text-stone-700">
             {title}
           </CardTitle>
           <div className="w-16 h-1 bg-[#D4AF37] mt-4" />
@@ -49,7 +49,7 @@ const MinistriesCard = ({
         <Button
           asChild
           variant="default"
-          className="bg-[#1B3B6F] text-white hover:bg-[#1B3B6F]/90 px-6 py-2 text-base shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#1B3B6F]/10"
+          className="bg-stone-700 text-white hover:bg-stone-700/90 px-6 py-2 text-base shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#1B3B6F]/10"
         >
           <Link href={href}>Learn More</Link>
         </Button>

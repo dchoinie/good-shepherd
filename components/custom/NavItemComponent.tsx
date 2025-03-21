@@ -23,41 +23,29 @@ const NavItemComponent = ({
 }: NavItemComponentProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  if (subItems) {
+  if (subItems && subItems.length > 0) {
     return (
       <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
         <DropdownMenuTrigger
-          className={`flex items-center gap-1 px-2 py-1.5 ${
-            isHomePage
-              ? "text-white/90 hover:text-white"
-              : "text-gray-800/90 hover:text-gray-800"
-          } cursor-pointer group focus:outline-none focus:ring-0 focus:border-0 focus:shadow-none focus:ring-offset-0 focus:ring-transparent`}
+          className={`flex items-center gap-1 text-[1rem] focus:outline-none ${
+            isHomePage ? "text-white" : "text-stone-700"
+          }`}
         >
-          <span className="font-medium relative">
-            {label}
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-lcms-gold transition-all duration-300 group-hover:w-full" />
-          </span>
+          <span className="text-inherit">{label}</span>
           <ChevronDown
-            size={14}
-            className={`self-center transition-transform duration-300 transform ${
-              isOpen ? "rotate-180" : "rotate-0"
+            className={`w-4 h-4 transition-transform duration-200 text-inherit ${
+              isOpen ? "rotate-180" : ""
             }`}
           />
         </DropdownMenuTrigger>
-        <DropdownMenuContent
-          className="min-w-[220px] p-2 mt-2 rounded-xl shadow-lg border border-gray-100 bg-white/95 backdrop-blur-sm"
-          align="start"
-        >
+        <DropdownMenuContent>
           {subItems?.map((subItem: SubNavItem) => (
             <DropdownMenuItem
               key={subItem.label}
-              className="cursor-pointer focus:outline-none rounded-lg group"
+              className="cursor-pointer"
+              onClick={() => setIsOpen(false)}
             >
-              <Link
-                href={subItem.link}
-                className="w-full text-[#4A4A4A]/90 group-hover:text-lcms-gold font-medium text-base"
-                onClick={() => setIsOpen(false)}
-              >
+              <Link href={subItem.link} className="text-inherit">
                 {subItem.label}
               </Link>
             </DropdownMenuItem>
@@ -67,18 +55,15 @@ const NavItemComponent = ({
     );
   }
 
-  if (!subItems && link) {
+  if (link) {
     return (
       <Link
         href={link}
-        className={`px-2 py-1.5 ${
-          isHomePage
-            ? "text-white/90 hover:text-white"
-            : "text-gray-800/90 hover:text-gray-800"
-        } font-medium cursor-pointer group relative`}
+        className={`text-inherit text-[1rem] ${
+          isHomePage ? "text-white" : "text-stone-700"
+        }`}
       >
         {label}
-        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-lcms-gold transition-all duration-300 group-hover:w-full" />
       </Link>
     );
   }

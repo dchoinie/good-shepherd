@@ -109,7 +109,7 @@ export const navItems: NavItem[] = [
       },
       {
         label: "Live Stream",
-        link: "/live-stream",
+        link: "/stream",
       },
     ],
   },

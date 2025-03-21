@@ -7,7 +7,7 @@ import { navItems } from "@/types/navigation";
 
 const Footer = () => {
   return (
-    <footer className="bg-lcms-navy/20 text-gray-900">
+    <footer className="bg-stone-700 text-gray-100">
       <div className="max-w-screen-xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Contact Info */}
@@ -15,8 +15,8 @@ const Footer = () => {
             <Image
               src="/Cross_blue.png"
               alt="Good Shepherd Lutheran Church"
-              width={150}
-              height={150}
+              width={50}
+              height={50}
               className="mx-auto md:mx-0"
             />
             <div className="text-sm space-y-2">

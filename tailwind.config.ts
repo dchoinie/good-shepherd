@@ -11,10 +11,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-source-serif)"],
-        serif: ["var(--font-playfair)"],
-        playfair: ["var(--font-playfair)"],
-        "source-serif": ["var(--font-source-serif)"],
+        sans: ["var(--font-figtree)"],
+        figtree: ["var(--font-figtree)"],
+        italianno: ["var(--font-italianno)"],
       },
       colors: {
         lcms: {

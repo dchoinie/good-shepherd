@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Source_Serif_4 } from "next/font/google";
+import { Figtree, Italianno } from "next/font/google";
 import "./globals.css";
 import PageLayout from "../layout/PageLayout";
+import { HeaderProvider } from "@/context/HeaderContext";
 
-const playfair = Playfair_Display({
+const figtree = Figtree({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-playfair",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-figtree",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const sourceSerif = Source_Serif_4({
+const italianno = Italianno({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-source-serif",
-  weight: ["400", "600", "700"],
+  variable: "--font-italianno",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -30,10 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${playfair.variable} ${sourceSerif.variable} antialiased`}
-      >
-        <PageLayout>{children}</PageLayout>
+      <body className={`${figtree.variable} ${italianno.variable} antialiased`}>
+        <HeaderProvider>
+          <PageLayout>{children}</PageLayout>
+        </HeaderProvider>
       </body>
     </html>
   );

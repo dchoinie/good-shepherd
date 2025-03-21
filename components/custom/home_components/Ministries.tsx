@@ -51,12 +51,12 @@ const ministriesData = [
 const Ministries = (): JSX.Element => {
   return (
     <div className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-lcms-navy/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute inset-0 bg-stone-700/5 rounded-full blur-3xl -z-10" />
       <div className="relative">
         <SectionTitle
           title="Ministries"
           tag="Get Involved"
-          tagColor="bg-lcms-navy"
+          tagColor="bg-stone-700"
           subtitle="We offer a variety of ministries to help you get involved and make a difference. Whether you're passionate about community outreach, music, youth programs, or small group fellowship, there's a place for you here. Join us in serving others, building relationships, and growing together in faith."
         />
         <PageContainer>

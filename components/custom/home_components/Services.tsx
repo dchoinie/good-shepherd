@@ -34,7 +34,7 @@ const Services = (): JSX.Element => {
         title="Worship Schedule"
         tag="Join Us"
         subtitle="We welcome you to worship with us every Sunday morning."
-        tagColor="bg-lcms-navy"
+        tagColor="bg-stone-700"
       />
       <div className="max-w-5xl mx-auto my-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -44,10 +44,10 @@ const Services = (): JSX.Element => {
               className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border border-gray-100 h-full flex flex-col"
             >
               <div className="flex flex-col items-center text-center flex-grow">
-                <div className="bg-[#003B70]/10 p-4 rounded-full mb-6">
-                  <span className="text-[#003B70]">{item.icon}</span>
+                <div className="bg-stone-700/10 p-4 rounded-full mb-6">
+                  <span className="text-stone-700">{item.icon}</span>
                 </div>
-                <h3 className="text-2xl font-bold text-[#003B70] mb-2 whitespace-nowrap">
+                <h3 className="text-2xl font-bold text-stone-700 mb-2 whitespace-nowrap">
                   {item.name}
                 </h3>
                 <p className="text-3xl font-semibold text-[#FFB81C] mb-3">
