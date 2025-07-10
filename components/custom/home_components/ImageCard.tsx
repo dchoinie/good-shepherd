@@ -15,7 +15,7 @@ const ImageCard = ({ src, alt, title, latin, icon: Icon }: ImageCardProps) => {
     <div className="flex flex-col">
       <div className="relative">
         <div className="flex flex-col items-center">
-          <Icon className="w-12 h-12 text-[#D4AF37] mb-4" />
+          <Icon className="w-12 h-12 text-lcms-gold mb-4" />
           <div className="text-center">
             <h2 className="text-3xl font-serif font-bold text-stone-700 mb-1">
               {latin}

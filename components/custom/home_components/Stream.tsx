@@ -220,8 +220,8 @@ const Stream = (): JSX.Element => {
               <Button
                 asChild
                 variant="default"
-                className="self-start bg-white text-stone-700 hover:bg-stone-700/90 px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                size="sm"
+                className="self-start bg-lcms-gold hover:bg-lcms-gold/80 text-stone-800 font-medium px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                size="lg"
               >
                 <Link href="/watch">View Previous Streams</Link>
               </Button>

@@ -6,6 +6,7 @@ import SectionTitle from "../SectionTitle";
 import ImageCard from "./ImageCard";
 import { Cross, Book, ScrollText, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const Beliefs = () => {
   return (
@@ -50,15 +51,17 @@ const Beliefs = () => {
 
         {/* Learn More Button */}
         <div className="flex justify-center mt-12">
-          <Link
-            href="/our-faith"
-            className="inline-flex items-center gap-2 px-8 py-3 text-lg font-medium text-stone-700 bg-[#D4AF37] hover:bg-[#B38F2E] transition-colors rounded-md"
+          <Button
+            asChild
+            variant="default"
+            className="bg-lcms-gold hover:bg-lcms-gold/80 text-lg font-medium text-stone-800 px-8 py-3"
+            size="lg"
           >
-            Learn More About Our Beliefs
-            <span className="text-stone-800">
-              <ArrowRight />
-            </span>
-          </Link>
+            <Link href="/our-faith" className="inline-flex items-center gap-2">
+              Learn More About Our Beliefs
+              <ArrowRight className="text-stone-800" />
+            </Link>
+          </Button>
         </div>
       </div>
     </PageContainer>

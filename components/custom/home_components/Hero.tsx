@@ -43,14 +43,14 @@ const Hero = (): React.ReactNode => {
           <Button
             asChild
             variant="default"
-            className="bg-lcms-gold hover:bg-lcms-gold/80 text-lg text-stone-800"
+            className="bg-lcms-gold hover:bg-lcms-gold/80 text-lg text-stone-800 font-medium px-8 py-3"
             size="lg"
           >
             <Link href="/new">I&apos;m New</Link>
           </Button>
           <Button
             variant="outline"
-            className="border border-none bg-white text-stone-800 hover:bg-white/80 hover:text-lcms-gold/90 text-lg"
+            className="border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-stone-800 text-lg font-medium px-8 py-3"
             size="lg"
           >
             Stream Live

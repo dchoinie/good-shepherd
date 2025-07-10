@@ -50,7 +50,7 @@ const Services = (): JSX.Element => {
                 <h3 className="text-2xl font-bold text-stone-700 mb-2 whitespace-nowrap">
                   {item.name}
                 </h3>
-                <p className="text-3xl font-semibold text-[#FFB81C] mb-3">
+                <p className="text-3xl font-semibold text-lcms-gold mb-3">
                   {item.time}
                 </p>
                 <p className="text-gray-600 flex-grow">{item.description}</p>
