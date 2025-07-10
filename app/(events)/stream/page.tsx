@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import PageTitle from "@/components/custom/PageTitle";
 import { Card, CardContent } from "@/components/ui/card";
 import { format } from "date-fns";
-import Image from "next/image";
 import Container from "@/components/custom/Container";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface YouTubeVideo {
   id: string;
@@ -125,14 +125,17 @@ export default function LiveStreamPage() {
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/3">
                   <div className="relative aspect-video">
-                    <Image
-                      src={upcomingStream.snippet.thumbnails.high.url}
-                      alt={upcomingStream.snippet.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      priority
-                    />
+                    {loading ? (
+                      <Skeleton className="w-full h-full" />
+                    ) : (
+                      <iframe
+                        src={`https://www.youtube.com/embed/${upcomingStream.id}`}
+                        title={upcomingStream.snippet.title}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="absolute inset-0 w-full h-full"
+                      />
+                    )}
                   </div>
                 </div>
                 <CardContent className="p-4 md:w-2/3">
@@ -164,13 +167,17 @@ export default function LiveStreamPage() {
             {pastStreams.map((video) => (
               <Card key={video.id} className="overflow-hidden">
                 <div className="relative aspect-video">
-                  <Image
-                    src={video.snippet.thumbnails.high.url}
-                    alt={video.snippet.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
+                  {loading ? (
+                    <Skeleton className="w-full h-full" />
+                  ) : (
+                    <iframe
+                      src={`https://www.youtube.com/embed/${video.id}`}
+                      title={video.snippet.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  )}
                 </div>
                 <CardContent className="p-4">
                   <h3 className="font-semibold mb-2 line-clamp-2">

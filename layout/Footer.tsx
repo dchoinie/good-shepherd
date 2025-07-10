@@ -7,7 +7,7 @@ import { navItems } from "@/types/navigation";
 
 const Footer = () => {
   return (
-    <footer className="bg-stone-700 text-gray-100">
+    <footer className="bg-gray-700 text-gray-100">
       <div className="max-w-screen-xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Contact Info */}

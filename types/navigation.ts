@@ -5,8 +5,8 @@ export const navItems: NavItem[] = [
     label: "About",
     subItems: [
       {
-        label: "About",
-        link: "/about",
+        label: "Mission",
+        link: "/mission",
       },
       {
         label: "Worship Schedule",
