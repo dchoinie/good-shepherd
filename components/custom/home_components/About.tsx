@@ -45,13 +45,16 @@ const About = () => {
   ];
 
   return (
-    <div className="py-24 bg-gradient-to-br from-gray-50 to-stone-50">
+    <div className="py-24 bg-lcms-navy relative overflow-hidden">
       <PageContainer>
         <SectionTitle
           title="About Good Shepherd"
           subtitle="Discover our mission, explore our rich history, and learn about the beliefs that guide our congregation as we serve God and our community."
           tag="About Us"
-          tagBgColor="bg-lcms-navy"
+          tagBgColor="bg-lcms-gold"
+          tagTextColor="text-stone-800"
+          titleColor="text-white"
+          subtitleColor="text-gray-300"
           tagIcon={<Info className="w-4 h-4" />}
         />
 
@@ -61,7 +64,7 @@ const About = () => {
             return (
               <div
                 key={section.title}
-                className={`relative bg-gradient-to-br ${section.color} rounded-2xl p-8 shadow-lg border ${section.borderColor} hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}
+                className="relative bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
               >
                 {/* Decorative background elements */}
                 <div
@@ -108,7 +111,7 @@ const About = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 max-w-2xl mx-auto">
+          <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Join Our Community
             </h3>

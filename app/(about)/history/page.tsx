@@ -227,7 +227,7 @@ const TimelineItem = ({
       className="relative flex items-start space-x-4"
     >
       {/* Timeline line */}
-      <div className="flex-shrink-0 w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg relative z-10"></div>
+      <div className="flex-shrink-0 w-4 h-4 bg-lcms-navy rounded-full border-4 border-white shadow-lg relative z-10"></div>
 
       {/* Content */}
       <div className="flex-1 bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
@@ -256,9 +256,9 @@ export default function HistoryPage() {
           <div className="container mx-auto px-4 py-24">
             {/* Introduction Section */}
             <div className="max-w-4xl mx-auto mb-16">
-              <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 md:p-12 shadow-sm border border-blue-100">
-                <div className="absolute top-0 left-0 w-24 h-24 bg-blue-500 rounded-full opacity-10 -translate-x-12 -translate-y-12"></div>
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-indigo-500 rounded-full opacity-10 translate-x-16 translate-y-16"></div>
+              <div className="relative bg-gradient-to-br from-blue-50 to-lcms-navy/20 rounded-2xl p-8 md:p-12 shadow-sm border border-blue-100">
+                <div className="absolute top-0 left-0 w-24 h-24 bg-lcms-navy rounded-full opacity-10 -translate-x-12 -translate-y-12"></div>
+                <div className="absolute bottom-0 right-0 w-32 h-32 bg-lcms-navy rounded-full opacity-10 translate-x-16 translate-y-16"></div>
                 <div className="relative">
                   <h2 className="text-4xl font-bold text-gray-900 mb-6">
                     Our Story
@@ -298,37 +298,37 @@ export default function HistoryPage() {
                     </h3>
                     <ul className="space-y-3 text-gray-700">
                       <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                         <div>
                           <strong>Pastor E.P. Kauffeld</strong> (1957-1966)
                         </div>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                         <div>
                           <strong>Pastor Ronald Bongard</strong> (1966-1976)
                         </div>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                         <div>
                           <strong>Pastor Victor Roth</strong> (1975-1987)
                         </div>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                         <div>
                           <strong>Pastor Michael Dooling</strong> (1988-1994)
                         </div>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                         <div>
                           <strong>Pastor Greggory S. Coop</strong> (1994-2001)
                         </div>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                         <div>
                           <strong>Pastor Vance Becker</strong> (2003-2019)
                         </div>
@@ -394,7 +394,7 @@ export default function HistoryPage() {
 
               <div className="relative">
                 {/* Timeline line */}
-                <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500"></div>
+                <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-lcms-navy to-purple-500"></div>
 
                 {/* Timeline items */}
                 <div className="space-y-8">

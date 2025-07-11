@@ -94,19 +94,19 @@ export default function SchedulePage() {
                     </p>
                     <ul className="space-y-2 text-gray-700">
                       <li className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-2"></span>
                         Confession and Absolution
                       </li>
                       <li className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-2"></span>
                         Scripture readings and sermon
                       </li>
                       <li className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-2"></span>
                         Holy Communion
                       </li>
                       <li className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-2"></span>
                         Traditional hymns and liturgy
                       </li>
                     </ul>
@@ -120,19 +120,19 @@ export default function SchedulePage() {
                     </p>
                     <ul className="space-y-2 text-gray-700">
                       <li className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-2"></span>
                         All-ages Bible study discussion
                       </li>
                       <li className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-2"></span>
                         Age-appropriate children&apos;s classes
                       </li>
                       <li className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-2"></span>
                         Fellowship and refreshments
                       </li>
                       <li className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-2"></span>
                         Questions and discussion welcome
                       </li>
                     </ul>

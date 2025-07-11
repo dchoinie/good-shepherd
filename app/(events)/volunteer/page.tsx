@@ -43,7 +43,7 @@ export default function VolunteerPage() {
                 {/* Church Council */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-3 h-3 bg-lcms-navy rounded-full mr-3"></span>
                     Church Council
                   </h3>
                   <p className="text-gray-600 mb-4">
@@ -75,7 +75,7 @@ export default function VolunteerPage() {
                 {/* Board of Elders */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-3 h-3 bg-lcms-navy rounded-full mr-3"></span>
                     Board of Elders
                   </h3>
                   <p className="text-gray-600 mb-4">
@@ -92,7 +92,7 @@ export default function VolunteerPage() {
                 {/* Board of Education */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-3 h-3 bg-lcms-navy rounded-full mr-3"></span>
                     Board of Education
                   </h3>
                   <p className="text-gray-600 mb-4">
@@ -109,7 +109,7 @@ export default function VolunteerPage() {
                 {/* Board of Evangelism */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-3 h-3 bg-lcms-navy rounded-full mr-3"></span>
                     Board of Evangelism
                   </h3>
                   <p className="text-gray-600 mb-4">
@@ -126,7 +126,7 @@ export default function VolunteerPage() {
                 {/* Board of Trustees */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-3 h-3 bg-lcms-navy rounded-full mr-3"></span>
                     Board of Trustees
                   </h3>
                   <p className="text-gray-600 mb-4">
@@ -143,7 +143,7 @@ export default function VolunteerPage() {
                 {/* School Board */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-3 h-3 bg-lcms-navy rounded-full mr-3"></span>
                     School Board
                   </h3>
                   <p className="text-gray-600 mb-4">
@@ -160,7 +160,7 @@ export default function VolunteerPage() {
                 {/* Board of Finance */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-3 h-3 bg-lcms-navy rounded-full mr-3"></span>
                     Board of Finance
                   </h3>
                   <p className="text-gray-600 mb-4">

@@ -16,9 +16,9 @@ export default function WomenPage() {
           <div className="container mx-auto px-4 py-24">
             {/* Hero Section */}
             <div className="max-w-4xl mx-auto mb-16">
-              <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 md:p-12 shadow-sm border border-blue-100">
-                <div className="absolute top-0 left-0 w-24 h-24 bg-blue-500 rounded-full opacity-10 -translate-x-12 -translate-y-12"></div>
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-indigo-500 rounded-full opacity-10 translate-x-16 translate-y-16"></div>
+              <div className="relative bg-gradient-to-br from-blue-50 to-lcms-navy/20 rounded-2xl p-8 md:p-12 shadow-sm border border-blue-100">
+                <div className="absolute top-0 left-0 w-24 h-24 bg-lcms-navy rounded-full opacity-10 -translate-x-12 -translate-y-12"></div>
+                <div className="absolute bottom-0 right-0 w-32 h-32 bg-lcms-navy rounded-full opacity-10 translate-x-16 translate-y-16"></div>
                 <div className="relative">
                   <h2 className="text-4xl font-bold text-gray-900 mb-6">
                     Lutheran Women&apos;s Missionary League
@@ -35,7 +35,7 @@ export default function WomenPage() {
                     </h3>
                     <div className="space-y-3 text-gray-700">
                       <div className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3"></span>
                         <span className="font-medium">Purpose:</span>
                         <span className="ml-2">
                           To assist each woman of The Lutheran Church—Missouri
@@ -44,7 +44,7 @@ export default function WomenPage() {
                         </span>
                       </div>
                       <div className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3"></span>
                         <span className="font-medium">Focus:</span>
                         <span className="ml-2">
                           Mission projects, Bible study, and Christian
@@ -52,7 +52,7 @@ export default function WomenPage() {
                         </span>
                       </div>
                       <div className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3"></span>
                         <span className="font-medium">Motto:</span>
                         <span className="ml-2">
                           &quot;Serve the Lord with gladness&quot; (Psalm 100:2)
@@ -75,28 +75,28 @@ export default function WomenPage() {
                 </p>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                     <span>
                       <strong>Mite Box Collections:</strong> Supporting national
                       and district mission grants
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                     <span>
                       <strong>Local Outreach:</strong> Serving our community
                       through various ministries
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                     <span>
                       <strong>International Missions:</strong> Supporting global
                       mission efforts
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                     <span>
                       <strong>Care Ministries:</strong> Providing comfort and
                       support to those in need
@@ -114,28 +114,28 @@ export default function WomenPage() {
                 </p>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                     <span>
                       <strong>Monthly Meetings:</strong> Bible study, prayer,
                       and mission updates
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                     <span>
                       <strong>Quarterly Programs:</strong> Special events and
                       guest speakers
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                     <span>
                       <strong>District Conventions:</strong> Connecting with
                       LWML sisters across the region
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                     <span>
                       <strong>Prayer Partners:</strong> Supporting one another
                       through prayer
@@ -241,7 +241,7 @@ export default function WomenPage() {
 
             {/* Call to Action */}
             <div className="max-w-2xl mx-auto text-center">
-              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 border border-blue-100">
+              <div className="bg-gradient-to-r from-blue-50 to-lcms-navy/20 rounded-xl p-8 border border-blue-100">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Join Our LWML Chapter
                 </h3>

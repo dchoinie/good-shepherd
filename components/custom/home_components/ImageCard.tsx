@@ -29,7 +29,7 @@ const ImageCard = ({ src, alt, title, latin, icon: Icon }: ImageCardProps) => {
         </div>
 
         {/* Image Section */}
-        <div className="relative h-[300px] overflow-hidden">
+        <div className="relative h-[200px] overflow-hidden">
           <Image
             src={src}
             alt={alt}

@@ -31,7 +31,6 @@ export default function OurFaith() {
               title="What We Believe"
               subtitle="As members of The Lutheran Church—Missouri Synod, we hold to the teachings of the Bible as the inspired and inerrant Word of God. We confess the faith as it has been handed down to us in the Lutheran Confessions."
               tag="LCMS Beliefs"
-              tagColor="bg-stone-700"
             />
 
             <div className="grid md:grid-cols-2 gap-8 mt-12">
@@ -86,7 +85,6 @@ export default function OurFaith() {
               title="The Three Solas"
               subtitle="The foundational principles of the Lutheran Reformation that guide our faith and practice"
               tag="Reformation Principles"
-              tagColor="bg-stone-700"
             />
 
             <div className="grid md:grid-cols-3 gap-8 mt-16">
@@ -165,7 +163,6 @@ export default function OurFaith() {
             title="Core Doctrines"
             subtitle="The essential teachings that form the foundation of our Lutheran faith"
             tag="Christian Doctrine"
-            tagColor="bg-stone-700"
           />
 
           <div className="space-y-12 mt-16">
@@ -307,7 +304,6 @@ export default function OurFaith() {
             title="The Lutheran Confessions"
             subtitle="Our church subscribes to the Lutheran Confessions as a true and faithful exposition of Holy Scripture"
             tag="Confessional Lutheran"
-            tagColor="bg-stone-700"
           />
 
           <div className="grid md:grid-cols-2 gap-12 mt-16">
@@ -409,7 +405,6 @@ export default function OurFaith() {
             title="Our Mission and Ministry"
             subtitle="As a Lutheran congregation, we are called to share the Gospel and serve our neighbor"
             tag="Christian Service"
-            tagColor="bg-stone-700"
           />
 
           <div className="grid md:grid-cols-3 gap-8 mt-16">
@@ -464,7 +459,7 @@ export default function OurFaith() {
         </div>
 
         {/* Call to Action */}
-        <div className="py-20 bg-gradient-to-br from-blue-600 to-gray-700 text-white text-center relative overflow-hidden">
+        <div className="py-20 bg-gradient-to-br from-lcms-navy to-gray-700 text-white text-center relative overflow-hidden">
           <div
             className="absolute inset-0 opacity-30"
             style={{
@@ -480,7 +475,7 @@ export default function OurFaith() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
                 href="/worship-schedule"
-                className="inline-flex items-center justify-center px-10 py-4 text-lg font-semibold text-blue-600 bg-white hover:bg-gray-100 transition-all duration-300 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="inline-flex items-center justify-center px-10 py-4 text-lg font-semibold text-lcms-navy bg-white hover:bg-gray-100 transition-all duration-300 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 Worship Schedule
               </a>

@@ -18,6 +18,10 @@ export default function MembershipPage() {
             {/* Welcome Section */}
             <div className="max-w-4xl mx-auto mb-16">
               <div className="relative bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100">
+                {/* Decorative background elements */}
+                <div className="absolute top-0 left-0 w-16 h-16 bg-lcms-navy rounded-full opacity-10 -translate-x-8 -translate-y-8"></div>
+                <div className="absolute bottom-0 right-0 w-20 h-20 bg-lcms-gold rounded-full opacity-10 translate-x-10 translate-y-10"></div>
+
                 <div className="relative">
                   <h2 className="text-4xl font-bold text-gray-900 mb-6">
                     Welcome to Good Shepherd
@@ -36,14 +40,14 @@ export default function MembershipPage() {
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               {/* LCMS Members */}
               <Card className="shadow-sm border border-gray-100">
-                <CardHeader className="bg-blue-50 border-b border-blue-100 rounded-t-lg">
+                <CardHeader className="bg-lcms-navy border-b border-lcms-navy rounded-t-lg">
                   <div className="flex items-center justify-between">
-                    <CardTitle className="text-2xl text-blue-900">
+                    <CardTitle className="text-2xl text-white">
                       LCMS Members
                     </CardTitle>
                     <Badge
                       variant="secondary"
-                      className="bg-blue-100 text-blue-800"
+                      className="bg-lcms-gold text-stone-800"
                     >
                       Transfer
                     </Badge>
@@ -57,26 +61,26 @@ export default function MembershipPage() {
                   </p>
                   <div className="space-y-3">
                     <div className="flex items-start">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                      <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                       <span className="text-gray-700">
                         Contact our church office to begin the transfer process
                       </span>
                     </div>
                     <div className="flex items-start">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                      <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                       <span className="text-gray-700">
                         We&apos;ll coordinate with your current congregation
                       </span>
                     </div>
                     <div className="flex items-start">
-                      <span className="w-2 h-2 bg-blue-300 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                      <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                       <span className="text-gray-700">
                         Welcome you into our church family
                       </span>
                     </div>
                   </div>
-                  <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                    <p className="text-sm text-blue-800 font-medium">
+                  <div className="mt-6 p-4 bg-lcms-gold rounded-lg">
+                    <p className="text-sm text-stone-800 font-medium">
                       💡 Tip: Feel free to visit us for worship first to get to
                       know our congregation!
                     </p>
@@ -86,14 +90,14 @@ export default function MembershipPage() {
 
               {/* New Member Class */}
               <Card className="shadow-sm border border-gray-100">
-                <CardHeader className="bg-yellow-50 border-b border-yellow-100 rounded-t-lg">
+                <CardHeader className="bg-lcms-gold border-b border-lcms-gold rounded-t-lg">
                   <div className="flex items-center justify-between">
-                    <CardTitle className="text-2xl text-yellow-900">
+                    <CardTitle className="text-2xl text-stone-800">
                       New Member Class
                     </CardTitle>
                     <Badge
                       variant="secondary"
-                      className="bg-yellow-100 text-yellow-800"
+                      className="bg-lcms-navy text-white"
                     >
                       Learn
                     </Badge>
@@ -108,26 +112,26 @@ export default function MembershipPage() {
                   </p>
                   <div className="space-y-3">
                     <div className="flex items-start">
-                      <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                      <span className="w-2 h-2 bg-lcms-gold rounded-full mr-3 mt-2 flex-shrink-0"></span>
                       <span className="text-gray-700">
                         Learn about Lutheran doctrine and beliefs
                       </span>
                     </div>
                     <div className="flex items-start">
-                      <span className="w-2 h-2 bg-yellow-300 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                      <span className="w-2 h-2 bg-lcms-gold rounded-full mr-3 mt-2 flex-shrink-0"></span>
                       <span className="text-gray-700">
                         Understand our church&apos;s mission and values
                       </span>
                     </div>
                     <div className="flex items-start">
-                      <span className="w-2 h-2 bg-yellow-200 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                      <span className="w-2 h-2 bg-lcms-gold rounded-full mr-3 mt-2 flex-shrink-0"></span>
                       <span className="text-gray-700">
                         Get to know our congregation and ministries
                       </span>
                     </div>
                   </div>
-                  <div className="mt-6 p-4 bg-yellow-50 rounded-lg">
-                    <p className="text-sm text-yellow-800 font-medium">
+                  <div className="mt-6 p-4 bg-lcms-navy rounded-lg">
+                    <p className="text-sm text-white font-medium">
                       📅 Schedule: Classes are arranged at times convenient for
                       you and Pastor LaPlant
                     </p>
@@ -139,14 +143,14 @@ export default function MembershipPage() {
             {/* Student Outreach */}
             <div className="max-w-4xl mx-auto mb-16">
               <Card className="shadow-sm border border-gray-100">
-                <CardHeader className="bg-yellow-100 border-b border-yellow-200 rounded-t-lg">
+                <CardHeader className="bg-lcms-navy border-b border-lcms-navy rounded-t-lg">
                   <div className="flex items-center justify-between">
-                    <CardTitle className="text-2xl text-yellow-900">
+                    <CardTitle className="text-2xl text-white">
                       Students Welcome!
                     </CardTitle>
                     <Badge
                       variant="secondary"
-                      className="bg-yellow-200 text-yellow-800"
+                      className="bg-lcms-gold text-stone-800"
                     >
                       Campus
                     </Badge>
@@ -165,19 +169,19 @@ export default function MembershipPage() {
                       </p>
                       <div className="space-y-2">
                         <div className="flex items-center">
-                          <span className="w-2 h-2 bg-yellow-700 rounded-full mr-2"></span>
+                          <span className="w-2 h-2 bg-lcms-gold rounded-full mr-2"></span>
                           <span className="text-gray-700">
                             Convenient Sunday worship times
                           </span>
                         </div>
                         <div className="flex items-center">
-                          <span className="w-2 h-2 bg-yellow-600 rounded-full mr-2"></span>
+                          <span className="w-2 h-2 bg-lcms-gold rounded-full mr-2"></span>
                           <span className="text-gray-700">
                             Fellowship opportunities
                           </span>
                         </div>
                         <div className="flex items-center">
-                          <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
+                          <span className="w-2 h-2 bg-lcms-gold rounded-full mr-2"></span>
                           <span className="text-gray-700">
                             Spiritual guidance and support
                           </span>
@@ -195,19 +199,19 @@ export default function MembershipPage() {
                       </p>
                       <div className="space-y-2">
                         <div className="flex items-center">
-                          <span className="w-2 h-2 bg-yellow-700 rounded-full mr-2"></span>
+                          <span className="w-2 h-2 bg-lcms-gold rounded-full mr-2"></span>
                           <span className="text-gray-700">
                             Welcoming student community
                           </span>
                         </div>
                         <div className="flex items-center">
-                          <span className="w-2 h-2 bg-yellow-600 rounded-full mr-2"></span>
+                          <span className="w-2 h-2 bg-lcms-gold rounded-full mr-2"></span>
                           <span className="text-gray-700">
                             Mentorship opportunities
                           </span>
                         </div>
                         <div className="flex items-center">
-                          <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
+                          <span className="w-2 h-2 bg-lcms-gold rounded-full mr-2"></span>
                           <span className="text-gray-700">
                             Faith-based activities and events
                           </span>
@@ -215,8 +219,8 @@ export default function MembershipPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="mt-8 p-4 bg-yellow-50 rounded-lg">
-                    <p className="text-sm text-yellow-800 font-medium">
+                  <div className="mt-8 p-4 bg-lcms-gold rounded-lg">
+                    <p className="text-sm text-stone-800 font-medium">
                       🎓 Special Note: We understand the unique needs of college
                       students and are here to support your spiritual growth
                       during this important time in your life.

@@ -85,7 +85,7 @@ export default function StaffPage() {
                 {/* Church Council */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-3 h-3 bg-lcms-navy rounded-full mr-3"></span>
                     Church Council
                   </h3>
                   <div className="space-y-2 text-gray-700">
@@ -113,7 +113,7 @@ export default function StaffPage() {
                 {/* Board of Elders */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-3 h-3 bg-lcms-navy rounded-full mr-3"></span>
                     Board of Elders
                   </h3>
                   <div className="space-y-1 text-gray-700">
@@ -127,7 +127,7 @@ export default function StaffPage() {
                 {/* Board of Education */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-3 h-3 bg-lcms-navy rounded-full mr-3"></span>
                     Board of Education
                   </h3>
                   <div className="space-y-1 text-gray-700">
@@ -139,7 +139,7 @@ export default function StaffPage() {
                 {/* Board of Evangelism */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-3 h-3 bg-lcms-navy rounded-full mr-3"></span>
                     Board of Evangelism
                   </h3>
                   <div className="space-y-1 text-gray-700">
@@ -151,7 +151,7 @@ export default function StaffPage() {
                 {/* Board of Trustees */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-3 h-3 bg-lcms-navy rounded-full mr-3"></span>
                     Board of Trustees
                   </h3>
                   <div className="space-y-1 text-gray-700">
@@ -163,7 +163,7 @@ export default function StaffPage() {
                 {/* School Board */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-3 h-3 bg-lcms-navy rounded-full mr-3"></span>
                     School Board
                   </h3>
                   <div className="space-y-1 text-gray-700">
@@ -179,7 +179,7 @@ export default function StaffPage() {
                 {/* Music Director */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-3 h-3 bg-lcms-navy rounded-full mr-3"></span>
                     Music Director
                   </h3>
                   <div className="space-y-1 text-gray-700">
@@ -190,7 +190,7 @@ export default function StaffPage() {
                 {/* Head Usher */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-3 h-3 bg-lcms-navy rounded-full mr-3"></span>
                     Head Usher
                   </h3>
                   <div className="space-y-1 text-gray-700">
@@ -201,7 +201,7 @@ export default function StaffPage() {
                 {/* Board of Finance */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-3 h-3 bg-lcms-navy rounded-full mr-3"></span>
                     Board of Finance
                   </h3>
                   <div className="space-y-1 text-gray-700">

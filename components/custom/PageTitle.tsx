@@ -37,7 +37,7 @@ const PageTitle = ({ title, subtitle }: PageTitleProps) => {
           </motion.p>
         )}
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 opacity-20"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-lcms-navy to-purple-500 opacity-20"></div>
     </motion.div>
   );
 };

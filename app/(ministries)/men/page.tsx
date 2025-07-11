@@ -16,9 +16,9 @@ export default function MenPage() {
           <div className="container mx-auto px-4 py-24">
             {/* Hero Section */}
             <div className="max-w-4xl mx-auto mb-16">
-              <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 md:p-12 shadow-sm border border-blue-100">
-                <div className="absolute top-0 left-0 w-24 h-24 bg-blue-500 rounded-full opacity-10 -translate-x-12 -translate-y-12"></div>
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-indigo-500 rounded-full opacity-10 translate-x-16 translate-y-16"></div>
+              <div className="relative bg-gradient-to-br from-blue-50 to-lcms-navy/20 rounded-2xl p-8 md:p-12 shadow-sm border border-blue-100">
+                <div className="absolute top-0 left-0 w-24 h-24 bg-lcms-navy rounded-full opacity-10 -translate-x-12 -translate-y-12"></div>
+                <div className="absolute bottom-0 right-0 w-32 h-32 bg-lcms-navy rounded-full opacity-10 translate-x-16 translate-y-16"></div>
                 <div className="relative">
                   <h2 className="text-4xl font-bold text-gray-900 mb-6">
                     Men&apos;s Bible Study
@@ -34,21 +34,21 @@ export default function MenPage() {
                     </h3>
                     <div className="space-y-3 text-gray-700">
                       <div className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3"></span>
                         <span className="font-medium">When:</span>
                         <span className="ml-2">
                           Last Thursday of each month
                         </span>
                       </div>
                       <div className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3"></span>
                         <span className="font-medium">Who:</span>
                         <span className="ml-2">
                           All men 18+ (including college students)
                         </span>
                       </div>
                       <div className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3"></span>
                         <span className="font-medium">Where:</span>
                         <span className="ml-2">
                           Location varies - typically at a member&apos;s home
@@ -72,20 +72,20 @@ export default function MenPage() {
                 </p>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                     <span>
                       Most commonly at member&apos;s homes for a comfortable,
                       intimate setting
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                     <span>
                       Sometimes at public establishments for convenience
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                     <span>
                       Location details shared in advance via church
                       communications
@@ -103,20 +103,20 @@ export default function MenPage() {
                 </p>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                     <span>
                       Need a ride? Let us know and we&apos;ll coordinate
                       transportation
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                     <span>
                       Can offer a ride? We&apos;re always looking for drivers
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                     <span>
                       Contact the church office or speak with any member
                     </span>
@@ -169,7 +169,7 @@ export default function MenPage() {
 
             {/* Call to Action */}
             <div className="max-w-2xl mx-auto text-center">
-              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 border border-blue-100">
+              <div className="bg-gradient-to-r from-blue-50 to-lcms-navy/20 rounded-xl p-8 border border-blue-100">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Join Us This Month
                 </h3>

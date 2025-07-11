@@ -88,7 +88,7 @@ export default function DonationSuccessPage() {
               </div>
 
               {/* Bible Verse */}
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100 mb-8">
+              <div className="bg-gradient-to-br from-blue-50 to-lcms-navy/20 p-6 rounded-xl border border-blue-100 mb-8">
                 <Heart className="w-8 h-8 text-blue-600 mx-auto mb-4" />
                 <blockquote className="text-lg text-gray-800 italic">
                   &quot;Each of you must give as you have made up your mind, not

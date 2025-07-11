@@ -17,9 +17,9 @@ export default function ChoirPage() {
           <div className="container mx-auto px-4 py-24">
             {/* Welcome Section */}
             <div className="max-w-4xl mx-auto mb-16">
-              <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 md:p-12 shadow-sm border border-blue-100">
-                <div className="absolute top-0 left-0 w-24 h-24 bg-blue-500 rounded-full opacity-10 -translate-x-12 -translate-y-12"></div>
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-indigo-500 rounded-full opacity-10 translate-x-16 translate-y-16"></div>
+              <div className="relative bg-gradient-to-br from-blue-50 to-lcms-navy/20 rounded-2xl p-8 md:p-12 shadow-sm border border-blue-100">
+                <div className="absolute top-0 left-0 w-24 h-24 bg-lcms-navy rounded-full opacity-10 -translate-x-12 -translate-y-12"></div>
+                <div className="absolute bottom-0 right-0 w-32 h-32 bg-lcms-navy rounded-full opacity-10 translate-x-16 translate-y-16"></div>
                 <div className="relative">
                   <div className="flex items-center mb-6">
                     <Music className="h-8 w-8 text-blue-600 mr-3" />
@@ -39,21 +39,21 @@ export default function ChoirPage() {
                     </h3>
                     <ul className="space-y-3 text-gray-700">
                       <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                         <span>Traditional hymns</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                         <span>
                           Special music for holidays and special services
                         </span>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                         <span>Fellowship and community building</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span className="w-2 h-2 bg-lcms-navy rounded-full mr-3 mt-2 flex-shrink-0"></span>
                         <span>Opportunities to develop musical skills</span>
                       </li>
                     </ul>
@@ -78,15 +78,15 @@ export default function ChoirPage() {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center text-gray-700">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-2"></span>
                     <span>Weekly practices during school year</span>
                   </div>
                   <div className="flex items-center text-gray-700">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-2"></span>
                     <span>Time to be determined</span>
                   </div>
                   <div className="flex items-center text-gray-700">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-2"></span>
                     <span>Sunday morning participation</span>
                   </div>
                 </div>
@@ -113,19 +113,19 @@ export default function ChoirPage() {
                 </p>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-2"></span>
                     Adults of all ages welcome
                   </li>
                   <li className="flex items-center">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-2"></span>
                     No auditions required
                   </li>
                   <li className="flex items-center">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-2"></span>
                     All experience levels accepted
                   </li>
                   <li className="flex items-center">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                    <span className="w-2 h-2 bg-lcms-navy rounded-full mr-2"></span>
                     Commitment to regular attendance
                   </li>
                 </ul>
