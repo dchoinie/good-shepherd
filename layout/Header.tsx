@@ -36,17 +36,32 @@ export default function Header() {
 
   return (
     <div className="absolute top-0 left-0 z-50 w-full">
-      <div className="flex py-6 w-full justify-between items-center px-8">
-        <div className="flex gap-24">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-lcms-gold">
-              <Cross />
-            </span>
-            <h1 className="text-lcms-gold text-6xl font-italianno">
-              Good Shepherd
-            </h1>
+      <div
+        ref={containerRef}
+        className="backdrop-blur-md border-b border-gray-200/50 shadow-lg"
+      >
+        <div className="max-w-screen-xl mx-auto flex py-4 w-full justify-between items-center px-8">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="w-12 h-12 bg-gradient-to-br from-stone-600 to-gray-700 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+              <Cross className="text-white text-xl" />
+            </div>
+            <div>
+              <h1
+                className={`text-4xl font-italianno leading-none transition-colors duration-300 ${
+                  isHomePage ? "text-white" : "text-gray-700"
+                }`}
+              >
+                Good Shepherd
+              </h1>
+              <p className="text-lcms-gold text-sm font-medium -mt-1">
+                Lutheran Church
+              </p>
+            </div>
           </Link>
-          <div className="flex gap-16 items-center">
+
+          {/* Centered Navigation */}
+          <nav className="hidden lg:flex gap-8 items-center">
             {navItems.map((navItem: NavItem) => (
               <NavItemComponent
                 key={navItem.label}
@@ -54,17 +69,18 @@ export default function Header() {
                 isHomePage={isHomePage}
               />
             ))}
+          </nav>
+
+          {/* Button */}
+          <div className="flex justify-end items-center gap-4">
+            <Button
+              asChild
+              size="lg"
+              className="bg-lcms-gold hover:bg-lcms-gold/80 text-stone-800 font-semibold px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            >
+              <Link href="/new">I&apos;m New</Link>
+            </Button>
           </div>
-        </div>
-        <div className="flex justify-end items-center gap-4">
-          <Button
-            asChild
-            variant="default"
-            size="lg"
-            className="text-stone-800 bg-lcms-gold hover:bg-lcms-gold/80"
-          >
-            <Link href="/new">I&apos;m New</Link>
-          </Button>
         </div>
       </div>
     </div>
