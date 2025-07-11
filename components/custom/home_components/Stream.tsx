@@ -3,11 +3,13 @@
 import React, { useEffect, useState } from "react";
 import { YouTubeVideo } from "@/types/video";
 import PageContainer from "../PageContainer";
+
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import Link from "next/link";
 import Image from "next/image";
+import { Play, Calendar, ArrowRight } from "lucide-react";
 
 interface YouTubeSearchItem {
   id: {
@@ -156,7 +158,8 @@ const Stream = (): JSX.Element => {
   }
 
   return (
-    <div className="py-12 my-24 relative overflow-hidden">
+    <div className="py-24 bg-gradient-to-br from-stone-900 to-gray-900 relative overflow-hidden mb-24">
+      {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           src="/side_2.jpg"
@@ -167,65 +170,135 @@ const Stream = (): JSX.Element => {
           quality={100}
         />
       </div>
-      <div className="absolute inset-0 bg-stone-800/90" />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-stone-900/95 via-stone-800/90 to-gray-900/95" />
+
+      {/* Decorative background elements */}
+      <div
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}
+      ></div>
+
       <PageContainer>
-        <div className="flex flex-col justify-center items-center lg:flex-row gap-12 relative z-10">
-          <div className="flex w-1/2">
-            <AspectRatio ratio={16 / 9}>
-              {isLoading ? (
-                <Skeleton className="w-full h-full rounded-xl" />
-              ) : (
-                <div className="w-full h-full rounded-xl shadow-xl overflow-hidden">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${latestVideo?.id}?modestbranding=1&rel=0&showinfo=0&autoplay=0&origin=${window.location.origin}`}
-                    title={latestVideo?.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
-                </div>
-              )}
-            </AspectRatio>
+        <div className="relative z-10">
+          {/* Section Title */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-lcms-gold/20 text-lcms-gold px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <Play className="w-4 h-4" />
+              Live Stream
+            </div>
+            <h2 className="text-5xl font-bold text-white mb-4">
+              Join Us Online
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Can&apos;t make it to church? Join us for our live stream services
+              and stay connected with our community from anywhere.
+            </p>
           </div>
-          <div className="flex flex-col justify-center space-y-6">
-            <h4 className="text-white text-5xl">Live Stream</h4>
-            <div>
+
+          {/* Main Content */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Video Section */}
+            <div className="group relative">
+              {/* Decorative background card */}
+              <div className="absolute inset-0 bg-gradient-to-br from-lcms-gold to-yellow-500 rounded-2xl transform rotate-2 group-hover:rotate-4 transition-transform duration-300 opacity-20"></div>
+
+              {/* Video container */}
+              <div className="relative bg-white rounded-2xl shadow-2xl transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300 overflow-hidden">
+                <AspectRatio ratio={16 / 9}>
+                  {isLoading ? (
+                    <Skeleton className="w-full h-full rounded-2xl" />
+                  ) : (
+                    <div className="w-full h-full rounded-2xl overflow-hidden">
+                      <iframe
+                        src={`https://www.youtube.com/embed/${latestVideo?.id}?modestbranding=1&rel=0&showinfo=0&autoplay=0&origin=${window.location.origin}`}
+                        title={latestVideo?.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full"
+                      />
+                    </div>
+                  )}
+                </AspectRatio>
+              </div>
+            </div>
+
+            {/* Content Section */}
+            <div className="space-y-8">
               {isLoading ? (
                 <>
+                  <Skeleton className="h-8 w-48" />
+                  <Skeleton className="h-12 w-full" />
                   <Skeleton className="h-6 w-32" />
-                  <Skeleton className="h-8 w-full" />
+                  <Skeleton className="h-20 w-full" />
                 </>
               ) : (
                 <>
-                  <p className="text-lcms-gold">
-                    {new Date(
-                      latestVideo?.publishedAt || ""
-                    ).toLocaleDateString("en-US", {
-                      weekday: "long",
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </p>
-                  <h3 className="text-2xl font-serif text-white">
+                  {/* Date */}
+                  <div className="flex items-center gap-3 text-lcms-gold">
+                    <Calendar className="w-5 h-5" />
+                    <p className="text-lg font-medium">
+                      {new Date(
+                        latestVideo?.publishedAt || ""
+                      ).toLocaleDateString("en-US", {
+                        weekday: "long",
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </p>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-3xl font-bold text-white leading-tight">
                     {latestVideo?.title}
                   </h3>
+
+                  {/* Description */}
+                  <p className="text-gray-300 leading-relaxed text-lg">
+                    Join us for this special service as we gather together in
+                    worship, prayer, and the study of God&apos;s Word. All are
+                    welcome to participate in our online community.
+                  </p>
+
+                  {/* Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    <Button
+                      asChild
+                      className="bg-lcms-gold hover:bg-lcms-gold/80 text-stone-800 font-medium px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    >
+                      <Link
+                        href={`https://www.youtube.com/watch?v=${latestVideo?.id}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2"
+                      >
+                        Watch Live
+                        <Play className="w-4 h-4" />
+                      </Link>
+                    </Button>
+
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="border-2 border-white text-stone-800 hover:bg-white hover:text-stone-800 font-medium px-8 py-3 text-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      <Link
+                        href="/sermons"
+                        className="inline-flex items-center gap-2"
+                      >
+                        Previous Streams
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </Button>
+                  </div>
                 </>
               )}
             </div>
-            {isLoading ? (
-              <Skeleton className="h-14 w-48" />
-            ) : (
-              <Button
-                asChild
-                variant="default"
-                className="self-start bg-lcms-gold hover:bg-lcms-gold/80 text-stone-800 font-medium px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                size="lg"
-              >
-                <Link href="/watch">View Previous Streams</Link>
-              </Button>
-            )}
           </div>
         </div>
       </PageContainer>

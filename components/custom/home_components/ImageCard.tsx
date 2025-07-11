@@ -12,26 +12,32 @@ interface ImageCardProps {
 
 const ImageCard = ({ src, alt, title, latin, icon: Icon }: ImageCardProps) => {
   return (
-    <div className="flex flex-col">
-      <div className="relative">
-        <div className="flex flex-col items-center">
-          <Icon className="w-12 h-12 text-lcms-gold mb-4" />
-          <div className="text-center">
-            <h2 className="text-3xl font-serif font-bold text-stone-700 mb-1">
-              {latin}
-            </h2>
-            <p className="text-stone-700/80 text-lg">{title}</p>
+    <div className="group relative">
+      {/* Decorative background card */}
+      <div className="absolute inset-0 bg-gradient-to-br from-stone-600 to-gray-700 rounded-2xl transform rotate-2 group-hover:rotate-4 transition-transform duration-300 opacity-20"></div>
+
+      {/* Main card */}
+      <div className="relative bg-white rounded-2xl shadow-xl border border-gray-100 transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300 hover:shadow-2xl overflow-hidden">
+        {/* Icon and Title Section */}
+        <div className="p-8 text-center">
+          <div className="w-16 h-16 bg-gradient-to-br from-stone-600 to-gray-700 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
+            <Icon className="w-8 h-8 text-white" />
           </div>
-          <div className="absolute -inset-8 bg-stone-700/5 rounded-full blur-3xl -z-10" />
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-2">{latin}</h2>
+          <p className="text-gray-700 text-lg font-medium">{title}</p>
         </div>
-      </div>
-      <div className="h-[350px] relative mb-6 overflow-hidden rounded-lg">
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className="object-cover transition-transform duration-300 group-hover:scale-105 mt-3"
-        />
+
+        {/* Image Section */}
+        <div className="relative h-[300px] overflow-hidden">
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-stone-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        </div>
       </div>
     </div>
   );
