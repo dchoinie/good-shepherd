@@ -17,7 +17,7 @@ export default {
       },
       colors: {
         lcms: {
-          navy: "#1B3B6F",
+          navy: "#283240",
           gold: "#D4AF37",
           cream: "#F5F5DC",
           burgundy: "#8B0000",

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { navItems } from "@/types/navigation";
 import { NavItem } from "@/types/layout";
 import { useHeaderHeight } from "@/context/HeaderContext";
-import { Cross } from "lucide-react";
+import { Cross, ArrowRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
@@ -78,7 +78,10 @@ export default function Header() {
               size="lg"
               className="bg-lcms-gold hover:bg-lcms-gold/80 text-stone-800 font-semibold px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
-              <Link href="/new">I&apos;m New</Link>
+              <Link href="/new" className="inline-flex items-center gap-2">
+                I&apos;m New Here
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </Button>
           </div>
         </div>

@@ -14,13 +14,13 @@ const ImageCard = ({ src, alt, title, latin, icon: Icon }: ImageCardProps) => {
   return (
     <div className="group relative">
       {/* Decorative background card */}
-      <div className="absolute inset-0 bg-gradient-to-br from-stone-600 to-gray-700 rounded-2xl transform rotate-2 group-hover:rotate-4 transition-transform duration-300 opacity-20"></div>
+      <div className="absolute inset-0 bg-lcms-navy rounded-2xl transform rotate-2 group-hover:rotate-4 transition-transform duration-300"></div>
 
       {/* Main card */}
       <div className="relative bg-white rounded-2xl shadow-xl border border-gray-100 transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300 hover:shadow-2xl overflow-hidden">
         {/* Icon and Title Section */}
         <div className="p-8 text-center">
-          <div className="w-16 h-16 bg-gradient-to-br from-stone-600 to-gray-700 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
+          <div className="w-16 h-16 bg-gradient-to-br from-lcms-navy to-gray-700 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
             <Icon className="w-8 h-8 text-white" />
           </div>
 

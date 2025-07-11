@@ -1,7 +1,7 @@
 import React from "react";
 import PageContainer from "../PageContainer";
 import SectionTitle from "../SectionTitle";
-import { Book, Cross, School, Clock } from "lucide-react";
+import { Book, Cross, School, Clock, Church } from "lucide-react";
 
 const servicesGridItems = [
   {
@@ -10,9 +10,9 @@ const servicesGridItems = [
     icon: Cross,
     description:
       "Join us for worship and praise as we gather together in God's Word and Sacraments. Experience traditional Lutheran liturgy and meaningful hymns that proclaim Christ crucified and risen.",
-    color: "from-blue-50 to-indigo-50",
-    borderColor: "border-blue-100",
-    iconBg: "bg-blue-500",
+    color: "from-lcms-navy/5 to-lcms-navy/10",
+    borderColor: "border-lcms-navy/20",
+    iconBg: "bg-lcms-navy",
   },
   {
     name: "Bible Study For Life",
@@ -20,9 +20,9 @@ const servicesGridItems = [
     icon: Book,
     description:
       "Grow in your faith through Scripture study and discussion. This all-ages Bible study explores God's Word in depth, applying it to our daily lives and strengthening our walk with Christ.",
-    color: "from-green-50 to-emerald-50",
-    borderColor: "border-green-100",
-    iconBg: "bg-green-500",
+    color: "from-lcms-gold/10 to-lcms-gold/20",
+    borderColor: "border-lcms-gold/30",
+    iconBg: "bg-lcms-gold",
   },
   {
     name: "Sunday School",
@@ -30,9 +30,9 @@ const servicesGridItems = [
     icon: School,
     description:
       "Children ages 3 through 12 are invited to learn about Jesus through age-appropriate lessons, crafts, and activities. Classes run September through June.",
-    color: "from-purple-50 to-violet-50",
-    borderColor: "border-purple-100",
-    iconBg: "bg-purple-500",
+    color: "from-lcms-navy/5 to-lcms-gold/10",
+    borderColor: "border-lcms-navy/20",
+    iconBg: "bg-lcms-navy",
   },
 ];
 
@@ -53,7 +53,7 @@ const Services = (): JSX.Element => {
             title="Worship Schedule"
             tag="Join Us"
             subtitle="We welcome you to worship with us every Sunday morning."
-            tagColor="bg-stone-700"
+            tagIcon={<Church className="w-4 h-4" />}
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">

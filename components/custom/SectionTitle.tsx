@@ -1,24 +1,42 @@
-import { Badge } from "@/components/ui/badge";
 import React from "react";
 
 interface SectionTitleProps {
   title: string;
   subtitle?: string | JSX.Element;
   tag?: string;
-  tagColor?: string;
+  tagIcon?: React.ReactNode;
+  titleColor?: string;
+  subtitleColor?: string;
+  tagBgColor?: string;
+  tagTextColor?: string;
 }
 
 const SectionTitle = ({
   title,
   subtitle,
   tag,
-  tagColor = "bg-rose-900",
+  tagIcon,
+  titleColor = "text-gray-800",
+  subtitleColor = "text-gray-500",
+  tagBgColor = "bg-lcms-navy",
+  tagTextColor = "text-lcms-gold",
 }: SectionTitleProps) => {
   return (
-    <div className="flex flex-col items-center max-w-[800px] mx-auto text-center mb-16">
-      <Badge className={`${tagColor} text-white`}>{tag}</Badge>
-      <h2 className="text-4xl font-bold my-3 text-gray-800">{title}</h2>
-      <p className="text-gray-600">{subtitle}</p>
+    <div className="text-center mb-16">
+      {tag && (
+        <div
+          className={`inline-flex items-center gap-2 ${tagBgColor} ${tagTextColor} px-4 py-2 rounded-full text-sm font-medium mb-4`}
+        >
+          {tagIcon}
+          {tag}
+        </div>
+      )}
+      <h2 className={`text-5xl font-bold ${titleColor} mb-4`}>{title}</h2>
+      {subtitle && (
+        <p className={`text-xl ${subtitleColor} max-w-2xl mx-auto`}>
+          {subtitle}
+        </p>
+      )}
     </div>
   );
 };

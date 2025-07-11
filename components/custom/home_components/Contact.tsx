@@ -21,25 +21,25 @@ const Contact = () => {
       icon: MapPin,
       title: "Visit Us",
       content: "2101 Lor Ray Drive, North Mankato, MN 56003",
-      color: "from-blue-50 to-indigo-50",
-      borderColor: "border-blue-100",
-      iconBg: "bg-blue-500",
+      color: "from-lcms-navy/5 to-lcms-navy/10",
+      borderColor: "border-lcms-navy/20",
+      iconBg: "bg-lcms-navy",
     },
     {
       icon: Phone,
       title: "Call Us",
       content: "(507) 388-4336",
-      color: "from-green-50 to-emerald-50",
-      borderColor: "border-green-100",
-      iconBg: "bg-green-500",
+      color: "from-lcms-gold/10 to-lcms-gold/20",
+      borderColor: "border-lcms-gold/30",
+      iconBg: "bg-lcms-gold",
     },
     {
       icon: Mail,
       title: "Email Us",
       content: "goodshepmankato@gmail.com",
-      color: "from-purple-50 to-violet-50",
-      borderColor: "border-purple-100",
-      iconBg: "bg-purple-500",
+      color: "from-lcms-navy/5 to-lcms-gold/10",
+      borderColor: "border-lcms-navy/20",
+      iconBg: "bg-lcms-navy",
     },
   ];
 
@@ -83,7 +83,8 @@ const Contact = () => {
             title="Get in Touch"
             subtitle="We'd love to hear from you and welcome you to our Good Shepherd family. Whether you have questions, need prayer, or want to learn more about our church, we're here for you."
             tag="Contact Us"
-            tagColor="bg-stone-700"
+            tagBgColor="bg-lcms-navy"
+            tagIcon={<Mail className="w-4 h-4" />}
           />
 
           {/* Contact Information Grid */}
@@ -131,12 +132,12 @@ const Contact = () => {
               return (
                 <div key={action.title} className="group relative">
                   {/* Decorative background card */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-stone-600 to-gray-700 rounded-2xl transform rotate-2 group-hover:rotate-4 transition-transform duration-300 opacity-20"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-lcms-navy to-lcms-navy/80 rounded-2xl transform rotate-2 group-hover:rotate-4 transition-transform duration-300 opacity-20"></div>
 
                   {/* Main card */}
                   <div className="relative bg-white rounded-2xl shadow-xl border border-gray-100 transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300 hover:shadow-2xl p-8 text-center">
                     {/* Icon */}
-                    <div className="w-16 h-16 bg-gradient-to-br from-stone-600 to-gray-700 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
+                    <div className="w-16 h-16 bg-gradient-to-br from-lcms-navy to-lcms-navy/80 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg">
                       <IconComponent className="text-white text-2xl" />
                     </div>
 

@@ -2,6 +2,7 @@ import React from "react";
 import SectionTitle from "../SectionTitle";
 import MinistriesCard from "./MinistriesCard";
 import PageContainer from "../PageContainer";
+import { PersonStanding } from "lucide-react";
 
 const ministriesData = [
   {
@@ -63,7 +64,7 @@ const Ministries = (): JSX.Element => {
         <SectionTitle
           title="Ministries"
           tag="Get Involved"
-          tagColor="bg-stone-700"
+          tagIcon={<PersonStanding className="w-4 h-4" />}
           subtitle="We offer a variety of ministries to help you get involved and make a difference. Whether you're passionate about community outreach, music, youth programs, or small group fellowship, there's a place for you here. Join us in serving others, building relationships, and growing together in faith."
         />
         <PageContainer>

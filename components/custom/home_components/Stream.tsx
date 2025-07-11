@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { YouTubeVideo } from "@/types/video";
 import PageContainer from "../PageContainer";
+import SectionTitle from "../SectionTitle";
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
@@ -158,7 +159,7 @@ const Stream = (): JSX.Element => {
   }
 
   return (
-    <div className="py-24 bg-gradient-to-br from-stone-900 to-gray-900 relative overflow-hidden mb-24">
+    <div className="py-24 bg-lcms-navy relative overflow-hidden mb-24">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -172,32 +173,19 @@ const Stream = (): JSX.Element => {
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-stone-900/95 via-stone-800/90 to-gray-900/95" />
-
-      {/* Decorative background elements */}
-      <div
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}
-      ></div>
+      <div className="absolute inset-0 bg-lcms-navy/90" />
 
       <PageContainer>
         <div className="relative z-10">
           {/* Section Title */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-lcms-gold/20 text-lcms-gold px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <Play className="w-4 h-4" />
-              Live Stream
-            </div>
-            <h2 className="text-5xl font-bold text-white mb-4">
-              Join Us Online
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Can&apos;t make it to church? Join us for our live stream services
-              and stay connected with our community from anywhere.
-            </p>
-          </div>
+          <SectionTitle
+            tag="Live Stream"
+            tagIcon={<Play className="w-4 h-4" />}
+            title="Join Us Online"
+            subtitle="Can't make it to church? Join us for our live stream services and stay connected with our community from anywhere."
+            titleColor="text-white"
+            subtitleColor="text-gray-300"
+          />
 
           {/* Main Content */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">

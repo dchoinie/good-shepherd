@@ -24,7 +24,7 @@ const Beliefs = () => {
           <SectionTitle
             title="The Lutheran Confessions"
             tag="Our Faith"
-            tagColor="bg-stone-700"
+            tagIcon={<Book className="w-4 h-4" />}
             subtitle="Drawn from God's Word, the Lutheran Confessions are a true and binding exposition of Holy Scripture and serve as authoritative texts for all pastors, congregations and other rostered church workers of The Lutheran Church—Missouri Synod."
           />
 

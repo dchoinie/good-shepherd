@@ -8,7 +8,7 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-stone-800 to-gray-900 text-gray-100 relative overflow-hidden">
+    <footer className="bg-lcms-navy text-gray-100 relative overflow-hidden">
       {/* Decorative background elements */}
       <div
         className="absolute inset-0 opacity-20"

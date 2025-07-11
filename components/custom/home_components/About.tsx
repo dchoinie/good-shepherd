@@ -3,7 +3,7 @@
 import React from "react";
 import PageContainer from "../PageContainer";
 import SectionTitle from "../SectionTitle";
-import { Cross, BookOpen, Clock, ArrowRight } from "lucide-react";
+import { Cross, BookOpen, Clock, ArrowRight, Info } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -15,10 +15,10 @@ const About = () => {
         "We are committed to growing in God's truth through worship, study, and fellowship, while demonstrating Jesus' love in our community through service, compassion, and outreach.",
       icon: Cross,
       href: "/mission",
-      color: "from-blue-50 to-indigo-50",
-      borderColor: "border-blue-100",
-      iconBg: "bg-blue-500",
-      buttonColor: "bg-blue-600 hover:bg-blue-700",
+      color: "from-lcms-navy/5 to-lcms-navy/10",
+      borderColor: "border-lcms-navy/20",
+      iconBg: "bg-lcms-navy",
+      buttonColor: "bg-lcms-navy hover:bg-lcms-navy/80",
     },
     {
       title: "Our History",
@@ -26,10 +26,10 @@ const About = () => {
         "Founded in 1957, Good Shepherd has been serving our community for over 65 years, providing a place of worship, fellowship, and spiritual growth while building on a foundation of faith.",
       icon: Clock,
       href: "/history",
-      color: "from-green-50 to-emerald-50",
-      borderColor: "border-green-100",
-      iconBg: "bg-green-500",
-      buttonColor: "bg-green-600 hover:bg-green-700",
+      color: "from-lcms-gold/10 to-lcms-gold/20",
+      borderColor: "border-lcms-gold/30",
+      iconBg: "bg-lcms-gold",
+      buttonColor: "bg-lcms-gold hover:bg-lcms-gold/80",
     },
     {
       title: "Our Beliefs",
@@ -37,10 +37,10 @@ const About = () => {
         "As members of The Lutheran Church—Missouri Synod, we hold to the teachings of the Bible and confess the faith as handed down in the Lutheran Confessions, centered on Christ crucified and risen.",
       icon: BookOpen,
       href: "/our-faith",
-      color: "from-stone-50 to-gray-50",
-      borderColor: "border-stone-100",
-      iconBg: "bg-stone-600",
-      buttonColor: "bg-stone-600 hover:bg-stone-700",
+      color: "from-lcms-navy/5 to-lcms-gold/10",
+      borderColor: "border-lcms-navy/20",
+      iconBg: "bg-lcms-navy",
+      buttonColor: "bg-lcms-navy hover:bg-lcms-navy/80",
     },
   ];
 
@@ -51,7 +51,8 @@ const About = () => {
           title="About Good Shepherd"
           subtitle="Discover our mission, explore our rich history, and learn about the beliefs that guide our congregation as we serve God and our community."
           tag="About Us"
-          tagColor="bg-stone-700"
+          tagBgColor="bg-lcms-navy"
+          tagIcon={<Info className="w-4 h-4" />}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
