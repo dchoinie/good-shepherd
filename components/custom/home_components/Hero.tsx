@@ -52,8 +52,9 @@ const Hero = (): React.ReactNode => {
             variant="outline"
             className="border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-stone-800 text-lg font-medium px-8 py-3"
             size="lg"
+            asChild
           >
-            Stream Live
+            <Link href="/stream">Live Stream</Link>
           </Button>
         </div>
       </Container>

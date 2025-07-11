@@ -116,7 +116,7 @@ export default function LiveStreamPage() {
   return (
     <>
       <PageTitle title="Live Streams" />
-      <Container>
+      <Container className="mb-24">
         {/* Upcoming Stream Section */}
         {upcomingStream && (
           <section className="my-8">

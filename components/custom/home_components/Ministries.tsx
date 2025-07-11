@@ -9,42 +9,42 @@ const ministriesData = [
     description:
       "Our Men's Ministry provides opportunities for men to grow in faith, build strong relationships, and serve the community through fellowship, study, and acts of service.",
     image: "/men.jpg",
-    href: "/ministries/men",
+    href: "/men",
   },
   {
     title: "Women",
     description:
       "Our Women's Ministry offers a welcoming space for women to connect, deepen their faith, and serve others through fellowship, study, and outreach opportunities.",
     image: "/women.jpg",
-    href: "/ministries/women",
+    href: "/women",
   },
   {
     title: "Students",
     description:
       "Our Student Ministry welcomes both Bethany Lutheran College and Mankato State University students, providing a supportive community to grow in faith, build friendships, and serve others.",
     image: "/students.jpg",
-    href: "/ministries/students",
+    href: "/students",
   },
   {
     title: "Youth",
     description:
       "Youth Ministry nurtures faith, friendship, and fun for young people through engaging activities, Bible study, and opportunities to serve and grow together.",
     image: "/youth.jpg",
-    href: "/ministries/youth",
+    href: "/youth",
   },
   {
     title: "Children",
     description:
       "Children's Ministry provides a loving and joyful environment where kids can learn about God, grow in faith, and build lasting friendships through fun and engaging activities.",
     image: "/children.jpg",
-    href: "/ministries/children",
+    href: "/children",
   },
   {
     title: "Music",
     description:
       "Good Shepherd's Music Ministry, centered around our choir, offers a meaningful way to glorify God through music while fostering fellowship and inspiring worship.",
     image: "/choir.jpg",
-    href: "/ministries/music",
+    href: "/choir",
   },
 ];
 
