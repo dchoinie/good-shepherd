@@ -37,6 +37,8 @@ interface LiveStream {
         url: string;
       };
     };
+  };
+  liveStreamingDetails: {
     scheduledStartTime: string;
   };
 }
@@ -63,7 +65,17 @@ export default function LiveStreamPage() {
         console.log("Upcoming streams response:", upcomingData);
 
         if (upcomingData.items && upcomingData.items.length > 0) {
-          setUpcomingStream(upcomingData.items[0]);
+          // Get detailed information including scheduled start time
+          const videoId = upcomingData.items[0].id.videoId;
+          const detailsResponse = await fetch(
+            `https://www.googleapis.com/youtube/v3/videos?part=snippet,liveStreamingDetails&id=${videoId}&key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}`
+          );
+          const detailsData = await detailsResponse.json();
+          console.log("Upcoming stream details:", detailsData);
+
+          if (detailsData.items && detailsData.items.length > 0) {
+            setUpcomingStream(detailsData.items[0]);
+          }
         }
 
         // Fetch past live streams with a broader search
@@ -144,9 +156,11 @@ export default function LiveStreamPage() {
                   </h3>
                   <p className="text-sm text-gray-600 mb-2">
                     Scheduled for:{" "}
-                    {upcomingStream.snippet.scheduledStartTime
+                    {upcomingStream.liveStreamingDetails.scheduledStartTime
                       ? format(
-                          new Date(upcomingStream.snippet.scheduledStartTime),
+                          new Date(
+                            upcomingStream.liveStreamingDetails.scheduledStartTime
+                          ),
                           "PPP p"
                         )
                       : "TBA"}

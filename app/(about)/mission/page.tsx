@@ -1,6 +1,8 @@
 import React from "react";
 import PageContainer from "../../../components/custom/PageContainer";
 import PageTitle from "../../../components/custom/PageTitle";
+import Link from "next/link";
+import { Button } from "../../../components/ui/button";
 
 export default function AboutPage() {
   return (
@@ -95,13 +97,18 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Our History
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 Good Shepherd has been serving our community for many years,
                 providing a place of worship, fellowship, and spiritual growth.
                 We continue to build on the foundation of faith established by
                 those who came before us, while looking forward to how God will
                 work through us in the future.
               </p>
+              <div className="text-center">
+                <Button asChild>
+                  <Link href="/history">Learn More About Our History</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </PageContainer>
