@@ -116,7 +116,10 @@ export default function SermonsPage() {
                 const dateSlug = sermonDate.toISOString().split("T")[0]; // YYYY-MM-DD format
 
                 return (
-                  <Link key={sermon.sys.id} href={`/sermons/${dateSlug}`}>
+                  <Link
+                    key={sermon.sys.id}
+                    href={`/sermons/${dateSlug}` as any}
+                  >
                     <Card className="h-full hover:shadow-lg transition-shadow duration-200 cursor-pointer border-gray-200 hover:border-blue-300">
                       <CardHeader className="pb-3">
                         <div className="flex items-center gap-2 text-blue-600">

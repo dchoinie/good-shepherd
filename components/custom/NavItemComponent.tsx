@@ -45,7 +45,7 @@ const NavItemComponent = ({
               className="cursor-pointer"
               onClick={() => setIsOpen(false)}
             >
-              <Link href={subItem.link} className="text-inherit">
+              <Link href={subItem.link as any} className="text-inherit">
                 {subItem.label}
               </Link>
             </DropdownMenuItem>
@@ -58,7 +58,7 @@ const NavItemComponent = ({
   if (link) {
     return (
       <Link
-        href={link}
+        href={link as any}
         className={`text-inherit text-[1rem] ${
           isHomePage ? "text-white" : "text-stone-700"
         }`}

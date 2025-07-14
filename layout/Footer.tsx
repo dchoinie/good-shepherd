@@ -75,7 +75,7 @@ const Footer = () => {
                 navItems[0].subItems.map((item) => (
                   <li key={item.label}>
                     <Link
-                      href={item.link}
+                      href={item.link as any}
                       className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center gap-2 group"
                     >
                       <span className="w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -86,7 +86,7 @@ const Footer = () => {
               ) : (
                 <li>
                   <Link
-                    href={navItems[0]?.link || "#"}
+                    href={navItems[0].link as any}
                     className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <span className="w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -107,7 +107,7 @@ const Footer = () => {
                 navItems[1].subItems.map((item) => (
                   <li key={item.label}>
                     <Link
-                      href={item.link}
+                      href={item.link as any}
                       className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center gap-2 group"
                     >
                       <span className="w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -118,7 +118,7 @@ const Footer = () => {
               ) : (
                 <li>
                   <Link
-                    href={navItems[1]?.link || "#"}
+                    href={navItems[1]?.link || ("#" as any)}
                     className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <span className="w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -139,7 +139,7 @@ const Footer = () => {
                 navItems[2].subItems.map((item) => (
                   <li key={item.label}>
                     <Link
-                      href={item.link}
+                      href={item.link as any}
                       className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center gap-2 group"
                     >
                       <span className="w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -150,7 +150,7 @@ const Footer = () => {
               ) : (
                 <li>
                   <Link
-                    href={navItems[2]?.link || "#"}
+                    href={navItems[2]?.link || ("#" as any)}
                     className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <span className="w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -176,7 +176,7 @@ const Footer = () => {
                     section.subItems.map((item) => (
                       <li key={item.label}>
                         <Link
-                          href={item.link}
+                          href={item.link as any}
                           className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center gap-2 group"
                         >
                           <span className="w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -187,7 +187,7 @@ const Footer = () => {
                   ) : (
                     <li>
                       <Link
-                        href={section.link || "#"}
+                        href={section.link || ("#" as any)}
                         className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center gap-2 group"
                       >
                         <span className="w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -210,19 +210,19 @@ const Footer = () => {
             </p>
             <div className="flex space-x-6 text-sm">
               <Link
-                href="/terms"
+                href={"/terms" as any}
                 className="text-gray-400 hover:text-lcms-gold transition-colors duration-300"
               >
                 Terms & Conditions
               </Link>
               <Link
-                href="/privacy"
+                href={"/privacy" as any}
                 className="text-gray-400 hover:text-lcms-gold transition-colors duration-300"
               >
                 Privacy Policy
               </Link>
               <Link
-                href="/accessibility"
+                href={"/accessibility" as any}
                 className="text-gray-400 hover:text-lcms-gold transition-colors duration-300"
               >
                 Accessibility

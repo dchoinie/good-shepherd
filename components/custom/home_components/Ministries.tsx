@@ -75,7 +75,7 @@ const Ministries = (): JSX.Element => {
                 title={ministry.title}
                 description={ministry.description}
                 image={ministry.image}
-                href={ministry.href}
+                href={ministry.href as any}
               />
             ))}
           </div>

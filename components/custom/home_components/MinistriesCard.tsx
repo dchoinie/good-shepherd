@@ -55,7 +55,7 @@ const MinistriesCard = ({
             asChild
             className="bg-lcms-gold hover:bg-lcms-gold/80 text-stone-800 font-medium px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 self-start"
           >
-            <Link href={href} className="inline-flex items-center gap-2">
+            <Link href={href as any} className="inline-flex items-center gap-2">
               Learn More
               <ArrowRight className="w-4 h-4" />
             </Link>

@@ -8,6 +8,10 @@ const Breadcrumbs = () => {
   const pathname = usePathname();
   const paths = pathname.split("/").filter(Boolean);
 
+  const getBreadcrumbHref = (index: number) => {
+    return `/${paths.slice(0, index + 1).join("/")}` as const;
+  };
+
   return (
     <nav className="flex items-center text-sm text-gray-600 mb-4">
       <Link href="/" className="hover:text-gray-900 flex items-center">
@@ -17,7 +21,7 @@ const Breadcrumbs = () => {
         <div key={path} className="flex items-center">
           <span className="mx-2">/</span>
           <Link
-            href={`/${paths.slice(0, index + 1).join("/")}`}
+            href={getBreadcrumbHref(index) as any}
             className="capitalize hover:text-gray-900"
           >
             {path}

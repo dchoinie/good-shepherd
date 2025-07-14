@@ -260,7 +260,9 @@ const Stream = (): JSX.Element => {
                       className="bg-lcms-gold hover:bg-lcms-gold/80 text-stone-800 font-medium px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                     >
                       <Link
-                        href={`https://www.youtube.com/watch?v=${latestVideo?.id}`}
+                        href={
+                          `https://www.youtube.com/watch?v=${latestVideo?.id}` as any
+                        }
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2"

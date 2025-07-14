@@ -121,7 +121,7 @@ export default function NewsletterPage() {
                 return (
                   <Link
                     key={newsletter.sys.id}
-                    href={`/newsletter/${dateSlug}`}
+                    href={`/newsletter/${dateSlug}` as any}
                   >
                     <Card className="h-full hover:shadow-lg transition-shadow duration-200 cursor-pointer border-gray-200 hover:border-blue-300">
                       <CardHeader className="pb-3">

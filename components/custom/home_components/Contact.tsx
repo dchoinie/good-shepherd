@@ -15,6 +15,13 @@ import {
   Heart,
 } from "lucide-react";
 
+interface QuickAction {
+  icon: React.ElementType;
+  title: string;
+  description: string;
+  href: string;
+}
+
 const Contact = () => {
   const contactInfo = [
     {
@@ -43,7 +50,7 @@ const Contact = () => {
     },
   ];
 
-  const quickActions = [
+  const quickActions: QuickAction[] = [
     {
       icon: MessageCircle,
       title: "Send a Message",
@@ -127,7 +134,7 @@ const Contact = () => {
 
           {/* Quick Actions */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {quickActions.map((action) => {
+            {quickActions.map((action: QuickAction) => {
               const IconComponent = action.icon;
               return (
                 <div key={action.title} className="group relative">
@@ -155,7 +162,7 @@ const Contact = () => {
                       className="bg-lcms-gold hover:bg-lcms-gold/80 text-stone-800 font-medium px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
                     >
                       <Link
-                        href={action.href}
+                        href={action.href as any}
                         className="inline-flex items-center gap-2"
                       >
                         Get Started
