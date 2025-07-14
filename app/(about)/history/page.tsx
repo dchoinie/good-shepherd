@@ -288,7 +288,7 @@ export default function HistoryPage() {
                 title="Pastoral Leadership Through the Years"
                 subtitle="Faithful servants who have guided our congregation"
                 tag="Leadership"
-                tagColor="bg-green-600"
+                tagBgColor="bg-green-600"
               />
               <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
                 <div className="grid md:grid-cols-2 gap-6">
@@ -389,7 +389,7 @@ export default function HistoryPage() {
                 title="Our Journey Through Time"
                 subtitle="Key moments in the life of Good Shepherd Lutheran Church"
                 tag="Timeline"
-                tagColor="bg-orange-600"
+                tagBgColor="bg-orange-600"
               />
 
               <div className="relative">

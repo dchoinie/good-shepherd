@@ -41,7 +41,7 @@ export default function ChildrenPage() {
               title="Sunday School"
               subtitle="Learning God's Word Together"
               tag="During School Year"
-              tagColor="bg-blue-600"
+              tagBgColor="bg-blue-600"
             />
 
             <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -142,7 +142,7 @@ export default function ChildrenPage() {
               title="Vacation Bible School"
               subtitle="Summer Adventure in Faith"
               tag="Summer Program"
-              tagColor="bg-yellow-600"
+              tagBgColor="bg-yellow-600"
             />
 
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-16">
@@ -267,7 +267,7 @@ export default function ChildrenPage() {
               title="Concordia Classical Academy"
               subtitle="Classical Christian Education"
               tag="K-8 Partnership"
-              tagColor="bg-red-800"
+              tagBgColor="bg-red-800"
             />
 
             <div className="max-w-6xl mx-auto">

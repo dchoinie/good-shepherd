@@ -9,9 +9,9 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 interface SermonPageProps {
-  params: {
+  params: Promise<{
     date: string;
-  };
+  }>;
 }
 
 async function SermonContent({ date }: { date: string }) {
@@ -90,10 +90,12 @@ async function SermonContent({ date }: { date: string }) {
   }
 }
 
-export default function SermonPage({ params }: SermonPageProps) {
+export default async function SermonPage({ params }: SermonPageProps) {
+  const { date } = await params;
+
   // Validate date format (YYYY-MM-DD)
   const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
-  if (!dateRegex.test(params.date)) {
+  if (!dateRegex.test(date)) {
     notFound();
   }
 
@@ -101,15 +103,12 @@ export default function SermonPage({ params }: SermonPageProps) {
     <div className="min-h-screen bg-gray-50">
       <PageTitle
         title="Sermon"
-        subtitle={`Sermon from ${new Date(params.date).toLocaleDateString(
-          "en-US",
-          {
-            weekday: "long",
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          }
-        )}`}
+        subtitle={`Sermon from ${new Date(date).toLocaleDateString("en-US", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}`}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -143,7 +142,7 @@ export default function SermonPage({ params }: SermonPageProps) {
             </div>
           }
         >
-          <SermonContent date={params.date} />
+          <SermonContent date={date} />
         </Suspense>
       </div>
     </div>

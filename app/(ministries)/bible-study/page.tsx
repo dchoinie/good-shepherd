@@ -34,7 +34,7 @@ export default function BibleStudy() {
                   title="Deepen Your Faith Through Scripture"
                   subtitle="Our Bible Study For Life program offers a comprehensive approach to understanding God's Word in a welcoming, discussion-based environment."
                   tag="All Ages Welcome"
-                  tagColor="bg-blue-700"
+                  tagBgColor="bg-blue-700"
                 />
 
                 <div className="space-y-6 mt-8">
@@ -108,7 +108,7 @@ export default function BibleStudy() {
               title="What to Expect"
               subtitle="Our Bible Study For Life program is designed to be engaging, educational, and spiritually enriching for everyone"
               tag="Program Overview"
-              tagColor="bg-blue-700"
+              tagBgColor="bg-blue-700"
             />
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
@@ -228,7 +228,7 @@ export default function BibleStudy() {
             title="Current Study Focus"
             subtitle="We explore various books of the Bible and theological topics throughout the year"
             tag="Current Topic"
-            tagColor="bg-blue-700"
+            tagBgColor="bg-blue-700"
           />
 
           <div className="bg-gradient-to-br from-blue-50 to-gray-50 rounded-3xl p-12 border border-blue-200">

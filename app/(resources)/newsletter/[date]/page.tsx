@@ -9,9 +9,9 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 interface NewsletterPageProps {
-  params: {
+  params: Promise<{
     date: string;
-  };
+  }>;
 }
 
 async function NewsletterContent({ date }: { date: string }) {
@@ -92,10 +92,12 @@ async function NewsletterContent({ date }: { date: string }) {
   }
 }
 
-export default function NewsletterPage({ params }: NewsletterPageProps) {
+export default async function NewsletterPage({ params }: NewsletterPageProps) {
+  const { date } = await params;
+
   // Validate date format (YYYY-MM-DD)
   const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
-  if (!dateRegex.test(params.date)) {
+  if (!dateRegex.test(date)) {
     notFound();
   }
 
@@ -103,7 +105,7 @@ export default function NewsletterPage({ params }: NewsletterPageProps) {
     <div className="min-h-screen bg-gray-50">
       <PageTitle
         title="Newsletter"
-        subtitle={`Newsletter from ${new Date(params.date).toLocaleDateString(
+        subtitle={`Newsletter from ${new Date(date).toLocaleDateString(
           "en-US",
           {
             weekday: "long",
@@ -145,7 +147,7 @@ export default function NewsletterPage({ params }: NewsletterPageProps) {
             </div>
           }
         >
-          <NewsletterContent date={params.date} />
+          <NewsletterContent date={date} />
         </Suspense>
       </div>
     </div>
