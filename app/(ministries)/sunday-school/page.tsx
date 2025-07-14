@@ -1,291 +1,391 @@
-import React from "react";
-import PageContainer from "../../../components/custom/PageContainer";
+"use client";
+
 import PageTitle from "../../../components/custom/PageTitle";
+import PageContainer from "../../../components/custom/PageContainer";
+import SectionTitle from "../../../components/custom/SectionTitle";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+
+import {
+  BookOpen,
+  Users,
+  Clock,
+  Heart,
+  Lightbulb,
+  MessageCircle,
+  Calendar,
+  MapPin,
+  GraduationCap,
+  Palette,
+  Music,
+  Handshake,
+} from "lucide-react";
 
 export default function SundaySchoolPage() {
   return (
-    <>
-      <div className="min-h-screen bg-gray-50">
-        <PageTitle
-          title="Sunday School"
-          subtitle="Nurturing young hearts and minds in God's Word through age-appropriate learning and fellowship"
-        />
+    <div className="bg-gray-50 pb-24">
+      <PageTitle
+        title="Sunday School"
+        subtitle="Nurturing young hearts and minds in God's Word through age-appropriate learning and fellowship"
+      />
 
-        <PageContainer>
-          <div className="container mx-auto px-4 py-24">
-            {/* Introduction */}
-            <div className="max-w-4xl mx-auto mb-16">
-              <div className="relative bg-gradient-to-br from-blue-50 to-lcms-navy/20 rounded-2xl p-8 md:p-12 shadow-sm border border-blue-100">
-                <div className="absolute top-0 left-0 w-24 h-24 bg-lcms-navy rounded-full opacity-10 -translate-x-12 -translate-y-12"></div>
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-lcms-navy rounded-full opacity-10 translate-x-16 translate-y-16"></div>
-                <div className="relative">
-                  <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                    Growing in Faith Together
-                  </h2>
-                  <p className="text-xl text-gray-700 leading-relaxed">
-                    Our Sunday School program provides children with a solid
-                    foundation in biblical knowledge, Christian values, and
-                    spiritual growth. Through engaging lessons, interactive
-                    activities, and loving guidance, we help children develop a
-                    lifelong relationship with Jesus Christ.
-                  </p>
-                </div>
-              </div>
-            </div>
+      <PageContainer>
+        {/* Hero Section */}
+        <div className="py-20 bg-gradient-to-br from-lcms-navy/5 to-lcms-gold/10 rounded-3xl mx-4 mb-20">
+          <div className="px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <SectionTitle
+                  title="Growing in Faith Together"
+                  subtitle="Our Sunday School program provides children with a solid foundation in biblical knowledge, Christian values, and spiritual growth. Through engaging lessons, interactive activities, and loving guidance, we help children develop a lifelong relationship with Jesus Christ."
+                  tag="Children's Ministry"
+                  tagBgColor="bg-lcms-navy"
+                />
 
-            {/* Schedule and Information */}
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <svg
-                      className="w-6 h-6 text-blue-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-semibold text-gray-900">
-                    Schedule
-                  </h3>
-                </div>
-                <div className="space-y-4">
-                  <div className="p-4 bg-blue-50 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 mb-2">
-                      When We Meet
-                    </h4>
-                    <p className="text-gray-700">
-                      Sundays during the school year (September - May)
-                    </p>
-                    <p className="text-gray-700 font-medium">
-                      10:15 AM - 11:15 AM
-                    </p>
-                  </div>
-                  <div className="p-4 bg-gray-50 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 mb-2">
-                      Location
-                    </h4>
-                    <p className="text-gray-700">
-                      Sunday School classrooms in the church building
-                    </p>
-                  </div>
-                  <div className="p-4 bg-yellow-50 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 mb-2">Timing</h4>
-                    <p className="text-gray-700">
-                      Immediately following the Divine Service
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
-                    <svg
-                      className="w-6 h-6 text-yellow-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                      />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-semibold text-gray-900">
-                    Age Groups
-                  </h3>
-                </div>
-                <p className="text-gray-700 mb-4">
-                  Children are divided into age-appropriate groups to ensure the
-                  best learning experience for each child.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                    <span className="font-medium text-gray-900">
-                      Pre-K & Kindergarten
-                    </span>
-                    <Badge className="bg-blue-100 text-blue-800">
-                      Younger Group
-                    </Badge>
-                  </div>
-                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                    <span className="font-medium text-gray-900">
-                      1st Grade & Up
-                    </span>
-                    <Badge className="bg-green-100 text-green-800">
-                      Older Group
-                    </Badge>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* What We Do */}
-            <div className="max-w-4xl mx-auto mb-16">
-              <div className="relative bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 md:p-12 shadow-sm border border-green-100">
-                <div className="absolute top-0 left-0 w-24 h-24 bg-green-500 rounded-full opacity-10 -translate-x-12 -translate-y-12"></div>
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-emerald-500 rounded-full opacity-10 translate-x-16 translate-y-16"></div>
-                <div className="relative">
-                  <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                    What We Learn
-                  </h2>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                        Bible Stories & Lessons
-                      </h3>
-                      <ul className="space-y-2 text-gray-700">
-                        <li className="flex items-start">
-                          <span className="w-2 h-2 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                          <span>Age-appropriate Bible stories</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="w-2 h-2 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                          <span>Interactive storytelling</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="w-2 h-2 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                          <span>Memory verses</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="w-2 h-2 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                          <span>Christian songs and hymns</span>
-                        </li>
-                      </ul>
+                <div className="space-y-6 mt-8">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-lcms-navy/10 rounded-xl flex items-center justify-center">
+                      <Clock className="text-lcms-navy text-xl" />
                     </div>
-
-                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                        Activities & Crafts
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-800">
+                        Sundays 10:15 AM - 11:15 AM
                       </h3>
-                      <ul className="space-y-2 text-gray-700">
-                        <li className="flex items-start">
-                          <span className="w-2 h-2 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                          <span>Creative crafts and projects</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="w-2 h-2 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                          <span>Games and activities</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="w-2 h-2 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                          <span>Prayer time</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="w-2 h-2 bg-green-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                          <span>Fellowship and friendship building</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Volunteer Opportunities */}
-            <div className="max-w-4xl mx-auto mb-16">
-              <div className="relative bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 md:p-12 shadow-sm border border-amber-100">
-                <div className="absolute top-0 left-0 w-24 h-24 bg-amber-500 rounded-full opacity-10 -translate-x-12 -translate-y-12"></div>
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-orange-500 rounded-full opacity-10 translate-x-16 translate-y-16"></div>
-                <div className="relative">
-                  <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                    Join Our Teaching Team
-                  </h2>
-                  <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                    We are always looking for dedicated volunteers to help teach
-                    and guide our children in their faith journey. Whether you
-                    have teaching experience or simply a heart for children,
-                    your help is always appreciated.
-                  </p>
-
-                  <div className="grid md:grid-cols-2 gap-6 mb-8">
-                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                        How You Can Help
-                      </h3>
-                      <ul className="space-y-2 text-gray-700">
-                        <li className="flex items-start">
-                          <span className="w-2 h-2 bg-amber-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                          <span>Lead or assist with lessons</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="w-2 h-2 bg-amber-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                          <span>Help with crafts and activities</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="w-2 h-2 bg-amber-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                          <span>Provide classroom support</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="w-2 h-2 bg-amber-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                          <span>Share your faith and experiences</span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                        What We Provide
-                      </h3>
-                      <ul className="space-y-2 text-gray-700">
-                        <li className="flex items-start">
-                          <span className="w-2 h-2 bg-amber-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                          <span>Curriculum and lesson materials</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="w-2 h-2 bg-amber-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                          <span>Training and support</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="w-2 h-2 bg-amber-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                          <span>Flexible scheduling options</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="w-2 h-2 bg-amber-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
-                          <span>A rewarding experience with children</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="text-center">
-                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 inline-block">
-                      <p className="text-lg font-semibold text-gray-900 mb-2">
-                        Ready to Get Involved?
-                      </p>
-                      <p className="text-gray-700">
-                        Contact our church office or speak with any of our
-                        current Sunday School teachers to learn more about
-                        volunteering opportunities.
+                      <p className="text-gray-600">
+                        During school year (September - May)
                       </p>
                     </div>
                   </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-lcms-gold/10 rounded-xl flex items-center justify-center">
+                      <Users className="text-lcms-gold text-xl" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-800">
+                        Age-Appropriate Groups
+                      </h3>
+                      <p className="text-gray-600">Pre-K through elementary</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-lcms-navy/10 rounded-xl flex items-center justify-center">
+                      <MapPin className="text-lcms-navy text-xl" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-800">
+                        Sunday School Classrooms
+                      </h3>
+                      <p className="text-gray-600">In the church building</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="bg-gray-200 rounded-2xl p-8 text-center min-h-[400px] flex items-center justify-center border-2 border-dashed border-gray-300">
+                  <div>
+                    <GraduationCap className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                    <p className="text-gray-500 text-lg font-medium">
+                      Sunday School Image
+                    </p>
+                    <p className="text-gray-400 text-sm mt-2">
+                      Image will be added here
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
-            {/* Contact Information */}
-            <div className="max-w-2xl mx-auto text-center">
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Questions About Sunday School?
-                </h3>
+        {/* What We Learn Section */}
+        <div className="py-20 bg-gradient-to-r from-lcms-navy/5 to-lcms-gold/10 relative overflow-hidden">
+          <div
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234B5563' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }}
+          ></div>
+          <div className="relative">
+            <SectionTitle
+              title="What We Learn"
+              subtitle="Our Sunday School program combines biblical education with fun, interactive activities to engage children of all ages"
+              tag="Curriculum"
+              tagBgColor="bg-lcms-navy"
+            />
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+              <Card className="bg-white shadow-xl border-l-4 border-lcms-navy transform hover:scale-105 transition-transform duration-300">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-lcms-navy/10 rounded-xl flex items-center justify-center">
+                      <BookOpen className="text-lcms-navy text-xl" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800">
+                      Bible Stories
+                    </h3>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    Age-appropriate Bible stories with interactive storytelling
+                    and memory verses to help children understand God's Word.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white shadow-xl border-l-4 border-lcms-gold transform hover:scale-105 transition-transform duration-300">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-lcms-gold/10 rounded-xl flex items-center justify-center">
+                      <Palette className="text-lcms-gold text-xl" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800">
+                      Crafts & Activities
+                    </h3>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    Creative crafts and fun activities that reinforce biblical
+                    lessons and help children express their faith through art.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white shadow-xl border-l-4 border-lcms-navy transform hover:scale-105 transition-transform duration-300">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-lcms-navy/10 rounded-xl flex items-center justify-center">
+                      <Music className="text-lcms-navy text-xl" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800">
+                      Songs & Hymns
+                    </h3>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    Christian songs and hymns that teach biblical truths and
+                    help children develop a love for worship and praise.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white shadow-xl border-l-4 border-lcms-gold transform hover:scale-105 transition-transform duration-300">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-lcms-gold/10 rounded-xl flex items-center justify-center">
+                      <Handshake className="text-lcms-gold text-xl" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800">
+                      Prayer & Fellowship
+                    </h3>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    Prayer time and fellowship activities that build friendships
+                    and teach children the importance of community in faith.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+
+        {/* Age Groups Section */}
+        <div className="py-20">
+          <SectionTitle
+            title="Age Groups"
+            subtitle="Children are divided into age-appropriate groups to ensure the best learning experience for each child"
+            tag="Groups"
+            tagBgColor="bg-lcms-navy"
+          />
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div className="bg-gradient-to-br from-lcms-navy/5 to-lcms-gold/10 rounded-3xl p-12 border border-lcms-navy/20">
+              <h3 className="text-3xl font-bold text-gray-800 mb-6">
+                Younger Group
+              </h3>
+              <div className="flex items-center gap-4 mb-6">
+                <Badge className="bg-lcms-navy text-white text-lg px-4 py-2">
+                  Pre-K & Kindergarten
+                </Badge>
+              </div>
+              <p className="text-gray-700 leading-relaxed text-lg mb-8">
+                Our youngest learners focus on foundational biblical concepts
+                through:
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-lcms-navy rounded-full mt-3 flex-shrink-0"></div>
+                  <span className="text-gray-700">
+                    Simple Bible stories with colorful illustrations
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-lcms-gold rounded-full mt-3 flex-shrink-0"></div>
+                  <span className="text-gray-700">
+                    Hands-on crafts and activities
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-lcms-navy rounded-full mt-3 flex-shrink-0"></div>
+                  <span className="text-gray-700">
+                    Short memory verses and songs
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-lcms-gold rounded-full mt-3 flex-shrink-0"></div>
+                  <span className="text-gray-700">
+                    Play-based learning activities
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-lcms-gold/5 to-lcms-navy/10 rounded-3xl p-12 border border-lcms-gold/20">
+              <h3 className="text-3xl font-bold text-gray-800 mb-6">
+                Older Group
+              </h3>
+              <div className="flex items-center gap-4 mb-6">
+                <Badge className="bg-lcms-gold text-white text-lg px-4 py-2">
+                  1st Grade & Up
+                </Badge>
+              </div>
+              <p className="text-gray-700 leading-relaxed text-lg mb-8">
+                Our older students engage in more in-depth learning through:
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-lcms-gold rounded-full mt-3 flex-shrink-0"></div>
+                  <span className="text-gray-700">
+                    Deeper Bible study and discussion
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-lcms-navy rounded-full mt-3 flex-shrink-0"></div>
+                  <span className="text-gray-700">
+                    More complex crafts and projects
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-lcms-gold rounded-full mt-3 flex-shrink-0"></div>
+                  <span className="text-gray-700">
+                    Scripture memorization and application
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-lcms-navy rounded-full mt-3 flex-shrink-0"></div>
+                  <span className="text-gray-700">
+                    Interactive games and activities
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Volunteer Opportunities Section */}
+        <div className="py-20 bg-gradient-to-r from-lcms-navy/5 to-lcms-gold/10 relative overflow-hidden">
+          <div
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234B5563' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }}
+          ></div>
+          <div className="relative">
+            <SectionTitle
+              title="Join Our Teaching Team"
+              subtitle="We are always looking for dedicated volunteers to help teach and guide our children in their faith journey"
+              tag="Volunteer"
+              tagBgColor="bg-lcms-navy"
+            />
+
+            <div className="grid md:grid-cols-2 gap-8 mt-16">
+              <Card className="bg-white shadow-xl border-l-4 border-lcms-navy transform hover:scale-105 transition-transform duration-300">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-lcms-navy/10 rounded-xl flex items-center justify-center">
+                      <Heart className="text-lcms-navy text-xl" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800">
+                      How You Can Help
+                    </h3>
+                  </div>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-lcms-navy rounded-full mt-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">
+                        Lead or assist with lessons
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-lcms-gold rounded-full mt-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">
+                        Help with crafts and activities
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-lcms-navy rounded-full mt-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">
+                        Provide classroom support
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-lcms-gold rounded-full mt-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">
+                        Share your faith and experiences
+                      </span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white shadow-xl border-l-4 border-lcms-gold transform hover:scale-105 transition-transform duration-300">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-lcms-gold/10 rounded-xl flex items-center justify-center">
+                      <Lightbulb className="text-lcms-gold text-xl" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800">
+                      What We Provide
+                    </h3>
+                  </div>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-lcms-gold rounded-full mt-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">
+                        Curriculum and lesson materials
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-lcms-navy rounded-full mt-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">
+                        Training and support
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-lcms-gold rounded-full mt-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">
+                        Flexible scheduling options
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-lcms-navy rounded-full mt-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">
+                        A rewarding experience with children
+                      </span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="text-center mt-12">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200 max-w-md mx-auto">
+                <h4 className="text-2xl font-bold text-gray-800 mb-4">
+                  Ready to Get Involved?
+                </h4>
                 <p className="text-gray-700 mb-6">
-                  We&apos;d love to hear from you! Contact us for more
-                  information about our Sunday School program, volunteer
-                  opportunities, or to register your child.
+                  Contact our church office or speak with any of our current
+                  Sunday School teachers to learn more about volunteering
+                  opportunities.
                 </p>
                 <div className="space-y-2 text-gray-700">
                   <p>
@@ -298,8 +398,8 @@ export default function SundaySchoolPage() {
               </div>
             </div>
           </div>
-        </PageContainer>
-      </div>
-    </>
+        </div>
+      </PageContainer>
+    </div>
   );
 }

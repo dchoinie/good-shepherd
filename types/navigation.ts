@@ -83,16 +83,8 @@ export const navItems: NavItem[] = [
         link: "/newsletter",
       },
       {
-        label: "Prayer",
-        link: "/prayer",
-      },
-      {
-        label: "Marriage",
-        link: "/marriage",
-      },
-      {
-        label: "Baptism",
-        link: "/baptism",
+        label: "Lutheran Resources",
+        link: "/lutheran-resources",
       },
     ],
   },

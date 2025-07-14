@@ -41,7 +41,6 @@ export default function ChildrenPage() {
               title="Sunday School"
               subtitle="Learning God's Word Together"
               tag="During School Year"
-              tagBgColor="bg-blue-600"
             />
 
             <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -142,7 +141,6 @@ export default function ChildrenPage() {
               title="Vacation Bible School"
               subtitle="Summer Adventure in Faith"
               tag="Summer Program"
-              tagBgColor="bg-yellow-600"
             />
 
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-16">

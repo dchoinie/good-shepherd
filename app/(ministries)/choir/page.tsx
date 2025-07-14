@@ -221,7 +221,7 @@ export default function ChoirPage() {
                     after Sunday service or contact the church office
                   </p>
                   <p>
-                    <strong>Location:</strong> Church sanctuary and choir room
+                    <strong>Location:</strong> Church sanctuary
                   </p>
                   <p>
                     <strong>Commitment:</strong> Weekly practices during school

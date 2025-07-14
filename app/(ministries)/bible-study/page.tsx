@@ -1,8 +1,8 @@
 "use client";
 
-import PageTitle from "../../../components/custom/PageTitle";
-import PageContainer from "../../../components/custom/PageContainer";
-import SectionTitle from "../../../components/custom/SectionTitle";
+import PageTitle from "@/components/custom/PageTitle";
+import PageContainer from "@/components/custom/PageContainer";
+import SectionTitle from "@/components/custom/SectionTitle";
 import { Card, CardContent } from "@/components/ui/card";
 
 import {
@@ -26,7 +26,7 @@ export default function BibleStudy() {
 
       <PageContainer>
         {/* Hero Section with Image Placeholder */}
-        <div className="py-20 bg-gradient-to-br from-blue-50 to-gray-50 rounded-3xl mx-4 mb-20">
+        <div className="py-20 bg-gradient-to-br from-lcms-navy/5 to-lcms-gold/10 rounded-3xl mx-4 mb-20">
           <div className="px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -34,13 +34,13 @@ export default function BibleStudy() {
                   title="Deepen Your Faith Through Scripture"
                   subtitle="Our Bible Study For Life program offers a comprehensive approach to understanding God's Word in a welcoming, discussion-based environment."
                   tag="All Ages Welcome"
-                  tagBgColor="bg-blue-700"
+                  tagBgColor="bg-lcms-navy"
                 />
 
                 <div className="space-y-6 mt-8">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                      <Clock className="text-blue-700 text-xl" />
+                    <div className="w-12 h-12 bg-lcms-navy/10 rounded-xl flex items-center justify-center">
+                      <Clock className="text-lcms-navy text-xl" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-800">
@@ -51,8 +51,8 @@ export default function BibleStudy() {
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center">
-                      <Users className="text-yellow-700 text-xl" />
+                    <div className="w-12 h-12 bg-lcms-gold/10 rounded-xl flex items-center justify-center">
+                      <Users className="text-lcms-gold text-xl" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-800">
@@ -63,8 +63,8 @@ export default function BibleStudy() {
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-brown-100 rounded-xl flex items-center justify-center">
-                      <MessageCircle className="text-brown-700 text-xl" />
+                    <div className="w-12 h-12 bg-lcms-navy/10 rounded-xl flex items-center justify-center">
+                      <MessageCircle className="text-lcms-navy text-xl" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-800">
@@ -96,7 +96,7 @@ export default function BibleStudy() {
         </div>
 
         {/* What to Expect Section */}
-        <div className="py-20 bg-gradient-to-r from-gray-100 to-blue-50 relative overflow-hidden">
+        <div className="py-20 bg-gradient-to-r from-lcms-navy/5 to-lcms-gold/10 relative overflow-hidden">
           <div
             className="absolute inset-0 opacity-30"
             style={{
@@ -108,15 +108,15 @@ export default function BibleStudy() {
               title="What to Expect"
               subtitle="Our Bible Study For Life program is designed to be engaging, educational, and spiritually enriching for everyone"
               tag="Program Overview"
-              tagBgColor="bg-blue-700"
+              tagBgColor="bg-lcms-navy"
             />
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-              <Card className="bg-white shadow-xl border-l-4 border-blue-600 transform hover:scale-105 transition-transform duration-300">
+              <Card className="bg-white shadow-xl border-l-4 border-lcms-navy transform hover:scale-105 transition-transform duration-300">
                 <CardContent className="p-8">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                      <BookOpen className="text-blue-700 text-xl" />
+                    <div className="w-12 h-12 bg-lcms-navy/10 rounded-xl flex items-center justify-center">
+                      <BookOpen className="text-lcms-navy text-xl" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-800">
                       In-Depth Scripture Study
@@ -130,11 +130,11 @@ export default function BibleStudy() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-white shadow-xl border-l-4 border-yellow-600 transform hover:scale-105 transition-transform duration-300">
+              <Card className="bg-white shadow-xl border-l-4 border-lcms-gold transform hover:scale-105 transition-transform duration-300">
                 <CardContent className="p-8">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center">
-                      <MessageCircle className="text-yellow-700 text-xl" />
+                    <div className="w-12 h-12 bg-lcms-gold/10 rounded-xl flex items-center justify-center">
+                      <MessageCircle className="text-lcms-gold text-xl" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-800">
                       Meaningful Discussion
@@ -148,11 +148,11 @@ export default function BibleStudy() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-white shadow-xl border-l-4 border-brown-600 transform hover:scale-105 transition-transform duration-300">
+              <Card className="bg-white shadow-xl border-l-4 border-lcms-navy transform hover:scale-105 transition-transform duration-300">
                 <CardContent className="p-8">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-brown-100 rounded-xl flex items-center justify-center">
-                      <Heart className="text-brown-700 text-xl" />
+                    <div className="w-12 h-12 bg-lcms-navy/10 rounded-xl flex items-center justify-center">
+                      <Heart className="text-lcms-navy text-xl" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-800">
                       Spiritual Growth
@@ -166,11 +166,11 @@ export default function BibleStudy() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-white shadow-xl border-l-4 border-gray-600 transform hover:scale-105 transition-transform duration-300">
+              <Card className="bg-white shadow-xl border-l-4 border-lcms-gold transform hover:scale-105 transition-transform duration-300">
                 <CardContent className="p-8">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
-                      <Users className="text-gray-700 text-xl" />
+                    <div className="w-12 h-12 bg-lcms-gold/10 rounded-xl flex items-center justify-center">
+                      <Users className="text-lcms-gold text-xl" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-800">
                       All Ages Together
@@ -184,11 +184,11 @@ export default function BibleStudy() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-white shadow-xl border-l-4 border-blue-600 transform hover:scale-105 transition-transform duration-300">
+              <Card className="bg-white shadow-xl border-l-4 border-lcms-navy transform hover:scale-105 transition-transform duration-300">
                 <CardContent className="p-8">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                      <Lightbulb className="text-blue-700 text-xl" />
+                    <div className="w-12 h-12 bg-lcms-navy/10 rounded-xl flex items-center justify-center">
+                      <Lightbulb className="text-lcms-navy text-xl" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-800">
                       Practical Application
@@ -201,11 +201,11 @@ export default function BibleStudy() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-white shadow-xl border-l-4 border-yellow-600 transform hover:scale-105 transition-transform duration-300">
+              <Card className="bg-white shadow-xl border-l-4 border-lcms-gold transform hover:scale-105 transition-transform duration-300">
                 <CardContent className="p-8">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center">
-                      <Calendar className="text-yellow-700 text-xl" />
+                    <div className="w-12 h-12 bg-lcms-gold/10 rounded-xl flex items-center justify-center">
+                      <Calendar className="text-lcms-gold text-xl" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-800">
                       Consistent Schedule
@@ -228,10 +228,10 @@ export default function BibleStudy() {
             title="Current Study Focus"
             subtitle="We explore various books of the Bible and theological topics throughout the year"
             tag="Current Topic"
-            tagBgColor="bg-blue-700"
+            tagBgColor="bg-lcms-navy"
           />
 
-          <div className="bg-gradient-to-br from-blue-50 to-gray-50 rounded-3xl p-12 border border-blue-200">
+          <div className="bg-gradient-to-br from-lcms-navy/5 to-lcms-gold/10 rounded-3xl p-12 border border-lcms-navy/20">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-3xl font-bold text-gray-800 mb-6">
@@ -243,31 +243,31 @@ export default function BibleStudy() {
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-lcms-navy rounded-full mt-3 flex-shrink-0"></div>
                     <span className="text-gray-700">
                       Complete books of the Bible with verse-by-verse study
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-yellow-600 rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-lcms-gold rounded-full mt-3 flex-shrink-0"></div>
                     <span className="text-gray-700">
                       Theological themes and Christian doctrine
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-brown-600 rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-lcms-navy rounded-full mt-3 flex-shrink-0"></div>
                     <span className="text-gray-700">
                       Life application and practical Christian living
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-gray-600 rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-lcms-gold rounded-full mt-3 flex-shrink-0"></div>
                     <span className="text-gray-700">
                       Historical context and cultural background
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-lcms-navy rounded-full mt-3 flex-shrink-0"></div>
                     <span className="text-gray-700">
                       Contemporary issues from a biblical perspective
                     </span>
@@ -281,8 +281,8 @@ export default function BibleStudy() {
                 </h4>
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <Clock className="text-blue-700" />
+                    <div className="w-10 h-10 bg-lcms-navy/10 rounded-lg flex items-center justify-center">
+                      <Clock className="text-lcms-navy" />
                     </div>
                     <div>
                       <p className="font-semibold text-gray-800">Time</p>
@@ -291,8 +291,8 @@ export default function BibleStudy() {
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
-                      <Calendar className="text-yellow-700" />
+                    <div className="w-10 h-10 bg-lcms-gold/10 rounded-lg flex items-center justify-center">
+                      <Calendar className="text-lcms-gold" />
                     </div>
                     <div>
                       <p className="font-semibold text-gray-800">Day</p>
@@ -301,8 +301,8 @@ export default function BibleStudy() {
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-brown-100 rounded-lg flex items-center justify-center">
-                      <MapPin className="text-brown-700" />
+                    <div className="w-10 h-10 bg-lcms-navy/10 rounded-lg flex items-center justify-center">
+                      <MapPin className="text-lcms-navy" />
                     </div>
                     <div>
                       <p className="font-semibold text-gray-800">Location</p>
