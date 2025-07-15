@@ -22,9 +22,6 @@ export default function Home() {
       <Ministries />
       <About />
       <Contact />
-      {/* Events */}
-      {/* CCA */}
-      {/* Support */}
     </div>
   );
 }
