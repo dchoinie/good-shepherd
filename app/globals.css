@@ -90,7 +90,7 @@
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground font-figtree;
+  html, body {
+    @apply bg-background text-foreground font-figtree overflow-x-hidden;
   }
 }
