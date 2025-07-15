@@ -10,7 +10,7 @@ import { ArrowRight, Play } from "lucide-react";
 
 const Hero = (): React.ReactNode => {
   return (
-    <div className="relative w-full h-screen overflow-hidden px-6 lg:px-0">
+    <div className="relative w-full h-screen overflow-hidden px-6 lg:px-0 pt-28 lg:pt-0">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
