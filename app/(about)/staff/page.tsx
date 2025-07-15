@@ -1,11 +1,16 @@
 import React from "react";
 import PageContainer from "../../../components/custom/PageContainer";
 import PageTitle from "../../../components/custom/PageTitle";
+import SEO from "@/components/custom/SEO";
 
 export default function StaffPage() {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
+        <SEO
+          title="Our Staff & Leadership"
+          keywords="Good Shepherd Lutheran Church, staff, leadership, church, Mankato, MN, Minnesota, Church"
+        />
         <PageTitle
           title="Our Staff & Leadership"
           subtitle="Meet the dedicated people who serve our congregation"

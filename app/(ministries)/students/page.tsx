@@ -1,11 +1,16 @@
 import React from "react";
 import PageContainer from "../../../components/custom/PageContainer";
 import PageTitle from "../../../components/custom/PageTitle";
+import SEO from "@/components/custom/SEO";
 
 export default function StudentsPage() {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
+        <SEO
+          title="Students Ministry"
+          keywords="Good Shepherd Lutheran Church, students ministry, college students, Mankato, MN, Minnesota, Church"
+        />
         <PageTitle
           title="Students Ministry"
           subtitle="A warm welcome to college students in the Mankato area"

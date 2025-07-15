@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import PageTitle from "@/components/custom/PageTitle";
 import { contentfulUtils } from "@/lib/contentful-utils";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import SEO from "@/components/custom/SEO";
 
 export default function LectionaryPage() {
   const [lectionary, setLectionary] = useState<any[]>([]);
@@ -66,6 +67,10 @@ export default function LectionaryPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="Lectionary"
+        keywords="Good Shepherd Lutheran Church, lectionary, upcoming readings, recent readings, liturgical color, first reading, second reading, gospel, Mankato, MN, Minnesota, Church"
+      />
       <PageTitle
         title="Lectionary"
         subtitle="Explore the upcoming and recent lectionary readings."

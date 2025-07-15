@@ -11,11 +11,16 @@ import {
   CardTitle,
 } from "../../../components/ui/card";
 import { Badge } from "../../../components/ui/badge";
+import SEO from "@/components/custom/SEO";
 
 export default function SupportPage() {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
+        <SEO
+          title="Support & Care"
+          keywords="Good Shepherd Lutheran Church, support, care, prayer requests, pastoral care, financial support, donations, Mankato, MN, Minnesota, Church"
+        />
         <PageTitle
           title="Support & Care"
           subtitle="We're here to support you in your faith journey and life's challenges"

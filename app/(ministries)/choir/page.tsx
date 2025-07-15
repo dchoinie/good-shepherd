@@ -2,11 +2,16 @@ import React from "react";
 import PageContainer from "../../../components/custom/PageContainer";
 import PageTitle from "../../../components/custom/PageTitle";
 import { Music, Users, Calendar, Heart } from "lucide-react";
+import SEO from "@/components/custom/SEO";
 
 export default function ChoirPage() {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
+        <SEO
+          title="Adult Choir"
+          keywords="Good Shepherd Lutheran Church, adult choir, music, worship, Mankato, MN, Minnesota, Church"
+        />
         <PageTitle
           title="Adult Choir"
           subtitle="Lifting our voices in praise and worship together"

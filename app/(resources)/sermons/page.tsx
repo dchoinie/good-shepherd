@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Loader2 } from "lucide-react";
+import SEO from "@/components/custom/SEO";
 
 interface Sermon {
   sys: {
@@ -58,6 +59,10 @@ export default function SermonsPage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50">
+        <SEO
+          title="Sermons"
+          keywords="Good Shepherd Lutheran Church, sermons, worship, teachings, Mankato, MN, Minnesota, Church"
+        />
         <PageTitle
           title="Sermons"
           subtitle="Explore our collection of sermons and teachings from our worship services."

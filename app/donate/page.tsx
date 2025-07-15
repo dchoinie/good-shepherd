@@ -5,11 +5,16 @@ import DonationForm from "../../components/custom/DonationForm";
 import Link from "next/link";
 import { Button } from "../../components/ui/button";
 import { ArrowLeft, Heart } from "lucide-react";
+import SEO from "@/components/custom/SEO";
 
 export default function DonatePage() {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
+        <SEO
+          title="Support Our Ministry"
+          keywords="Good Shepherd Lutheran Church, donate, support, ministry, worship, study, fellowship, service, compassion, outreach, Mankato, MN, Minnesota, Church"
+        />
         <PageTitle
           title="Support Our Ministry"
           subtitle="Your generous donations help us continue our mission of growing in God's truth and showing Jesus' love"

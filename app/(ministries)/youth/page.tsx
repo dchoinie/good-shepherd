@@ -2,11 +2,16 @@ import React from "react";
 import PageContainer from "../../../components/custom/PageContainer";
 import PageTitle from "../../../components/custom/PageTitle";
 import { ExternalLink } from "lucide-react";
+import SEO from "@/components/custom/SEO";
 
 export default function YouthPage() {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
+        <SEO
+          title="Youth Ministries"
+          keywords="Good Shepherd Lutheran Church, youth ministries, faith, community, Mankato, MN, Minnesota, Church"
+        />
         <PageTitle
           title="Youth Ministries"
           subtitle="Nurturing faith and building character in the next generation"

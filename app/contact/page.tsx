@@ -20,6 +20,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import SEO from "@/components/custom/SEO";
 
 // Contact form schema
 const contactFormSchema = z.object({
@@ -81,6 +82,10 @@ export default function ContactPage() {
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-gray-50">
+        <SEO
+          title="Contact Us"
+          keywords="Good Shepherd Lutheran Church, contact us, message, prayer request, feedback, Mankato, MN, Minnesota, Church"
+        />
         <PageTitle
           title="Contact Us"
           subtitle="Get in touch with Good Shepherd Lutheran Church"

@@ -4,11 +4,16 @@ import PageTitle from "../../../components/custom/PageTitle";
 import Link from "next/link";
 import { Button } from "../../../components/ui/button";
 import { CheckCircle, Heart, ArrowLeft } from "lucide-react";
+import SEO from "@/components/custom/SEO";
 
 export default function DonationSuccessPage() {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
+        <SEO
+          title="Donation Successful"
+          keywords="Good Shepherd Lutheran Church, donation successful, thank you for your support, ministry, worship, study, fellowship, service, compassion, outreach, Mankato, MN, Minnesota, Church"
+        />
         <PageTitle
           title="Thank You!"
           subtitle="Your donation has been received and will help us continue our ministry"

@@ -3,11 +3,16 @@ import PageContainer from "../../../components/custom/PageContainer";
 import PageTitle from "../../../components/custom/PageTitle";
 import Link from "next/link";
 import { Button } from "../../../components/ui/button";
+import SEO from "@/components/custom/SEO";
 
 export default function AboutPage() {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
+        <SEO
+          title="About Good Shepherd"
+          keywords="Good Shepherd Lutheran Church, about, church, Mankato, MN, Minnesota, Church"
+        />
         <PageTitle
           title="About Good Shepherd"
           subtitle="Grow in God's Truth. Show Jesus' Love."

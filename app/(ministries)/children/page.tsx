@@ -4,11 +4,16 @@ import PageTitle from "../../../components/custom/PageTitle";
 import SectionTitle from "../../../components/custom/SectionTitle";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import SEO from "@/components/custom/SEO";
 
 export default function ChildrenPage() {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
+        <SEO
+          title="Children's Ministries"
+          keywords="Good Shepherd Lutheran Church, children's ministries, faith, learning, community, Mankato, MN, Minnesota, Church"
+        />
         <PageTitle
           title="Children's Ministries"
           subtitle="Nurturing young hearts and minds in faith, learning, and community"

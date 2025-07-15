@@ -2,10 +2,15 @@
 
 import PageTitle from "@/components/custom/PageTitle";
 import NewsletterSignupForm from "@/components/custom/NewsletterSignupForm";
+import SEO from "@/components/custom/SEO";
 
 export default function NewsletterPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="Newsletter"
+        keywords="Good Shepherd Lutheran Church, newsletter, church events, community news, spiritual insights, Mankato, MN, Minnesota, Church"
+      />
       <PageTitle
         title="Newsletter"
         subtitle="Stay connected with our church community through our newsletter."
@@ -29,7 +34,7 @@ export default function NewsletterPage() {
         <div className="mt-16 text-center">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              What You'll Receive
+              What You&apos;ll Receive
             </h3>
             <div className="grid md:grid-cols-3 gap-8 text-left">
               <div className="text-center">

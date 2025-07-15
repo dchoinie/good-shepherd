@@ -1,11 +1,16 @@
 import React from "react";
 import PageContainer from "../../../components/custom/PageContainer";
 import PageTitle from "../../../components/custom/PageTitle";
+import SEO from "@/components/custom/SEO";
 
 export default function VolunteerPage() {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
+        <SEO
+          title="Volunteer Opportunities"
+          keywords="Good Shepherd Lutheran Church, volunteer opportunities, church service, community service, Mankato, MN, Minnesota, Church"
+        />
         <PageTitle
           title="Volunteer Opportunities"
           subtitle="Join us in serving our church and community through various ministry opportunities"

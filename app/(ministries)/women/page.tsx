@@ -1,11 +1,16 @@
 import React from "react";
 import PageContainer from "../../../components/custom/PageContainer";
 import PageTitle from "../../../components/custom/PageTitle";
+import SEO from "@/components/custom/SEO";
 
 export default function WomenPage() {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
+        <SEO
+          title="Women's Ministries"
+          keywords="Good Shepherd Lutheran Church, women's ministries, faith, service, Mankato, MN, Minnesota, Church"
+        />
         <PageTitle
           title="Women's Ministries"
           subtitle="Serving Christ through the Lutheran Women's Missionary League (LWML)"

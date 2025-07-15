@@ -3,11 +3,16 @@ import PageContainer from "../../../components/custom/PageContainer";
 import PageTitle from "../../../components/custom/PageTitle";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import SEO from "@/components/custom/SEO";
 
 export default function MembershipPage() {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
+        <SEO
+          title="Membership"
+          keywords="Good Shepherd Lutheran Church, membership, church, Mankato, MN, Minnesota, Church"
+        />
         <PageTitle
           title="Membership"
           subtitle="Join our church family and grow in faith together"

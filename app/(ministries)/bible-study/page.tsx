@@ -4,6 +4,7 @@ import PageTitle from "@/components/custom/PageTitle";
 import PageContainer from "@/components/custom/PageContainer";
 import SectionTitle from "@/components/custom/SectionTitle";
 import { Card, CardContent } from "@/components/ui/card";
+import SEO from "@/components/custom/SEO";
 
 import {
   BookOpen,
@@ -19,6 +20,10 @@ import {
 export default function BibleStudy() {
   return (
     <div className="bg-gray-50 pb-24">
+      <SEO
+        title="Bible Study For Life"
+        keywords="Good Shepherd Lutheran Church, Bible study, teachings, Mankato, MN, Minnesota, Church"
+      />
       <PageTitle
         title="Bible Study For Life"
         subtitle="Join us for an all-ages approach to Bible study that includes in-depth looks into scripture, meaningful discussion, and spiritual growth."

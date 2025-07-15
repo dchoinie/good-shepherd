@@ -10,9 +10,8 @@ import {
   Users,
   MessageCircle,
   Building2,
-  Leaf,
-  Cross,
 } from "lucide-react";
+import SEO from "@/components/custom/SEO";
 
 export default function LutheranResourcesPage() {
   const resources = [
@@ -100,6 +99,10 @@ export default function LutheranResourcesPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="Lutheran Resources"
+        keywords="Good Shepherd Lutheran Church, Lutheran resources, spiritual growth, theological study, Lutheran ministry, Mankato, MN, Minnesota, Church"
+      />
       <PageTitle
         title="Lutheran Resources"
         subtitle="Discover trusted resources for spiritual growth, theological study, and Lutheran ministry."
@@ -173,9 +176,9 @@ export default function LutheranResourcesPage() {
               Need More Resources?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              If you're looking for specific resources or have questions about
-              any of these materials, please don't hesitate to reach out to our
-              church office or speak with our pastor.
+              If you&apos;re looking for specific resources or have questions
+              about any of these materials, please don&apos;t hesitate to reach
+              out to our church office or speak with our pastor.
             </p>
             <Button asChild>
               <a href="/contact" className="flex items-center">

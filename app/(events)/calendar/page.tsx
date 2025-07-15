@@ -1,9 +1,14 @@
 import PageTitle from "@/components/custom/PageTitle";
 import PageContainer from "@/components/custom/PageContainer";
+import SEO from "@/components/custom/SEO";
 
 export default function CalendarPage() {
   return (
     <>
+      <SEO
+        title="Church Calendar"
+        keywords="Good Shepherd Lutheran Church, church calendar, events, services, activities, Mankato, MN, Minnesota, Church"
+      />
       <PageTitle
         title="Church Calendar"
         subtitle="Stay up to date with all our church events, services, and activities"

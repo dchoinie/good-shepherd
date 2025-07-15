@@ -5,6 +5,7 @@ import PageContainer from "../../../components/custom/PageContainer";
 import PageTitle from "../../../components/custom/PageTitle";
 import SectionTitle from "../../../components/custom/SectionTitle";
 import { motion } from "framer-motion";
+import SEO from "@/components/custom/SEO";
 
 interface TimelineItem {
   date: string;
@@ -247,6 +248,10 @@ export default function HistoryPage() {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
+        <SEO
+          title="Our History"
+          keywords="Good Shepherd Lutheran Church, history, church, Mankato, MN, Minnesota, Church"
+        />
         <PageTitle
           title="Our History"
           subtitle="A journey of faith, community, and God's grace since 1957"

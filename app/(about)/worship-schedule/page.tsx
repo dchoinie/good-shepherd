@@ -2,6 +2,7 @@ import React from "react";
 import PageContainer from "../../../components/custom/PageContainer";
 import PageTitle from "../../../components/custom/PageTitle";
 import { Book, Cross, School, Calendar } from "lucide-react";
+import SEO from "@/components/custom/SEO";
 
 const scheduleItems = [
   {
@@ -35,6 +36,10 @@ export default function SchedulePage() {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
+        <SEO
+          title="Worship Schedule"
+          keywords="Good Shepherd Lutheran Church, worship schedule, church service times, Mankato, MN, Minnesota, Church"
+        />
         <PageTitle
           title="Worship Schedule"
           subtitle="Join us every Sunday morning for worship, study, and fellowship"

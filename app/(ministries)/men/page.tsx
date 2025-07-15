@@ -4,21 +4,16 @@ import PageTitle from "../../../components/custom/PageTitle";
 import PageContainer from "../../../components/custom/PageContainer";
 import SectionTitle from "../../../components/custom/SectionTitle";
 import { Card, CardContent } from "@/components/ui/card";
-
-import {
-  Users,
-  Clock,
-  Heart,
-  MessageCircle,
-  Calendar,
-  MapPin,
-  Car,
-  Home,
-} from "lucide-react";
+import SEO from "@/components/custom/SEO";
+import { Users, Heart, MessageCircle, Calendar, Car, Home } from "lucide-react";
 
 export default function MenPage() {
   return (
     <div className="bg-gray-50 pb-24">
+      <SEO
+        title="Men's Ministries"
+        keywords="Good Shepherd Lutheran Church, men's ministries, faith, fellowship, study, service, Mankato, MN, Minnesota, Church"
+      />
       <PageTitle
         title="Men's Ministries"
         subtitle="Building strong men of faith through fellowship, study, and service"
@@ -75,7 +70,7 @@ export default function MenPage() {
                         Rotating Locations
                       </h3>
                       <p className="text-gray-600">
-                        Typically at member's homes
+                        Typically at member&apos;s homes
                       </p>
                     </div>
                   </div>
@@ -87,7 +82,7 @@ export default function MenPage() {
                   <div>
                     <Users className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                     <p className="text-gray-500 text-lg font-medium">
-                      Men's Ministry Image
+                      Men&apos;s Ministry Image
                     </p>
                     <p className="text-gray-400 text-sm mt-2">
                       Image will be added here
@@ -146,8 +141,8 @@ export default function MenPage() {
                   </div>
                   <p className="text-gray-700 leading-relaxed">
                     Engage in thoughtful discussion of Scripture, exploring how
-                    God's Word applies to our daily lives as men, husbands, and
-                    fathers.
+                    God&apos;s Word applies to our daily lives as men, husbands,
+                    and fathers.
                   </p>
                 </CardContent>
               </Card>
@@ -195,8 +190,8 @@ export default function MenPage() {
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-lcms-navy rounded-full mt-3 flex-shrink-0"></div>
                   <span className="text-gray-700">
-                    Most commonly at member's homes for a comfortable, intimate
-                    setting
+                    Most commonly at member&apos;s homes for a comfortable,
+                    intimate setting
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -226,13 +221,14 @@ export default function MenPage() {
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-lcms-gold rounded-full mt-3 flex-shrink-0"></div>
                   <span className="text-gray-700">
-                    Need a ride? Let us know and we'll coordinate transportation
+                    Need a ride? Let us know and we&apos;ll coordinate
+                    transportation
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-lcms-navy rounded-full mt-3 flex-shrink-0"></div>
                   <span className="text-gray-700">
-                    Can offer a ride? We're always looking for drivers
+                    Can offer a ride? We&apos;re always looking for drivers
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -254,9 +250,9 @@ export default function MenPage() {
                 Join Us This Month
               </h3>
               <p className="text-gray-700 leading-relaxed text-lg mb-8">
-                Whether you're a long-time member or new to our church, all men
-                are welcome. Come as you are and experience the fellowship of
-                brothers in Christ.
+                Whether you&apos;re a long-time member or new to our church, all
+                men are welcome. Come as you are and experience the fellowship
+                of brothers in Christ.
               </p>
 
               <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200 max-w-md mx-auto">
@@ -292,7 +288,7 @@ export default function MenPage() {
 
                   <div className="pt-4 border-t border-gray-200">
                     <p className="text-gray-600 text-center">
-                      We're here to help you get connected!
+                      We&apos;re here to help you get connected!
                     </p>
                   </div>
                 </div>

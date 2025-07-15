@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { format } from "date-fns";
 import Container from "@/components/custom/Container";
 import { Skeleton } from "@/components/ui/skeleton";
+import SEO from "@/components/custom/SEO";
 
 interface YouTubeVideo {
   id: string;
@@ -127,6 +128,10 @@ export default function LiveStreamPage() {
 
   return (
     <>
+      <SEO
+        title="Live Streams"
+        keywords="Good Shepherd Lutheran Church, live streams, worship, teachings, Mankato, MN, Minnesota, Church"
+      />
       <PageTitle title="Live Streams" />
       <Container className="mb-24">
         {/* Upcoming Stream Section */}

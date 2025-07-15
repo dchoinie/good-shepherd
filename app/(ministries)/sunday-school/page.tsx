@@ -5,15 +5,13 @@ import PageContainer from "../../../components/custom/PageContainer";
 import SectionTitle from "../../../components/custom/SectionTitle";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-
+import SEO from "@/components/custom/SEO";
 import {
   BookOpen,
   Users,
   Clock,
   Heart,
   Lightbulb,
-  MessageCircle,
-  Calendar,
   MapPin,
   GraduationCap,
   Palette,
@@ -24,6 +22,10 @@ import {
 export default function SundaySchoolPage() {
   return (
     <div className="bg-gray-50 pb-24">
+      <SEO
+        title="Sunday School"
+        keywords="Good Shepherd Lutheran Church, Sunday School, children's ministry, faith, learning, Mankato, MN, Minnesota, Church"
+      />
       <PageTitle
         title="Sunday School"
         subtitle="Nurturing young hearts and minds in God's Word through age-appropriate learning and fellowship"
@@ -129,7 +131,8 @@ export default function SundaySchoolPage() {
                   </div>
                   <p className="text-gray-700 leading-relaxed">
                     Age-appropriate Bible stories with interactive storytelling
-                    and memory verses to help children understand God's Word.
+                    and memory verses to help children understand God&apos;s
+                    Word.
                   </p>
                 </CardContent>
               </Card>

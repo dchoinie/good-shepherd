@@ -3,7 +3,6 @@
 import PageTitle from "../../../components/custom/PageTitle";
 import PageContainer from "../../../components/custom/PageContainer";
 import SectionTitle from "../../../components/custom/SectionTitle";
-
 import {
   Cross,
   Book,
@@ -14,10 +13,15 @@ import {
   Shield,
   Lightbulb,
 } from "lucide-react";
+import SEO from "@/components/custom/SEO";
 
 export default function OurFaith() {
   return (
     <div className="bg-gray-50 pb-24">
+      <SEO
+        title="Our Faith"
+        keywords="Good Shepherd Lutheran Church, faith, church, Mankato, MN, Minnesota, Church"
+      />
       <PageTitle
         title="Our Faith"
         subtitle="We believe, teach, and confess the saving Gospel of Jesus Christ as revealed in Holy Scripture and confessed in the Lutheran Confessions."

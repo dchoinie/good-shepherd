@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/custom/SEO";
 
 interface SermonPageProps {
   params: Promise<{
@@ -39,6 +40,10 @@ async function SermonContent({ date }: { date: string }) {
 
     return (
       <div className="max-w-4xl mx-auto">
+        <SEO
+          title={`Sermon - ${formattedDate}`}
+          keywords={`Good Shepherd Lutheran Church, sermon, ${formattedDate}, worship, teachings, Mankato, MN, Minnesota, Church`}
+        />
         <Card className="mb-8">
           <CardHeader>
             <div className="flex items-center gap-2 text-blue-600 mb-2">
