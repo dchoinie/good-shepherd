@@ -19,7 +19,8 @@ export default function OurFaith() {
   return (
     <div className="bg-gray-50 pb-24">
       <SEO
-        title="Our Faith"
+        title="Our Faith | Good Shepherd Lutheran Church"
+        canonical="https://goodshepherdmankato.org/our-faith"
         keywords="Good Shepherd Lutheran Church, faith, church, Mankato, MN, Minnesota, Church"
       />
       <PageTitle

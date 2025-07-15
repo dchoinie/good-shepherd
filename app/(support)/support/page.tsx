@@ -20,6 +20,7 @@ export default function SupportPage() {
         <SEO
           title="Support & Care"
           keywords="Good Shepherd Lutheran Church, support, care, prayer requests, pastoral care, financial support, donations, Mankato, MN, Minnesota, Church"
+          canonical="https://goodshepherdmankato.org/support"
         />
         <PageTitle
           title="Support & Care"

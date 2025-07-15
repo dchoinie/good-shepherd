@@ -11,6 +11,7 @@ export default function YouthPage() {
         <SEO
           title="Youth Ministries"
           keywords="Good Shepherd Lutheran Church, youth ministries, faith, community, Mankato, MN, Minnesota, Church"
+          canonical="https://goodshepherdmankato.org/youth"
         />
         <PageTitle
           title="Youth Ministries"

@@ -23,6 +23,7 @@ export default function BibleStudy() {
       <SEO
         title="Bible Study For Life"
         keywords="Good Shepherd Lutheran Church, Bible study, teachings, Mankato, MN, Minnesota, Church"
+        canonical="https://goodshepherdmankato.org/bible-study"
       />
       <PageTitle
         title="Bible Study For Life"

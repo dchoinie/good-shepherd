@@ -85,6 +85,7 @@ export default function ContactPage() {
         <SEO
           title="Contact Us"
           keywords="Good Shepherd Lutheran Church, contact us, message, prayer request, feedback, Mankato, MN, Minnesota, Church"
+          canonical="https://goodshepherdmankato.org/contact"
         />
         <PageTitle
           title="Contact Us"
@@ -126,6 +127,11 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="Contact Us"
+        keywords="Good Shepherd Lutheran Church, contact us, message, prayer request, feedback, Mankato, MN, Minnesota, Church"
+        canonical="https://goodshepherdmankato.org/contact"
+      />
       <PageTitle
         title="Contact Us"
         subtitle="We'd love to hear from you. Send us a message and we'll respond as soon as possible."

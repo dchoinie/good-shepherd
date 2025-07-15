@@ -8,8 +8,8 @@ export default function StaffPage() {
     <>
       <div className="min-h-screen bg-gray-50">
         <SEO
-          title="Our Staff & Leadership"
-          keywords="Good Shepherd Lutheran Church, staff, leadership, church, Mankato, MN, Minnesota, Church"
+          title="Our Staff | Good Shepherd Lutheran Church"
+          canonical="https://goodshepherdmankato.org/staff"
         />
         <PageTitle
           title="Our Staff & Leadership"

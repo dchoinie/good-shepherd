@@ -37,7 +37,8 @@ export default function SchedulePage() {
     <>
       <div className="min-h-screen bg-gray-50">
         <SEO
-          title="Worship Schedule"
+          title="Worship Schedule | Good Shepherd Lutheran Church"
+          canonical="https://goodshepherdmankato.org/worship-schedule"
           keywords="Good Shepherd Lutheran Church, worship schedule, church service times, Mankato, MN, Minnesota, Church"
         />
         <PageTitle

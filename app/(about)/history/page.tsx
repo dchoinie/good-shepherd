@@ -249,8 +249,8 @@ export default function HistoryPage() {
     <>
       <div className="min-h-screen bg-gray-50">
         <SEO
-          title="Our History"
-          keywords="Good Shepherd Lutheran Church, history, church, Mankato, MN, Minnesota, Church"
+          title="Our History | Good Shepherd Lutheran Church"
+          canonical="https://goodshepherdmankato.org/history"
         />
         <PageTitle
           title="Our History"

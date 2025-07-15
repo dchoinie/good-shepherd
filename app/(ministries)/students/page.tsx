@@ -10,6 +10,7 @@ export default function StudentsPage() {
         <SEO
           title="Students Ministry"
           keywords="Good Shepherd Lutheran Church, students ministry, college students, Mankato, MN, Minnesota, Church"
+          canonical="https://goodshepherdmankato.org/students"
         />
         <PageTitle
           title="Students Ministry"

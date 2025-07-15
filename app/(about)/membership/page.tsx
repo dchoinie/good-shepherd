@@ -10,7 +10,8 @@ export default function MembershipPage() {
     <>
       <div className="min-h-screen bg-gray-50">
         <SEO
-          title="Membership"
+          title="Membership | Good Shepherd Lutheran Church"
+          canonical="https://goodshepherdmankato.org/membership"
           keywords="Good Shepherd Lutheran Church, membership, church, Mankato, MN, Minnesota, Church"
         />
         <PageTitle

@@ -13,6 +13,7 @@ export default function Home() {
       <SEO
         title="Good Shepherd Lutheran Church"
         keywords="Good Shepherd, Lutheran Church, Worship, Study, Fellowship, Service, Compassion, Outreach, Mankato, MN, Minnesota, Church"
+        canonical="https://goodshepherdmankato.org/"
       />
       <Hero />
       <Beliefs />

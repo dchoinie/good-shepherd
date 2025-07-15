@@ -43,6 +43,7 @@ async function SermonContent({ date }: { date: string }) {
         <SEO
           title={`Sermon - ${formattedDate}`}
           keywords={`Good Shepherd Lutheran Church, sermon, ${formattedDate}, worship, teachings, Mankato, MN, Minnesota, Church`}
+          canonical={`https://goodshepherdmankato.org/sermons/${date}`}
         />
         <Card className="mb-8">
           <CardHeader>
@@ -62,7 +63,6 @@ async function SermonContent({ date }: { date: string }) {
             </p>
           </CardHeader>
         </Card>
-
         <Card>
           <CardContent className="pt-8">
             <div className="prose prose-lg max-w-none">
@@ -115,7 +115,6 @@ export default async function SermonPage({ params }: SermonPageProps) {
           day: "numeric",
         })}`}
       />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
           <Link href="/sermons">
@@ -125,7 +124,6 @@ export default async function SermonPage({ params }: SermonPageProps) {
             </Button>
           </Link>
         </div>
-
         <Suspense
           fallback={
             <div className="max-w-4xl mx-auto">

@@ -15,6 +15,7 @@ export default function NewVisitorPage() {
       <SEO
         title="I'm New | Good Shepherd Lutheran Church"
         keywords="Lutheran church for new visitors, visiting Good Shepherd Lutheran Church, first time at church, what to expect at church, church service times North Mankato, welcoming church in Mankato MN, directions to Good Shepherd Lutheran Church, family friendly church Mankato, Sunday worship for newcomers, Bible study for visitors, LCMS church for new members"
+        canonical="https://goodshepherdmankato.org/new"
       />
       <PageTitle
         title="Welcome to Good Shepherd"

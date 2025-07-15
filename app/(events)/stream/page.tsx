@@ -129,7 +129,8 @@ export default function LiveStreamPage() {
   return (
     <>
       <SEO
-        title="Live Streams"
+        title="Live Stream | Good Shepherd Lutheran Church"
+        canonical="https://goodshepherdmankato.org/stream"
         keywords="Good Shepherd Lutheran Church, live streams, worship, teachings, Mankato, MN, Minnesota, Church"
       />
       <PageTitle title="Live Streams" />

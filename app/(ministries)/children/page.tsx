@@ -13,6 +13,7 @@ export default function ChildrenPage() {
         <SEO
           title="Children's Ministries"
           keywords="Good Shepherd Lutheran Church, children's ministries, faith, learning, community, Mankato, MN, Minnesota, Church"
+          canonical="https://goodshepherdmankato.org/children"
         />
         <PageTitle
           title="Children's Ministries"

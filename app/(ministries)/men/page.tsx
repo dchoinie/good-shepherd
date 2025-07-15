@@ -13,6 +13,7 @@ export default function MenPage() {
       <SEO
         title="Men's Ministries"
         keywords="Good Shepherd Lutheran Church, men's ministries, faith, fellowship, study, service, Mankato, MN, Minnesota, Church"
+        canonical="https://goodshepherdmankato.org/men"
       />
       <PageTitle
         title="Men's Ministries"

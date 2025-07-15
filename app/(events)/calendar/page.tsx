@@ -6,8 +6,8 @@ export default function CalendarPage() {
   return (
     <>
       <SEO
-        title="Church Calendar"
-        keywords="Good Shepherd Lutheran Church, church calendar, events, services, activities, Mankato, MN, Minnesota, Church"
+        title="Event Calendar | Good Shepherd Lutheran Church"
+        canonical="https://goodshepherdmankato.org/calendar"
       />
       <PageTitle
         title="Church Calendar"

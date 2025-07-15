@@ -10,6 +10,7 @@ export default function VolunteerPage() {
         <SEO
           title="Volunteer Opportunities"
           keywords="Good Shepherd Lutheran Church, volunteer opportunities, church service, community service, Mankato, MN, Minnesota, Church"
+          canonical="https://goodshepherdmankato.org/volunteer"
         />
         <PageTitle
           title="Volunteer Opportunities"

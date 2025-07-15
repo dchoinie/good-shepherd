@@ -102,6 +102,7 @@ export default function LutheranResourcesPage() {
       <SEO
         title="Lutheran Resources"
         keywords="Good Shepherd Lutheran Church, Lutheran resources, spiritual growth, theological study, Lutheran ministry, Mankato, MN, Minnesota, Church"
+        canonical="https://goodshepherdmankato.org/lutheran-resources"
       />
       <PageTitle
         title="Lutheran Resources"

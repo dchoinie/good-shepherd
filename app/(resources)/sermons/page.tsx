@@ -62,6 +62,7 @@ export default function SermonsPage() {
         <SEO
           title="Sermons"
           keywords="Good Shepherd Lutheran Church, sermons, worship, teachings, Mankato, MN, Minnesota, Church"
+          canonical="https://goodshepherdmankato.org/sermons"
         />
         <PageTitle
           title="Sermons"
@@ -88,6 +89,11 @@ export default function SermonsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="Sermons"
+        keywords="Good Shepherd Lutheran Church, sermons, worship, teachings, Mankato, MN, Minnesota, Church"
+        canonical="https://goodshepherdmankato.org/sermons"
+      />
       <PageTitle
         title="Sermons"
         subtitle="Explore our collection of sermons and teachings from our worship services."

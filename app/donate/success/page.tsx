@@ -13,6 +13,7 @@ export default function DonationSuccessPage() {
         <SEO
           title="Donation Successful"
           keywords="Good Shepherd Lutheran Church, donation successful, thank you for your support, ministry, worship, study, fellowship, service, compassion, outreach, Mankato, MN, Minnesota, Church"
+          canonical="https://goodshepherdmankato.org/donate/success"
         />
         <PageTitle
           title="Thank You!"

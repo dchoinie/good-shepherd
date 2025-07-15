@@ -10,6 +10,7 @@ export default function NewsletterPage() {
       <SEO
         title="Newsletter"
         keywords="Good Shepherd Lutheran Church, newsletter, church events, community news, spiritual insights, Mankato, MN, Minnesota, Church"
+        canonical="https://goodshepherdmankato.org/newsletter"
       />
       <PageTitle
         title="Newsletter"

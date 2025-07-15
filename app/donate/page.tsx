@@ -14,6 +14,7 @@ export default function DonatePage() {
         <SEO
           title="Support Our Ministry"
           keywords="Good Shepherd Lutheran Church, donate, support, ministry, worship, study, fellowship, service, compassion, outreach, Mankato, MN, Minnesota, Church"
+          canonical="https://goodshepherdmankato.org/donate"
         />
         <PageTitle
           title="Support Our Ministry"

@@ -10,8 +10,8 @@ export default function AboutPage() {
     <>
       <div className="min-h-screen bg-gray-50">
         <SEO
-          title="About Good Shepherd"
-          keywords="Good Shepherd Lutheran Church, about, church, Mankato, MN, Minnesota, Church"
+          title="Our Mission | Good Shepherd Lutheran Church"
+          canonical="https://goodshepherdmankato.org/mission"
         />
         <PageTitle
           title="About Good Shepherd"

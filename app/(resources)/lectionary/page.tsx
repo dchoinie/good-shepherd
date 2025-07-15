@@ -70,6 +70,7 @@ export default function LectionaryPage() {
       <SEO
         title="Lectionary"
         keywords="Good Shepherd Lutheran Church, lectionary, upcoming readings, recent readings, liturgical color, first reading, second reading, gospel, Mankato, MN, Minnesota, Church"
+        canonical="https://goodshepherdmankato.org/lectionary"
       />
       <PageTitle
         title="Lectionary"

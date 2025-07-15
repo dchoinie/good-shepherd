@@ -25,6 +25,7 @@ export default function SundaySchoolPage() {
       <SEO
         title="Sunday School"
         keywords="Good Shepherd Lutheran Church, Sunday School, children's ministry, faith, learning, Mankato, MN, Minnesota, Church"
+        canonical="https://goodshepherdmankato.org/sunday-school"
       />
       <PageTitle
         title="Sunday School"

@@ -87,17 +87,19 @@ export default function Header() {
                 <SheetContent side="left" className="p-0 w-64 max-w-full">
                   <div className="flex flex-col h-full">
                     <div className="flex items-center gap-3 px-6 py-4 border-b border-gray-200">
-                      <div className="w-10 h-10 bg-gradient-to-br from-stone-600 to-gray-700 rounded-xl flex items-center justify-center shadow-lg">
-                        <Cross className="text-white text-xl" />
-                      </div>
-                      <div>
-                        <h1 className="text-2xl font-italianno leading-none text-gray-700">
-                          Good Shepherd
-                        </h1>
-                        <p className="text-lcms-gold text-xs font-medium -mt-1">
-                          Lutheran Church
-                        </p>
-                      </div>
+                      <Link href="/">
+                        <div className="w-10 h-10 bg-gradient-to-br from-stone-600 to-gray-700 rounded-xl flex items-center justify-center shadow-lg">
+                          <Cross className="text-white text-xl" />
+                        </div>
+                        <div>
+                          <h1 className="text-2xl font-italianno leading-none text-gray-700">
+                            Good Shepherd
+                          </h1>
+                          <p className="text-lcms-gold text-xs font-medium -mt-1">
+                            Lutheran Church
+                          </p>
+                        </div>
+                      </Link>
                     </div>
                     <nav className="flex-1 overflow-y-auto px-4 py-6">
                       <ul className="flex flex-col gap-2">

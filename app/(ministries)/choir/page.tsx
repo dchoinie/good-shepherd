@@ -11,6 +11,7 @@ export default function ChoirPage() {
         <SEO
           title="Adult Choir"
           keywords="Good Shepherd Lutheran Church, adult choir, music, worship, Mankato, MN, Minnesota, Church"
+          canonical="https://goodshepherdmankato.org/choir"
         />
         <PageTitle
           title="Adult Choir"

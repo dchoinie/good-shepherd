@@ -10,6 +10,7 @@ export default function WomenPage() {
         <SEO
           title="Women's Ministries"
           keywords="Good Shepherd Lutheran Church, women's ministries, faith, service, Mankato, MN, Minnesota, Church"
+          canonical="https://goodshepherdmankato.org/women"
         />
         <PageTitle
           title="Women's Ministries"
