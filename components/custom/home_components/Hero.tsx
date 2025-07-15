@@ -64,8 +64,8 @@ const Hero = (): React.ReactNode => {
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           className="text-gray-300 text-lg leading-relaxed mb-12 max-w-2xl"
         >
-          Join us as we gather in worship, grow in faith, and serve our
-          community with the love of Christ. All are welcome here.
+          At Good Shepherd, we are committed to growing in our understanding of
+          God&apos;s truth through worship, study, and fellowship.
         </motion.p>
 
         {/* Buttons */}
