@@ -227,6 +227,13 @@ const Footer = () => {
               >
                 Accessibility
               </Link>
+              <Link
+                href="https://app.contentful.com/spaces/02dyhx9snvj0"
+                target="_blank"
+                className="text-gray-400 hover:text-lcms-gold transition-colors duration-300"
+              >
+                Website Login
+              </Link>
             </div>
           </div>
         </div>

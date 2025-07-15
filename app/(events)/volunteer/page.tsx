@@ -35,7 +35,7 @@ export default function VolunteerPage() {
               <p className="text-gray-700 text-center mb-12 max-w-3xl mx-auto">
                 These positions are filled through congregational elections and
                 provide important leadership and governance for our church.
-                Terms typically run for 2-3 years, and nominations are accepted
+                Terms typically run for 1 year, and nominations are accepted
                 during our annual meeting.
               </p>
 
