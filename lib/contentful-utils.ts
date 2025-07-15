@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { contentfulHelpers, ContentfulEntry } from "./contentful";
-import { Sermon, Newsletter } from "../types/contentful";
+import { Sermon, Newsletter, Lectionary } from "../types/contentful";
 
 // Utility functions for fetching content
 export const contentfulUtils = {
@@ -47,10 +47,17 @@ export const contentfulUtils = {
 
   // Format date from Contentful
   formatDate(dateString: string): string {
-    return new Date(dateString).toLocaleDateString("en-US", {
+    // Always treat as UTC, extract only the date part
+    const d = new Date(dateString);
+    const year = d.getUTCFullYear();
+    const month = d.getUTCMonth(); // 0-based
+    const day = d.getUTCDate();
+    // Format as desired, e.g., July 13, 2024
+    return new Date(Date.UTC(year, month, day)).toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
+      timeZone: "UTC", // force UTC
     });
   },
 
@@ -134,6 +141,25 @@ export const contentfulUtils = {
       console.error("Error fetching newsletter by date:", error);
       return null;
     }
+  },
+
+  // Fetch lectionary entries with pagination
+  async getLectionary(
+    limit: number = 10,
+    skip: number = 0
+  ): Promise<ContentfulEntry<Lectionary>[]> {
+    return contentfulHelpers.getEntries<Lectionary>("lectionary", {
+      order: "fields.date",
+      limit,
+      skip,
+    });
+  },
+
+  // Fetch all lectionary entries
+  async getAllLectionary(): Promise<ContentfulEntry<Lectionary>[]> {
+    return contentfulHelpers.getEntries<Lectionary>("lectionary", {
+      order: "fields.date",
+    });
   },
 };
 
