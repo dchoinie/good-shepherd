@@ -79,7 +79,9 @@ export default function Header() {
                 onClick={() => setMenuOpen(true)}
                 aria-label="Open menu"
               >
-                <Menu className="w-7 h-7 text-white" />
+                <Menu
+                  className={`w-7 h-7 ${isHomePage ? "text-white" : "text-[hsl(var(--lcms-navy))]"}`}
+                />
               </Button>
               <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
                 <SheetContent side="left" className="p-0 w-64 max-w-full">

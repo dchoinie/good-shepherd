@@ -66,30 +66,30 @@ const Footer = () => {
           </div>
 
           {/* Navigation Sections - First Row */}
-          <div className="space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
-            <h3 className="font-bold text-lg text-white border-b border-lcms-gold/30 pb-2">
+          <div className="space-y-4 flex flex-col items-center md:items-start text-center md:text-left w-full">
+            <h3 className="font-bold text-lg text-white border-b border-lcms-gold/30 pb-2 w-full text-center md:text-left">
               {navItems[0]?.label}
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3 w-full">
               {navItems[0]?.subItems ? (
                 navItems[0].subItems.map((item) => (
-                  <li key={item.label}>
+                  <li key={item.label} className="w-full">
                     <Link
                       href={item.link as any}
-                      className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center gap-2 group"
+                      className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center md:justify-start justify-center gap-2 group w-full"
                     >
-                      <span className="w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                      <span className="hidden md:inline w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                       {item.label}
                     </Link>
                   </li>
                 ))
               ) : (
-                <li>
+                <li className="w-full">
                   <Link
                     href={navItems[0].link as any}
-                    className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center gap-2 group"
+                    className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center md:justify-start justify-center gap-2 group w-full"
                   >
-                    <span className="w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span className="hidden md:inline w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                     {navItems[0]?.label}
                   </Link>
                 </li>
@@ -108,9 +108,9 @@ const Footer = () => {
                   <li key={item.label}>
                     <Link
                       href={item.link as any}
-                      className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center gap-2 group"
+                      className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center md:justify-start justify-center gap-2 group"
                     >
-                      <span className="w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                      <span className="hidden md:inline w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                       {item.label}
                     </Link>
                   </li>
@@ -119,9 +119,9 @@ const Footer = () => {
                 <li>
                   <Link
                     href={navItems[1]?.link || ("#" as any)}
-                    className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center gap-2 group"
+                    className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center md:justify-start justify-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span className="hidden md:inline w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                     {navItems[1]?.label}
                   </Link>
                 </li>
@@ -140,9 +140,9 @@ const Footer = () => {
                   <li key={item.label}>
                     <Link
                       href={item.link as any}
-                      className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center gap-2 group"
+                      className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center md:justify-start justify-center gap-2 group"
                     >
-                      <span className="w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                      <span className="hidden md:inline w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                       {item.label}
                     </Link>
                   </li>
@@ -151,9 +151,9 @@ const Footer = () => {
                 <li>
                   <Link
                     href={navItems[2]?.link || ("#" as any)}
-                    className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center gap-2 group"
+                    className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center md:justify-start justify-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span className="hidden md:inline w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                     {navItems[2]?.label}
                   </Link>
                 </li>
@@ -180,9 +180,9 @@ const Footer = () => {
                       <li key={item.label}>
                         <Link
                           href={item.link as any}
-                          className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center gap-2 group"
+                          className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center md:justify-start justify-center gap-2 group"
                         >
-                          <span className="w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                          <span className="hidden md:inline w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                           {item.label}
                         </Link>
                       </li>
@@ -191,9 +191,9 @@ const Footer = () => {
                     <li>
                       <Link
                         href={section.link || ("#" as any)}
-                        className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center gap-2 group"
+                        className="text-sm text-gray-300 hover:text-lcms-gold transition-colors duration-300 flex items-center md:justify-start justify-center gap-2 group"
                       >
-                        <span className="w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                        <span className="hidden md:inline w-1 h-1 bg-lcms-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                         {section.label}
                       </Link>
                     </li>
