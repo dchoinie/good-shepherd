@@ -6,6 +6,12 @@ import Image from "next/image";
 import { navItems } from "@/types/navigation";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
+const handleScrollToTop = () => {
+  if (typeof window !== "undefined") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+};
+
 const Footer = () => {
   return (
     <footer className="bg-lcms-navy text-gray-100 relative overflow-hidden">
@@ -215,18 +221,21 @@ const Footer = () => {
               <Link
                 href={"/terms" as any}
                 className="text-gray-400 hover:text-lcms-gold transition-colors duration-300"
+                onClick={handleScrollToTop}
               >
                 Terms & Conditions
               </Link>
               <Link
                 href={"/privacy" as any}
                 className="text-gray-400 hover:text-lcms-gold transition-colors duration-300"
+                onClick={handleScrollToTop}
               >
                 Privacy Policy
               </Link>
               <Link
                 href={"/accessibility" as any}
                 className="text-gray-400 hover:text-lcms-gold transition-colors duration-300"
+                onClick={handleScrollToTop}
               >
                 Accessibility
               </Link>
