@@ -159,7 +159,7 @@ const Stream = (): JSX.Element => {
   }
 
   return (
-    <div className="py-24 bg-lcms-navy relative overflow-hidden mb-24">
+    <div className="py-24 bg-lcms-navy relative overflow-hidden mb-24 px-6 lg:px-0">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image

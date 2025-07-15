@@ -38,7 +38,7 @@ const servicesGridItems = [
 
 const Services = (): JSX.Element => {
   return (
-    <div className="py-24 bg-gradient-to-br from-gray-50 to-stone-50 relative overflow-hidden">
+    <div className="py-24 bg-gradient-to-br from-gray-50 to-stone-50 relative overflow-hidden px-6 lg:px-0">
       {/* Decorative background elements */}
       <div
         className="absolute inset-0 opacity-30"

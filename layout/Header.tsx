@@ -1,20 +1,24 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import NavItemComponent from "../components/custom/NavItemComponent";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { navItems } from "@/types/navigation";
 import { NavItem } from "@/types/layout";
 import { useHeaderHeight } from "@/context/HeaderContext";
-import { Cross, ArrowRight } from "lucide-react";
+import { Cross, ArrowRight, Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function Header() {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
   const containerRef = useRef<HTMLDivElement>(null);
   const { setHeaderHeight } = useHeaderHeight();
+  const isMobile = useIsMobile();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const updateHeaderHeight = () => {
@@ -23,14 +27,8 @@ export default function Header() {
         setHeaderHeight(height);
       }
     };
-
-    // Initial calculation
     updateHeaderHeight();
-
-    // Add resize listener to recalculate on window resize
     window.addEventListener("resize", updateHeaderHeight);
-
-    // Cleanup
     return () => window.removeEventListener("resize", updateHeaderHeight);
   }, [setHeaderHeight]);
 
@@ -60,7 +58,7 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Centered Navigation */}
+          {/* Centered Navigation (Desktop Only) */}
           <nav className="hidden lg:flex gap-8 items-center">
             {navItems.map((navItem: NavItem) => (
               <NavItemComponent
@@ -71,19 +69,107 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Button */}
-          <div className="flex justify-end items-center gap-4">
-            <Button
-              asChild
-              size="lg"
-              className="bg-lcms-gold hover:bg-lcms-gold/80 text-stone-800 font-semibold px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              <Link href="/new" className="inline-flex items-center gap-2">
-                I&apos;m New Here
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </Button>
-          </div>
+          {/* Hamburger Menu (Mobile Only) */}
+          {isMobile && (
+            <>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="lg:hidden"
+                onClick={() => setMenuOpen(true)}
+                aria-label="Open menu"
+              >
+                <Menu className="w-7 h-7 text-white" />
+              </Button>
+              <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
+                <SheetContent side="left" className="p-0 w-64 max-w-full">
+                  <div className="flex flex-col h-full">
+                    <div className="flex items-center gap-3 px-6 py-4 border-b border-gray-200">
+                      <div className="w-10 h-10 bg-gradient-to-br from-stone-600 to-gray-700 rounded-xl flex items-center justify-center shadow-lg">
+                        <Cross className="text-white text-xl" />
+                      </div>
+                      <div>
+                        <h1 className="text-2xl font-italianno leading-none text-gray-700">
+                          Good Shepherd
+                        </h1>
+                        <p className="text-lcms-gold text-xs font-medium -mt-1">
+                          Lutheran Church
+                        </p>
+                      </div>
+                    </div>
+                    <nav className="flex-1 overflow-y-auto px-4 py-6">
+                      <ul className="flex flex-col gap-2">
+                        {navItems.map((item) => (
+                          <li key={item.label}>
+                            {item.subItems ? (
+                              <div>
+                                <span className="font-semibold text-gray-700 block mb-1">
+                                  {item.label}
+                                </span>
+                                <ul className="pl-4 flex flex-col gap-1">
+                                  {item.subItems.map((sub) => (
+                                    <li key={sub.label}>
+                                      <Link
+                                        href={sub.link as any}
+                                        className="block py-1 px-2 rounded hover:bg-gray-100 text-gray-600"
+                                        onClick={() => setMenuOpen(false)}
+                                      >
+                                        {sub.label}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ) : (
+                              <Link
+                                href={(item.link || "#") as any}
+                                className="block py-2 px-2 rounded hover:bg-gray-100 text-gray-700 font-semibold"
+                                onClick={() => setMenuOpen(false)}
+                              >
+                                {item.label}
+                              </Link>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="mt-8 flex justify-center">
+                        <Button
+                          asChild
+                          size="lg"
+                          className="bg-lcms-gold hover:bg-lcms-gold/80 text-stone-800 font-semibold px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full"
+                        >
+                          <Link
+                            href="/new"
+                            className="inline-flex items-center gap-2"
+                            onClick={() => setMenuOpen(false)}
+                          >
+                            I&apos;m New Here
+                            <ArrowRight className="w-4 h-4" />
+                          </Link>
+                        </Button>
+                      </div>
+                    </nav>
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </>
+          )}
+
+          {/* Button (Desktop Only) */}
+          {!isMobile && (
+            <div className="flex justify-end items-center gap-4">
+              <Button
+                asChild
+                size="lg"
+                className="bg-lcms-gold hover:bg-lcms-gold/80 text-stone-800 font-semibold px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                <Link href="/new" className="inline-flex items-center gap-2">
+                  I&apos;m New Here
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </div>

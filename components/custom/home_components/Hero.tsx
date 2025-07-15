@@ -10,7 +10,7 @@ import { ArrowRight, Play } from "lucide-react";
 
 const Hero = (): React.ReactNode => {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden px-6 lg:px-0">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -104,7 +104,7 @@ const Hero = (): React.ReactNode => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:block"
         >
           <div className="flex flex-col items-center text-white/60">
             <span className="text-sm font-medium mb-2">Scroll to explore</span>

@@ -45,7 +45,7 @@ const About = () => {
   ];
 
   return (
-    <div className="py-24 bg-lcms-navy relative overflow-hidden">
+    <div className="py-24 bg-lcms-navy relative overflow-hidden px-6 lg:px-0">
       <PageContainer>
         <SectionTitle
           title="About Good Shepherd"

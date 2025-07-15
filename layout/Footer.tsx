@@ -17,10 +17,10 @@ const Footer = () => {
         }}
       ></div>
 
-      <div className="max-w-screen-xl mx-auto px-4 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-screen-xl mx-auto px-4 py-16 relative z-10 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 items-center md:items-start">
           {/* Logo and Contact Info */}
-          <div className="space-y-6">
+          <div className="space-y-6 flex flex-col items-center md:items-start">
             <div className="flex items-center gap-3">
               <Image
                 src="/Cross_blue.png"
@@ -66,7 +66,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation Sections - First Row */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
             <h3 className="font-bold text-lg text-white border-b border-lcms-gold/30 pb-2">
               {navItems[0]?.label}
             </h3>
@@ -98,7 +98,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation Sections - Second Row */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
             <h3 className="font-bold text-lg text-white border-b border-lcms-gold/30 pb-2">
               {navItems[1]?.label}
             </h3>
@@ -130,7 +130,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation Sections - Third Row */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
             <h3 className="font-bold text-lg text-white border-b border-lcms-gold/30 pb-2">
               {navItems[2]?.label}
             </h3>
@@ -164,10 +164,13 @@ const Footer = () => {
 
         {/* Additional Navigation Sections - Fourth Row (if needed) */}
         {navItems.length > 3 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mt-12 items-center md:items-start text-center md:text-left">
             <div></div> {/* Empty space to align with first column */}
             {navItems.slice(3).map((section) => (
-              <div key={section.label} className="space-y-4">
+              <div
+                key={section.label}
+                className="space-y-4 flex flex-col items-center md:items-start"
+              >
                 <h3 className="font-bold text-lg text-white border-b border-lcms-gold/30 pb-2">
                   {section.label}
                 </h3>
@@ -203,12 +206,12 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start space-y-4 md:space-y-0 text-center md:text-left">
             <p className="text-sm text-gray-400">
               &copy; {new Date().getFullYear()} Good Shepherd Lutheran Church,
               All rights reserved.
             </p>
-            <div className="flex space-x-6 text-sm">
+            <div className="flex flex-col items-center space-y-2 md:flex-row md:items-center md:space-x-6 md:space-y-0 text-sm">
               <Link
                 href={"/terms" as any}
                 className="text-gray-400 hover:text-lcms-gold transition-colors duration-300"
