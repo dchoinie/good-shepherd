@@ -79,7 +79,7 @@ export default function ChoirPage() {
                 </div>
                 <p className="text-gray-700 mb-4">
                   We practice weekly during the school year to prepare for
-                  Sunday services and special events. Our rehearsals are a time
+                  Divine Services and special events. Our rehearsals are a time
                   of learning, fellowship, and spiritual growth.
                 </p>
                 <div className="space-y-3">
@@ -224,7 +224,7 @@ export default function ChoirPage() {
                 <div className="space-y-3 text-gray-700">
                   <p>
                     <strong>Contact:</strong> Speak with our choir director
-                    after Sunday service or contact the church office
+                    after Divine Service or contact the church office
                   </p>
                   <p>
                     <strong>Location:</strong> Church sanctuary

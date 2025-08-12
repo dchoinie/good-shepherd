@@ -32,12 +32,12 @@ export default function StudentsPage() {
                   <p className="text-xl text-gray-700 leading-relaxed mb-6">
                     Whether you&apos;re attending Bethany Lutheran College or
                     Mankato State University, we invite you to join us for
-                    Sunday services and become part of our church family during
+                    Divine Services and become part of our church family during
                     your time in Mankato.
                   </p>
                   <div className="bg-white bg-opacity-70 rounded-lg p-6 border border-blue-200">
                     <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                      Sunday Services
+                      Divine Services
                     </h3>
                     <div className="space-y-3 text-gray-700">
                       <div className="flex items-center">

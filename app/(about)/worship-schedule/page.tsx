@@ -1,8 +1,12 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import PageContainer from "../../../components/custom/PageContainer";
 import PageTitle from "../../../components/custom/PageTitle";
 import { Book, Cross, School, Calendar } from "lucide-react";
 import SEO from "@/components/custom/SEO";
+import { lectionaryService } from "@/lib/lectionary";
+import { LectionaryData } from "@/types/lectionary";
 
 const scheduleItems = [
   {
@@ -33,6 +37,28 @@ const scheduleItems = [
 ];
 
 export default function SchedulePage() {
+  const [lectionaryData, setLectionaryData] = useState<LectionaryData | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchLectionary = async () => {
+      try {
+        const nearestSunday = lectionaryService.getNearestSunday();
+        const result = await lectionaryService.getLectionaryForDate(nearestSunday, 1);
+        
+        if (!('error' in result)) {
+          setLectionaryData(result);
+        }
+      } catch (error) {
+        console.error('Error fetching lectionary:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchLectionary();
+  }, []);
+
   return (
     <>
       <div className="min-h-screen bg-gray-50">
@@ -144,6 +170,87 @@ export default function SchedulePage() {
                     </ul>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Lectionary Section */}
+            <div className="max-w-4xl mx-auto mt-8">
+              <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">
+                <div className="text-center mb-6">
+                  <h3 className="text-xl font-semibold text-blue-900 mb-2">
+                    This Week&apos;s Lectionary
+                  </h3>
+                  <p className="text-blue-700">
+                    Scripture readings for this Sunday&apos;s worship service
+                  </p>
+                </div>
+
+                {loading ? (
+                  <div className="text-center py-8">
+                    <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600 mx-auto mb-2"></div>
+                    <p className="text-blue-600 text-sm">Loading lectionary...</p>
+                  </div>
+                ) : lectionaryData ? (
+                  <div className="space-y-4">
+                    <div className="bg-white rounded-lg p-4 border border-blue-100">
+                      <h4 className="font-semibold text-blue-900 mb-2">
+                        {lectionaryData.liturgicalDay}
+                      </h4>
+                      <p className="text-sm text-blue-600">
+                        Liturgical Color: {lectionaryData.liturgicalColor}
+                      </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {lectionaryData.firstReading && (
+                        <div className="bg-white rounded-lg p-4 border border-blue-100">
+                          <h5 className="font-medium text-blue-900 mb-1">Old Testament</h5>
+                          <p className="text-sm text-gray-700">{lectionaryData.firstReading}</p>
+                        </div>
+                      )}
+                      
+                      {lectionaryData.psalm && (
+                        <div className="bg-white rounded-lg p-4 border border-blue-100">
+                          <h5 className="font-medium text-blue-900 mb-1">Psalm</h5>
+                          <p className="text-sm text-gray-700">{lectionaryData.psalm}</p>
+                        </div>
+                      )}
+                      
+                      {lectionaryData.secondReading && (
+                        <div className="bg-white rounded-lg p-4 border border-blue-100">
+                          <h5 className="font-medium text-blue-900 mb-1">Epistle</h5>
+                          <p className="text-sm text-gray-700">{lectionaryData.secondReading}</p>
+                        </div>
+                      )}
+                      
+                      {lectionaryData.gospel && (
+                        <div className="bg-white rounded-lg p-4 border border-blue-100">
+                          <h5 className="font-medium text-blue-900 mb-1">Gospel</h5>
+                          <p className="text-sm text-gray-700">{lectionaryData.gospel}</p>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="text-center pt-4">
+                      <a
+                        href="/lectionary"
+                        className="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                      >
+                        View Full Lectionary
+                      </a>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="text-center py-8">
+                    <p className="text-blue-600 mb-4">Unable to load lectionary data</p>
+                    <a
+                      href="/lectionary"
+                      className="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                    >
+                      View Lectionary
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </div>

@@ -278,7 +278,7 @@ const Stream = (): JSX.Element => {
                       className="border-2 border-white text-stone-800 hover:bg-white hover:text-stone-800 font-medium px-8 py-3 text-lg transition-all duration-300 transform hover:scale-105"
                     >
                       <Link
-                        href="/sermons"
+                        href="/stream"
                         className="inline-flex items-center gap-2"
                       >
                         Previous Streams

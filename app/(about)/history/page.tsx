@@ -154,7 +154,7 @@ const timelineData: TimelineItem[] = [
     date: "1998",
     title: "Transition Period",
     description:
-      "The church building at 937 Charles Avenue was sold to Victory Life Church. Sunday services were held at Garfield Elem. School in North Mankato and weekday services were held at Campus Chapel at Mankato State University.",
+      "The church building at 937 Charles Avenue was sold to Victory Life Church. Divine Services were held at Garfield Elem. School in North Mankato and weekday services were held at Campus Chapel at Mankato State University.",
   },
   {
     date: "1999",

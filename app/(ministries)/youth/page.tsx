@@ -219,7 +219,7 @@ export default function YouthPage() {
                   <strong>Questions about our youth programs?</strong>
                   <br />
                   Contact our church office or speak with any of our ministry
-                  leaders after Sunday service.
+                  leaders after Divine Service.
                 </p>
               </div>
             </div>

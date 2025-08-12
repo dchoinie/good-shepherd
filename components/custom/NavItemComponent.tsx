@@ -38,14 +38,18 @@ const NavItemComponent = ({
             }`}
           />
         </DropdownMenuTrigger>
-        <DropdownMenuContent>
+        <DropdownMenuContent 
+          className="max-w-[200px] overflow-hidden"
+          sideOffset={8}
+          align="start"
+        >
           {subItems?.map((subItem: SubNavItem) => (
             <DropdownMenuItem
               key={subItem.label}
               className="cursor-pointer"
               onClick={() => setIsOpen(false)}
             >
-              <Link href={subItem.link as any} className="text-inherit">
+              <Link href={subItem.link as any} className="text-inherit w-full">
                 {subItem.label}
               </Link>
             </DropdownMenuItem>

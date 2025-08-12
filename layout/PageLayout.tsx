@@ -11,9 +11,9 @@ interface PageLayoutProps {
 
 export default function PageLayout({ children }: PageLayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Header />
-      <main>
+      <main className="overflow-x-hidden">
         <PageTransition>{children}</PageTransition>
       </main>
       <Footer />

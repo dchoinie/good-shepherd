@@ -33,10 +33,10 @@ export default function Header() {
   }, [setHeaderHeight]);
 
   return (
-    <div className="absolute top-0 left-0 z-50 w-full">
+    <div className="absolute top-0 left-0 z-50 w-full overflow-x-hidden">
       <div
         ref={containerRef}
-        className="backdrop-blur-md border-b border-gray-200/50 shadow-lg"
+        className="backdrop-blur-md border-b border-gray-200/50 shadow-lg overflow-x-hidden"
       >
         <div className="max-w-screen-xl mx-auto flex py-4 w-full justify-between items-center px-8">
           {/* Logo */}

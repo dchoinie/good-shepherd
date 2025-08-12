@@ -66,7 +66,7 @@ const Footer = () => {
 
               <div className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-lcms-gold flex-shrink-0" />
-                <p className="text-sm text-gray-300">Sunday Service: 9:00 AM</p>
+                <p className="text-sm text-gray-300">Divine Service: 9:00 AM</p>
               </div>
             </div>
           </div>
