@@ -4,6 +4,7 @@ import Stream from "../components/custom/home_components/Stream";
 import Services from "../components/custom/home_components/Services";
 import Ministries from "../components/custom/home_components/Ministries";
 import About from "../components/custom/home_components/About";
+import CCA from "../components/custom/home_components/CCA";
 import Contact from "../components/custom/home_components/Contact";
 import SEO from "@/components/custom/SEO";
 
@@ -21,6 +22,7 @@ export default function Home() {
       <Services />
       <Ministries />
       <About />
+      <CCA />
       <Contact />
     </div>
   );
