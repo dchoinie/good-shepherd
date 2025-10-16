@@ -14,10 +14,11 @@ const Hero = (): React.ReactNode => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/church_exterior.jpg"
+          src="/CCA-1.jpg"
           alt="Church Exterior"
           fill
           className="object-cover"
+          style={{ objectPosition: 'center 90%' }}
           priority
         />
         {/* Enhanced Dark Overlay */}
