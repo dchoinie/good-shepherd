@@ -9,4 +9,4 @@ export const resend = new Resend(process.env.RESEND_API_KEY);
 // Use a verified domain or Resend's default domain
 export const FROM_EMAIL =
   process.env.FROM_EMAIL ||
-  "Good Shepherd Lutheran Church <onboarding@resend.dev>";
+  "Good Shepherd Lutheran Church <info@goodshepherdmankato.org>";
