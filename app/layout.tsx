@@ -3,7 +3,6 @@ import { Figtree, Italianno } from "next/font/google";
 import "./globals.css";
 import PageLayout from "../layout/PageLayout";
 import { HeaderProvider } from "@/context/HeaderContext";
-import { ClerkProvider } from "@clerk/nextjs";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -31,14 +30,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={`${figtree.variable} ${italianno.variable} antialiased`}>
-          <HeaderProvider>
-            <PageLayout>{children}</PageLayout>
-          </HeaderProvider>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body className={`${figtree.variable} ${italianno.variable} antialiased`}>
+        <HeaderProvider>
+          <PageLayout>{children}</PageLayout>
+        </HeaderProvider>
+      </body>
+    </html>
   );
 }
