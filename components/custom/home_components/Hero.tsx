@@ -14,7 +14,7 @@ const Hero = (): React.ReactNode => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/CCA-1.jpg"
+          src="/church_exterior.jpg"
           alt="Church Exterior"
           fill
           className="object-cover"
