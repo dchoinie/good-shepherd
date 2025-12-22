@@ -18,6 +18,7 @@ import {
   Music,
   Handshake,
 } from "lucide-react";
+import { EMAIL, PHONE } from "@/lib/constants";
 
 export default function SundaySchoolPage() {
   return (
@@ -393,10 +394,10 @@ export default function SundaySchoolPage() {
                 </p>
                 <div className="space-y-2 text-gray-700">
                   <p>
-                    <strong>Phone:</strong> (507) 387-4334
+                    <strong>Phone:</strong> {PHONE}
                   </p>
                   <p>
-                    <strong>Email:</strong> office@goodshepherdmankato.org
+                    <strong>Email:</strong> {EMAIL}
                   </p>
                 </div>
               </div>

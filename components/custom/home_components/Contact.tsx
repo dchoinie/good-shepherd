@@ -14,6 +14,7 @@ import {
   Users,
   Heart,
 } from "lucide-react";
+import { EMAIL, PHONE, ADDRESS } from "@/lib/constants";
 
 interface QuickAction {
   icon: React.ElementType;
@@ -27,7 +28,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      content: "2101 Lor Ray Drive, North Mankato, MN 56003",
+      content: ADDRESS,
       color: "from-lcms-navy/5 to-lcms-navy/10",
       borderColor: "border-lcms-navy/20",
       iconBg: "bg-lcms-navy",
@@ -35,7 +36,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      content: "(507) 388-4336",
+      content: PHONE,
       color: "from-lcms-gold/10 to-lcms-gold/20",
       borderColor: "border-lcms-gold/30",
       iconBg: "bg-lcms-gold",
@@ -43,7 +44,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      content: "goodshepmankato@gmail.com",
+      content: EMAIL,
       color: "from-lcms-navy/5 to-lcms-gold/10",
       borderColor: "border-lcms-navy/20",
       iconBg: "bg-lcms-navy",

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { navItems } from "@/types/navigation";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import FooterNewsletterSignup from "@/components/custom/FooterNewsletterSignup";
+import { EMAIL, PHONE, ADDRESS } from "@/lib/constants";
 
 const handleScrollToTop = () => {
   if (typeof window !== "undefined") {
@@ -50,20 +51,20 @@ const Footer = () => {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-lcms-gold mt-0.5 flex-shrink-0" />
                   <div className="text-sm space-y-1">
-                    <p className="font-medium text-white">2101 Lor Ray Dr</p>
-                    <p className="text-gray-300">North Mankato, MN</p>
+                    <p className="font-medium text-white">{ADDRESS.split(" North Mankato")[0]}</p>
+                    <p className="text-gray-300">{"North Mankato" + ADDRESS.split("North Mankato")[1]}</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-lcms-gold flex-shrink-0" />
-                  <p className="text-sm text-gray-300">507.388.4336</p>
+                  <p className="text-sm text-gray-300">{PHONE}</p>
                 </div>
 
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-lcms-gold flex-shrink-0" />
                   <p className="text-sm text-gray-300">
-                    goodshepmankato@gmail.com
+                    {EMAIL}
                   </p>
                 </div>
 

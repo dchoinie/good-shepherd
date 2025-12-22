@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import SEO from "@/components/custom/SEO";
+import { EMAIL, PHONE, ADDRESS } from "@/lib/constants";
 
 export default function NewVisitorPage() {
   return (
@@ -970,13 +971,13 @@ export default function NewVisitorPage() {
               <div>
                 <h3 className="text-2xl font-semibold mb-4">Location</h3>
                 <p className="text-lg">
-                  2101 Lor Ray Dr
+                  {ADDRESS.split(" North Mankato")[0]}
                   <br />
-                  North Mankato, MN 56001
+                  {"North Mankato" + ADDRESS.split("North Mankato")[1]}
                   <br />
-                  Phone: 507.388.4336
+                  Phone: {PHONE}
                   <br />
-                  Email: goodshepmankato@gmail.com
+                  Email: {EMAIL}
                 </p>
               </div>
             </div>

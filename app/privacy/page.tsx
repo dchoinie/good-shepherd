@@ -1,5 +1,6 @@
 import PageTitle from "@/components/custom/PageTitle";
 import SEO from "@/components/custom/SEO";
+import { EMAIL } from "@/lib/constants";
 
 export default function PrivacyPolicyPage() {
   return (
@@ -96,10 +97,10 @@ export default function PrivacyPolicyPage() {
           If you have any questions about this Privacy Policy or our data
           practices, please contact us at{" "}
           <a
-            href="mailto:goodshepmankato@gmail.com"
+            href={`mailto:${EMAIL}`}
             className="text-blue-600 underline"
           >
-            goodshepmankato@gmail.com
+            {EMAIL}
           </a>
           .
         </p>

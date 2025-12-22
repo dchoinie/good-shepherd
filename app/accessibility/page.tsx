@@ -1,5 +1,6 @@
 import PageTitle from "@/components/custom/PageTitle";
 import SEO from "@/components/custom/SEO";
+import { EMAIL } from "@/lib/constants";
 
 export default function AccessibilityPage() {
   return (
@@ -67,10 +68,10 @@ export default function AccessibilityPage() {
             If you need assistance accessing any part of our website, or would
             like to report an accessibility issue, please contact us at{" "}
             <a
-              href="mailto:goodshepmankato@gmail.com"
+              href={`mailto:${EMAIL}`}
               className="text-blue-700 underline"
             >
-              goodshepmankato@gmail.com
+              {EMAIL}
             </a>{" "}
             or use our{" "}
             <a href="/contact" className="text-blue-700 underline">

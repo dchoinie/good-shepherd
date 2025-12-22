@@ -2,6 +2,7 @@ import React from "react";
 import PageContainer from "../../../components/custom/PageContainer";
 import PageTitle from "../../../components/custom/PageTitle";
 import SEO from "@/components/custom/SEO";
+import { EMAIL, PHONE } from "@/lib/constants";
 
 export default function VolunteerPage() {
   return (
@@ -317,12 +318,10 @@ export default function VolunteerPage() {
                     LaPlant or Julie Evens (Church Secretary)
                   </p>
                   <p className="text-gray-700">
-                    <span className="font-semibold">Phone:</span> (Church office
-                    number)
+                    <span className="font-semibold">Phone:</span> {PHONE}
                   </p>
                   <p className="text-gray-700">
-                    <span className="font-semibold">Email:</span> (Church email
-                    address)
+                    <span className="font-semibold">Email:</span> {EMAIL}
                   </p>
                 </div>
                 <div className="mt-8">

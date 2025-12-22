@@ -21,6 +21,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import SEO from "@/components/custom/SEO";
+import { EMAIL, PHONE, ADDRESS } from "@/lib/constants";
 
 // Contact form schema
 const contactFormSchema = z.object({
@@ -182,9 +183,9 @@ export default function ContactPage() {
                 <div>
                   <h4 className="font-semibold text-gray-900">Address</h4>
                   <p className="text-gray-600">
-                    2101 Lor Ray Dr
+                    {ADDRESS.split(" North Mankato")[0]}
                     <br />
-                    North Mankato, MN
+                    {"North Mankato" + ADDRESS.split("North Mankato")[1]}
                   </p>
                 </div>
               </div>
@@ -207,7 +208,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Phone</h4>
-                  <p className="text-gray-600">507.388.4336</p>
+                  <p className="text-gray-600">{PHONE}</p>
                 </div>
               </div>
 
@@ -229,7 +230,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Email</h4>
-                  <p className="text-gray-600">goodshepmankato@gmail.com</p>
+                  <p className="text-gray-600">{EMAIL}</p>
                 </div>
               </div>
             </div>
