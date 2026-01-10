@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
 import { Send, CheckCircle } from "lucide-react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 import PageTitle from "@/components/custom/PageTitle";
 import { Button } from "@/components/ui/button";
@@ -30,6 +31,7 @@ const contactFormSchema = z.object({
   phone: z.string().min(1, "Phone number is required"),
   email: z.string().email("Please enter a valid email address"),
   message: z.string().min(10, "Message must be at least 10 characters long"),
+  website: z.string().optional(), // Honeypot field
 });
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
@@ -37,6 +39,8 @@ type ContactFormData = z.infer<typeof contactFormSchema>;
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const formStartTime = useRef<number>(Date.now());
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
@@ -46,19 +50,40 @@ export default function ContactPage() {
       phone: "",
       email: "",
       message: "",
+      website: "", // Honeypot field
     },
   });
+
+  // Track when form is first interacted with
+  useEffect(() => {
+    formStartTime.current = Date.now();
+  }, []);
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
 
     try {
+      // Generate reCAPTCHA token
+      let recaptchaToken = "";
+      if (executeRecaptcha) {
+        try {
+          recaptchaToken = await executeRecaptcha("contact_form");
+        } catch (error) {
+          console.error("reCAPTCHA error:", error);
+          // Continue without token - server will handle gracefully
+        }
+      }
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          recaptchaToken,
+          formStartTime: formStartTime.current,
+        }),
       });
 
       const result = await response.json();
@@ -324,6 +349,26 @@ export default function ContactPage() {
                         />
                       </FormControl>
                       <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                {/* Honeypot field - hidden from users */}
+                <FormField
+                  control={form.control}
+                  name="website"
+                  render={({ field }) => (
+                    <FormItem className="hidden">
+                      <FormLabel>Website</FormLabel>
+                      <FormControl>
+                        <Input
+                          type="text"
+                          tabIndex={-1}
+                          autoComplete="off"
+                          {...field}
+                          style={{ display: "none" }}
+                        />
+                      </FormControl>
                     </FormItem>
                   )}
                 />

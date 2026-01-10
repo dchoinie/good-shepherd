@@ -1,5 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import mailchimp from "@mailchimp/mailchimp_marketing";
+import {
+  verifyRecaptcha,
+  checkSpamKeywords,
+  isValidFormFillTime,
+  checkRateLimit,
+  getClientIP,
+} from "@/lib/spam-filter";
 
 // Initialize Mailchimp
 mailchimp.setConfig({
@@ -9,7 +16,8 @@ mailchimp.setConfig({
 
 export async function POST(request: NextRequest) {
   try {
-    const { email, firstName, lastName } = await request.json();
+    const body = await request.json();
+    const { email, firstName, lastName, website, recaptchaToken, formStartTime } = body;
 
     // Basic validation
     if (!email || !email.includes("@")) {
@@ -17,6 +25,71 @@ export async function POST(request: NextRequest) {
         { error: "Valid email is required" },
         { status: 400 }
       );
+    }
+
+    // Spam filtering checks
+    const clientIP = getClientIP(request);
+
+    // 1. Check honeypot field (must be empty)
+    if (website && website.trim() !== "") {
+      console.log("Spam detected: Honeypot field filled", { ip: clientIP });
+      return NextResponse.json(
+        { error: "Invalid submission" },
+        { status: 400 }
+      );
+    }
+
+    // 2. Rate limiting check
+    const rateLimitResult = checkRateLimit(clientIP);
+    if (!rateLimitResult.allowed) {
+      console.log("Spam detected: Rate limit exceeded", {
+        ip: clientIP,
+        resetTime: rateLimitResult.resetTime,
+      });
+      return NextResponse.json(
+        { error: "Too many requests. Please try again later." },
+        { status: 429 }
+      );
+    }
+
+    // 3. Verify reCAPTCHA token
+    if (recaptchaToken) {
+      const recaptchaResult = await verifyRecaptcha(recaptchaToken);
+      if (!recaptchaResult.success || (recaptchaResult.score !== undefined && recaptchaResult.score < 0.5)) {
+        console.log("Spam detected: reCAPTCHA failed", {
+          ip: clientIP,
+          score: recaptchaResult.score,
+          error: recaptchaResult.error,
+        });
+        return NextResponse.json(
+          { error: "Invalid submission" },
+          { status: 400 }
+        );
+      }
+    }
+
+    // 4. Check spam keywords
+    const content = `${firstName || ""} ${lastName || ""} ${email}`;
+    if (checkSpamKeywords(content)) {
+      console.log("Spam detected: Spam keywords found", { ip: clientIP });
+      return NextResponse.json(
+        { error: "Invalid submission" },
+        { status: 400 }
+      );
+    }
+
+    // 5. Validate form fill time (should take at least 3 seconds)
+    if (formStartTime) {
+      if (!isValidFormFillTime(formStartTime)) {
+        console.log("Spam detected: Form filled too quickly", {
+          ip: clientIP,
+          fillTime: Date.now() - formStartTime,
+        });
+        return NextResponse.json(
+          { error: "Invalid submission" },
+          { status: 400 }
+        );
+      }
     }
 
     if (!process.env.MAILCHIMP_API_KEY || !process.env.MAILCHIMP_AUDIENCE_ID) {

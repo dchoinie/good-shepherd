@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -16,11 +16,13 @@ import {
 } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Loader2, Mail, CheckCircle, AlertCircle } from "lucide-react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const signupSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
   lastName: z.string().min(1, "Last name is required"),
   email: z.string().email("Please enter a valid email address"),
+  website: z.string().optional(), // Honeypot field
 });
 
 type SignupFormData = z.infer<typeof signupSchema>;
@@ -31,6 +33,8 @@ export default function NewsletterSignupForm() {
     type: "success" | "error" | null;
     message: string;
   }>({ type: null, message: "" });
+  const formStartTime = useRef<number>(Date.now());
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const {
     register,
@@ -39,19 +43,42 @@ export default function NewsletterSignupForm() {
     reset,
   } = useForm<SignupFormData>({
     resolver: zodResolver(signupSchema),
+    defaultValues: {
+      website: "", // Honeypot field
+    },
   });
+
+  // Track when form is first interacted with
+  useEffect(() => {
+    formStartTime.current = Date.now();
+  }, []);
 
   const onSubmit = async (data: SignupFormData) => {
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
 
     try {
+      // Generate reCAPTCHA token
+      let recaptchaToken = "";
+      if (executeRecaptcha) {
+        try {
+          recaptchaToken = await executeRecaptcha("newsletter_signup");
+        } catch (error) {
+          console.error("reCAPTCHA error:", error);
+          // Continue without token - server will handle gracefully
+        }
+      }
+
       const response = await fetch("/api/newsletter-signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          recaptchaToken,
+          formStartTime: formStartTime.current,
+        }),
       });
 
       const result = await response.json();
@@ -137,6 +164,18 @@ export default function NewsletterSignupForm() {
               {errors.email && (
                 <p className="text-sm text-red-500">{errors.email.message}</p>
               )}
+            </div>
+
+            {/* Honeypot field - hidden from users */}
+            <div style={{ display: "none" }}>
+              <Label htmlFor="website">Website</Label>
+              <Input
+                id="website"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                {...register("website")}
+              />
             </div>
 
             {submitStatus.type && (

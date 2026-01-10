@@ -3,6 +3,7 @@ import { Figtree, Italianno } from "next/font/google";
 import "./globals.css";
 import PageLayout from "../layout/PageLayout";
 import { HeaderProvider } from "@/context/HeaderContext";
+import ReCaptchaProvider from "@/components/providers/ReCaptchaProvider";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -32,9 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${figtree.variable} ${italianno.variable} antialiased`}>
-        <HeaderProvider>
-          <PageLayout>{children}</PageLayout>
-        </HeaderProvider>
+        <ReCaptchaProvider>
+          <HeaderProvider>
+            <PageLayout>{children}</PageLayout>
+          </HeaderProvider>
+        </ReCaptchaProvider>
       </body>
     </html>
   );

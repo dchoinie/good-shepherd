@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -8,9 +8,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Loader2, Mail, CheckCircle, AlertCircle } from "lucide-react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const signupSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
+  website: z.string().optional(), // Honeypot field
 });
 
 type SignupFormData = z.infer<typeof signupSchema>;
@@ -21,6 +23,8 @@ export default function FooterNewsletterSignup() {
     type: "success" | "error" | null;
     message: string;
   }>({ type: null, message: "" });
+  const formStartTime = useRef<number>(Date.now());
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const {
     register,
@@ -29,13 +33,32 @@ export default function FooterNewsletterSignup() {
     reset,
   } = useForm<SignupFormData>({
     resolver: zodResolver(signupSchema),
+    defaultValues: {
+      website: "", // Honeypot field
+    },
   });
+
+  // Track when form is first interacted with
+  useEffect(() => {
+    formStartTime.current = Date.now();
+  }, []);
 
   const onSubmit = async (data: SignupFormData) => {
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
 
     try {
+      // Generate reCAPTCHA token
+      let recaptchaToken = "";
+      if (executeRecaptcha) {
+        try {
+          recaptchaToken = await executeRecaptcha("newsletter_signup");
+        } catch (error) {
+          console.error("reCAPTCHA error:", error);
+          // Continue without token - server will handle gracefully
+        }
+      }
+
       const response = await fetch("/api/newsletter-signup", {
         method: "POST",
         headers: {
@@ -45,6 +68,9 @@ export default function FooterNewsletterSignup() {
           firstName: "Footer",
           lastName: "Subscriber",
           email: data.email,
+          website: data.website, // Honeypot field
+          recaptchaToken,
+          formStartTime: formStartTime.current,
         }),
       });
 
@@ -96,6 +122,16 @@ export default function FooterNewsletterSignup() {
           {errors.email && (
             <p className="text-sm text-red-300">{errors.email.message}</p>
           )}
+        </div>
+
+        {/* Honeypot field - hidden from users */}
+        <div style={{ display: "none" }}>
+          <Input
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            {...register("website")}
+          />
         </div>
 
         {submitStatus.type && (

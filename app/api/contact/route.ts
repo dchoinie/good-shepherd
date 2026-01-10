@@ -2,6 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import { resend, FROM_EMAIL } from "@/lib/resend";
 import { EMAIL } from "@/lib/constants";
 import { z } from "zod";
+import {
+  verifyRecaptcha,
+  checkSpamKeywords,
+  isValidFormFillTime,
+  checkRateLimit,
+  getClientIP,
+} from "@/lib/spam-filter";
 
 // Contact form schema for validation
 const contactSchema = z.object({
@@ -10,6 +17,9 @@ const contactSchema = z.object({
   phone: z.string().min(1, "Phone number is required"),
   email: z.string().email("Invalid email address"),
   message: z.string().min(1, "Message is required"),
+  website: z.string().optional(), // Honeypot field
+  recaptchaToken: z.string().optional(),
+  formStartTime: z.number().optional(),
 });
 
 export async function POST(request: NextRequest) {
@@ -18,6 +28,71 @@ export async function POST(request: NextRequest) {
 
     // Validate the request body
     const validatedData = contactSchema.parse(body);
+
+    // Spam filtering checks
+    const clientIP = getClientIP(request);
+
+    // 1. Check honeypot field (must be empty)
+    if (validatedData.website && validatedData.website.trim() !== "") {
+      console.log("Spam detected: Honeypot field filled", { ip: clientIP });
+      return NextResponse.json(
+        { error: "Invalid submission" },
+        { status: 400 }
+      );
+    }
+
+    // 2. Rate limiting check
+    const rateLimitResult = checkRateLimit(clientIP);
+    if (!rateLimitResult.allowed) {
+      console.log("Spam detected: Rate limit exceeded", {
+        ip: clientIP,
+        resetTime: rateLimitResult.resetTime,
+      });
+      return NextResponse.json(
+        { error: "Too many requests. Please try again later." },
+        { status: 429 }
+      );
+    }
+
+    // 3. Verify reCAPTCHA token
+    if (validatedData.recaptchaToken) {
+      const recaptchaResult = await verifyRecaptcha(validatedData.recaptchaToken);
+      if (!recaptchaResult.success || (recaptchaResult.score !== undefined && recaptchaResult.score < 0.5)) {
+        console.log("Spam detected: reCAPTCHA failed", {
+          ip: clientIP,
+          score: recaptchaResult.score,
+          error: recaptchaResult.error,
+        });
+        return NextResponse.json(
+          { error: "Invalid submission" },
+          { status: 400 }
+        );
+      }
+    }
+
+    // 4. Check spam keywords
+    const messageContent = `${validatedData.firstName} ${validatedData.lastName} ${validatedData.message}`;
+    if (checkSpamKeywords(messageContent)) {
+      console.log("Spam detected: Spam keywords found", { ip: clientIP });
+      return NextResponse.json(
+        { error: "Invalid submission" },
+        { status: 400 }
+      );
+    }
+
+    // 5. Validate form fill time (should take at least 3 seconds)
+    if (validatedData.formStartTime) {
+      if (!isValidFormFillTime(validatedData.formStartTime)) {
+        console.log("Spam detected: Form filled too quickly", {
+          ip: clientIP,
+          fillTime: Date.now() - validatedData.formStartTime,
+        });
+        return NextResponse.json(
+          { error: "Invalid submission" },
+          { status: 400 }
+        );
+      }
+    }
 
     console.log("Attempting to send email to:", validatedData.email);
     console.log("Using FROM_EMAIL:", FROM_EMAIL);
