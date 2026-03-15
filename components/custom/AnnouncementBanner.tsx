@@ -29,9 +29,7 @@ export default function AnnouncementBanner() {
       <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 min-w-0">
         <CloudRain className="h-4 w-4 flex-shrink-0 text-amber-600" aria-hidden />
         <span className="min-w-0">
-          <strong>Weather Announcement:</strong> Bible Study & Sunday School
-          are cancelled on 3/15/26 due to weather. Stay tuned for an
-          announcement about the Divine Service.
+          <strong>Weather Announcement:</strong>Service cancelled 3/15/26 due to weather.
         </span>
       </div>
     </div>
